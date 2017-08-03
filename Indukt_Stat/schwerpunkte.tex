@@ -1,0 +1,218 @@
+% \documentclass[a4paper,12pt]{article}
+% \usepackage[utf8]{inputenc}
+% \usepackage[ngerman]{babel} 
+% %opening
+% \title{}
+% %\author{}
+% \date{}
+\documentclass[a4paper,fontsize=16pt]{article}
+%\documentclass[a4paper,fontsize=13pt]{scrartcl}
+%\definecolor{mygreen}{cmyk}{0.82,0.11,1,0.25}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel} 
+\usepackage{textcomp} 
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[margin=1.55cm
+  %,showframe% <- only to show the page layout
+]{geometry}
+\usepackage{rotating}
+\usepackage{booktabs} 
+\usepackage{lscape}
+\usepackage{float}
+%opening
+\title{Schwerpunkte: Induktive Statistik WS 17/18}
+%\subtitle{Simulation und Auswertung der simulierten Daten in Übung und Tutorium mit Hilfe von \texttt{R}}
+%\author{Mariana Nold}
+\date{\vspace{-10ex}}
+\begin{document}
+
+\maketitle
+
+Termine: 
+16./23.10.17
+13./27.11.17
+11.12.17
+08.01.18
+22.01.18
+
+\section{Schwerpunkte}
+\begin{enumerate}
+\item{\colorbox{yellow}{Probabilistische Gesetze: Was ist das und welche Rolle spielen sie in der klassischen Inferenz?}}
+\item{\colorbox{pink}{Grundlagen der klassischen Schätz- und Testtheorie}}
+\item{\colorbox{green}{Statistische Modelle: Multiple parametrische Datenanalyse}}
+\end{enumerate}
+
+\section{Statistische Methoden}
+\begin{enumerate}
+\item{Daten selbst analysieren: Thüringen-Monitor 2015 und Pisa-Daten mit STATA}
+\item{Statistische Informationen nutzen und sachadäquat interpretieren: STATA-Output und Information aus Presse oder Fachliteratur (insbesondere Veröffentlichungen über Thüringen-Monitor, Pisa-Daten oder KIGGS-Daten)}
+\item{Statistische Ergebnisse verständlich kommunizieren, wesentliche Aussagen in einfachen Worten ausdrücken können}
+\end{enumerate}
+
+\section{Inhaltliche Gliederung}
+\begin{enumerate}
+   \item{ \textbf{\colorbox{yellow}{Probabilistische Gesetze} (16.10.17)}
+   \begin{itemize}
+      \item{Wiederholung: Wozu braucht man Statistik?}
+      \item{Warum das prob. Modell in der Soziologie? (Beispiel: Thüringen-Monitor oder Tagespresse)}
+      \item{Was ist eine stoch. bzw. prob. Aussage? (Ist Unterscheidung sinnvoll? S. 2, Schumann)}
+      \item{Beispiel: Zufall und Klausureinsicht}
+      \item{Motivation Binomialverteilung: Wie viele Personen kommen zur Klausureinsicht?}
+      \item{Summe von Bernoulli-Variablen: Jede Person entscheidet unabhängig, ob sie kommt}
+      \item{Zufallsstichprobe und Totalerhebung}
+       \item{\colorbox{gray}{Literatur:} 
+       \begin{itemize}
+       \item{ Gehring+Weins: Abschnitt 1.2.4 (S.9)}
+       \item{Mittag: Kap. 11}
+       \item{Bortz Kap. 6.1}
+       \end{itemize}}
+   \end{itemize}
+   }
+   \item{ \textbf{\colorbox{yellow}{So tickt die klassische Inferenz am Beispiel der Biomailverteilung}(23.10.17)
+  }
+     
+       \begin{itemize}
+       \item{Definition: diskrete Wahrscheinlichkeitsverteilung}
+       \item{Die Bernoulliverteilung als  diskrete Wahrscheinlichkeitsverteilung : Erwartungswert und Varianz}
+         \item{Die Binomialverteilung als diskrete Wahrscheinlichkeitsverteilung : Erwartungswert und Varianz}
+         \item{Intuitiver Schätzer für die Wahrscheinlichkeit dass jemand zur Klausureinsicht kommt}
+         \item{Konfidenzintervall für die Wahrscheinlichkeit dass jemand zur Klausureinsicht kommt}
+         \item{Wie viele Personen werden erwartet? Wir große ist die Streuung?}
+         \item{Weiteres Beispiel für diskrete Verteilung: Poisson-Verteilung (Anzahl der Flüchtlinge pro Tag \dots)}
+          \item{\colorbox{gray}{Literatur:} 
+       \begin{itemize}
+       \item{ Ludwig-Mayerhofer: Kap. 4.1 }
+       \item{Mittag: Kap.11}
+       \end{itemize}}
+         \item{\textbf{Übung:} So wenig Fleisch im Gulasch: Kann das Zufall sein?}
+    %     \item{Intuitives Verständnis für das Gesetz der großen Zahlen}
+         \end{itemize}
+      } 
+ 
+%      \item{ \textbf{Verteilung des Mittelwerts mit wachsender Anzahl von Versuchen}
+%        \begin{itemize}
+%           \item{Mittelwert als Schätzer} % 
+%           \item{Intuitives Verständnis für Gesetz der großen Zahlen}
+%         \end{itemize}
+%    }
+   
+    \item{\textbf{\colorbox{pink}{Punktschätzer, Konfidenzintervall und Hypothesentest}(13.11.17)}
+     \begin{itemize}
+          \item{Wiederholung: Was ist eine Konfidenzintervall?} % 
+          \item{Wiederholung: Parameter der Normalverteilung}
+          \item{Definition: stetige Wahrscheinlichkeitsverteilung}
+          \item{Konfidenzintervall für $\mu,$ wenn $\sigma$ bekannt. (Beispiel: Pisa)}
+          \item{z-Test für $\mu$, Zusammenhang mit Konfidenzintervall}
+          \item{$\alpha$ und $\beta$ Fehler}
+          \item{\colorbox{gray}{Literatur:} 
+          \begin{itemize}
+       \item{ Gehring+Weins: Kap. 10.3 +11, S. 235 ff (ohne 10.4)}
+       \item{Mittag: Kap. 12.3}
+       \item{Diaz- Bone Kap. 7 S.164 ff + S.155 ff }
+       \item{Bortz Kap. 6.2 + 6.3} 
+       \end{itemize}}
+           
+     \end{itemize}
+   }
+   
+      \item{\textbf{\colorbox{pink}{Grundlage des statistischen Testens}(27.11.17)}
+     \begin{itemize}
+          \item{Wiederholung: $\chi^2$-Koeffizient (aus dem letzten Semester)} % 
+          \item{Beispiel: Ganz viel im Thüringen-Monitor?}
+          \item{Wie groß muss $\chi^2$-Koeffizient sein, damit man nicht mehr vom Zufall ausgeht? ($\chi^{2}-$ Unabhängigkeitstest)}
+          \item{Überblick: Arten von stat. Tests}
+          \item{Namen von Test, die häufig verwendet werden z. B. Gauss-Test, t- Test}
+          \item{\colorbox{gray}{Literatur:} 
+          \begin{itemize}
+       \item{Mittag: Kap. 15}
+       \item{Diaz- Bone Kap. 177 ff }
+       \item{Bortz Kap. 7,8,9} 
+       \end{itemize}}
+     \end{itemize}
+   }
+  
+     
+%     \item{\textbf{Grundlage des statistischen Testens }
+%     \begin{itemize}
+%       \item{Normalverteilung und Mittelwert}
+%       \item{Tests über den Mittelwert}
+%       \item{Konfidenzintervall für den Mittelwert }
+%       \item{Zusammenhang der Interpretation von Konfidenzintervall und Test}
+%     \end{itemize}
+%   }
+%     
+
+  
+   \item{\textbf{\colorbox{green}{Bivariate lineare Regression und Varianzanalyse}(11.12.17)}
+     \begin{itemize}
+          \item{Wiederholung aus Stat 1 } % 
+          \item{Warum Regression?}
+          \item{Testen und Schätzen in der linearen Einfachregression}
+          \item{Varianzanalyse, t-Test und Regression können angewendet werden,
+          wenn man ein normalverteiltes Merkmal in zwei Gruppen vergleicht}
+           \item{\colorbox{gray}{Literatur:} 
+          \begin{itemize}
+       \item{ Gehring+Weins: Kap. 8}
+       \item{Mittag: S. 245-254}
+       \item{Diaz- Bone Kap. 8, Anfang }
+       \end{itemize}}
+     \end{itemize}
+   }
+   
+   \item{\textbf{\colorbox{green}{Multivariate lineare Regression}(08.01.17)}
+     \begin{itemize}
+        %  \item{Kovarianz und Korrelation} % 
+          \item{Interpretation von Schätzern, Konfidenzintervallen und Tests}
+          \item{Interpretation der Regressionsgeraden und Konfidenzintervall der Regressionsgeraden}
+          \item{F-Test}
+          \item{Multikollinearität}
+          \item{\colorbox{gray}{Literatur:} 
+          \begin{itemize}
+       \item{Diaz- Bone Kap. 8, S. 189 ff }
+       \item{Ludwig-Mayerhofer: Kap. 6}
+       \item{Fahrmeir, Kneib Lang: Regression (für Details)}
+       \end{itemize}}
+     \end{itemize}
+   }
+   
+         \item{\textbf{\colorbox{green}{Varianzanalyse und Wiederholung des bisherigen Stoffes}(22.01.17)}
+    \begin{itemize}
+      \item{Vergleich von Mittelwerten in zwei Gruppen (kurze Wiederholung)}
+      \item{Vergleich von Mittelwerten in drei und mehr Gruppen}
+      \item{Wiederholung}
+       \item{\colorbox{gray}{Literatur:} 
+          \begin{itemize}
+       \item{Mittag: Kap. 17}
+       \item{Ludwig-Mayerhofer: Kap. 5.4}
+       \item{Fahrmeir, Tutz : Statistik Kap. 13}
+       \end{itemize}}
+    \end{itemize}
+  }
+%  \item{\textbf{Logistische Regression}
+%      \begin{itemize}
+%        \item{Anwendungsbeispiele }
+%        \item{KI und Test für Effekte}
+%      \end{itemize}
+%    }
+  
+ % \item{\textbf{Wiederholung}}
+  
+\end{enumerate}
+
+\textbf{Nicht enthalten}: zentraler Grenzwertsatz und Gesetz der großen Zahlen (insbesondere W'keit als Grenzwert der rel. Häufigkeit) 
+% Aufgaben der deskrip. Statistik:
+
+% ist es, die in den Daten einer Stichprobe enthaltene relevante Information in Tabellen, Grafiken und statistischen 
+% % Maßzahlen übersichtlich und in einem der Fragestellung angemessenen Format zusammenzufassen.
+
+% In der Drittvariablenkontrolle versucht man
+% Effekte zwischen zwei Variablen unter
+% Konstanthaltung (Aussschaltung) der
+% anderen ins Modell aufgenommenen
+% Variablen zu berechnen
+
+\end{document}

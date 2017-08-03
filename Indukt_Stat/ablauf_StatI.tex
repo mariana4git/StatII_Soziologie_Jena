@@ -1,0 +1,154 @@
+
+\documentclass[a4paper,fontsize=12pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel} 
+\usepackage{textcomp} 
+\usepackage[margin=1.55cm
+  %,showframe% <- only to show the page layout
+]{geometry}
+\usepackage{rotating}
+\usepackage{booktabs} 
+\usepackage{lscape}
+\usepackage{float}
+%opening
+\title{ Statistik I}
+%\subtitle{Simulation und Auswertung der simulierten Daten in Übung und Tutorium mit Hilfe von \texttt{R}}
+%\author{Mariana Nold}
+\date{\vspace{-10ex}}
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item{\textbf{Motivation: Wozu braucht man Statistik?}
+  \begin{itemize}
+    \item {Organisation und Ablauf}
+    \item {Welche Geschichte erzählen die Daten: Deskriptive Statistik}
+   % \item {Vermutung über Signal und Rauschen: Explorative Statistik}
+    \item {Ein Signal nachweisen: Induktive Statistik}
+    \item Definition: Univariate und bivariate Deskription (Definition)
+    \item Rohdaten: Merkmale, Merkmalsträger, Merkmalsausprägungen
+    \item {Transparenz ist sehr wichtig!}
+  \end{itemize}
+  }
+  \item \textbf{Qualitative Merkmale}
+  \begin{itemize}
+     \item Nominales und ordinales Messniveau (qualitative Merkmale)
+     \item {Beschreibung von qualitativen Merkmalen durch Grafiken
+       \begin{itemize}
+       \item{Einfache und gruppierte Säulendiagramme interpretieren}
+       \item{Das gruppierte Säulendigramm aus zwei Perspektiven (Rolle der abhängigen bzw.
+       unabhängigen Variable)}
+       \end{itemize}
+     }
+     \item Definition: Absolute und relative Häufigkeit
+     \item Definition: $2 \times 2$ Kreuztabellen
+     \item Definition: Univariate und bivariate Deskription in $2 \times 2$ Kreuztabellen
+  \end{itemize}
+  
+ % \item{Was sind Rohdaten?
+   
+ % }
+  \item{ \textbf{Wie analysiere ich qualitative Merkmale?}
+    \begin{itemize}
+     \item Wiederholung: $2 \times 2$ Kreuztabellen
+     \item {Der $\Phi$-Koeffizient in $2 \times 2$ Kreuztabellen}
+     \item{Univariate Deskription und Exploration 
+      \begin{itemize}
+        \item{Lagemaße: Modus und Median}
+        \item{Quantile und kumulative Häufigkeit}
+      \end{itemize}
+     } % Lagemaße, Kreis- und Balkendiagramm
+     \item{Bivariate Deskription und Exploration} % Tabllen, interaktive Grafiken (Mondrian) % Mosaik-Plot
+     \begin{itemize}
+        \item{Kreuztabellen ($k \times m$), bedingte Häufigkeit} % 
+        \item {$\chi^{2}$-Koeffizient}
+        \item{Erklärung: Zufallsschwankung (Signal und Rauschen)}
+      \end{itemize}
+    \end{itemize}
+  }
+  \item{\textbf{Signal und Rauschen trennen: Was ist Zufall}
+	\begin{itemize}
+	 \item {Die Bedingte Verteilung eines nominalen Merkmals geg. eines dichotomen Merkmals in der Theorie}
+	 \item {Beispiel: Merkmal $X$ ist dichotom ($0$ oder $1$), $Y$ hat vier Ausprägungen, $f_{Y|X}$ durch Festlegung
+	 von W.keiten}
+	 \item {Theoretische Verteilung $f_{Y|X}$ und beobachtete Daten: Man beobachtet in verschiedenen
+	 Stichproben unterschiedliche Verteilungen}
+	 \item{Unter der Bedingung $f_{Y|X=0}=f_{Y|X=1}$ welche Werte nimmt der  $\chi^{2}$-Koeffizient an?}
+	 \item{Ab wann gehen wir davon aus, dass der beobachtete Werte des  $\chi^{2}$-Koeffizient auf einen
+	 Unterschied zwischen $f_{Y|X=0}$und $ f_{Y|X=1}$ hinweist?}
+	 \item{$\chi^{2}$-Verteilung, ihre $95\%$-Quantil grafisch Verstehen}
+	 \item{Cramer's V und der (korr.) Kontingenzkoeffizient}
+	\end{itemize}
+
+  }
+  
+    \item{\textbf{Univariate Deskription  von  quantitativen Merkmalen}
+    \begin{itemize}
+    \item{Metrische Merkmale: Intervall- und Verhälnisskala}
+     \item{Lagemaße und Streuungsmaße: Modus, Median, Quantile und Mittelwert} % 
+        \item{Spannweite, Interquartilsabstand, Varianz und Standardabweichung}
+        \item{Graphische Darstellung: Boxplot und Histogramm}
+        \item{Kumulative Häufigkeit und emp. Verteilungsfunktion}
+        \item{Lageregel: symmetrische und unsymmetrische Verteilungen}
+  \end{itemize}
+  }
+  \item{ \textbf{Die Normalverteilung als univariate Modellverteilung}
+       \begin{itemize}
+       \item{Historische Einstieg in die Normalverteilung}
+            \item{Definition: Modell bzw. Modellverteilung mit der Intention zu Beschreiben}
+	    \item{Erwartungswert beschreibt die Lage des Symmetrieachse}
+	    \item{Standardabweichung beschreibt Breite der Kurve}
+	    \item{Die $68-95-99.7$-Regel}
+	    \end{itemize}
+        }
+     \item{\textbf{Multivariate Deskription und Exploration von  quantitativen Merkmalen}
+    \begin{itemize}
+          \item{Standardisierung}
+          \item{Kovarianz und Korrelation nach Pearson bei standardisierten Merkmalen}
+          \item{Korrelation nach Pearson allgemein.}
+          \item{Was ist ein gleichsinniger bzw. gegensinniger linearer Zusammenhang?}
+         \item{Korrelation und zweidimensionale lineare Regression (deskriptiv)} % 
+         \item{Graphische Darstellung: Streudiagramm und Regressionsgerade}
+    \end{itemize}
+  }
+  \item{\textbf{Bivariate Analyse von quantitativen und qualitativen Merkmalen}
+    \begin{itemize}
+      \item{Monotone Zusammenhänge und Korrelation nach Spearman}
+      \item{Kandells $\tau_{\alpha}$}
+      \item{Vergleich von Boxplots}
+      \item{Die durch die Regressionsgerade erklärte Streuung: Was ist ein Modellfehler?
+      (rein deskriptiv, einfach Beschreiben, wie gut das Modell ist)}
+    \end{itemize}
+  }
+  
+  \item{\textbf{Vergleich von Mittelwerten und das Konzept des Konfidenzintervalls}
+    \begin{itemize}
+      \item{Vergleich von Mittelwerten in zwei Gruppen}
+      \item{Wie groß muss der Unterschied sein, damit man ihn nicht durch Zufallsschwankungen
+      erklären kann.}
+      \item{Was ist ein Konfidenzintervall (KI) am Beispiel der Mittelwertdifferenz}
+       \begin{itemize}
+        \item{bei verbundener Messung}
+        \item{bei unverbundener Messung}
+       \end{itemize}
+       \item{Interpretation des KI als Menge aller Nullhypothesen, die durch die Daten nicht abgelehnt werden}
+    \end{itemize}
+  }
+  
+  %\item{\textbf{Wiederholung}}
+  
+\end{enumerate}
+
+% Aufgaben der deskrip. Statistik:
+
+% ist es, die in den Daten einer Stichprobe enthaltene relevante Information in Tabellen, Grafiken und statistischen 
+% % Maßzahlen übersichtlich und in einem der Fragestellung angemessenen Format zusammenzufassen.
+
+% In der Drittvariablenkontrolle versucht man
+% Effekte zwischen zwei Variablen unter
+% Konstanthaltung (Aussschaltung) der
+% anderen ins Modell aufgenommenen
+% Variablen zu berechnen
+
+\end{document}
