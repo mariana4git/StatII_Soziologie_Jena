@@ -1,0 +1,46 @@
+% multi: https://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/
+
+% Mit pdflatex mindestens 2mal uebersetzen und Ergebnis mit einem pdf-Viewer betrachten
+%\documentclass{beamer}
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+\documentclass[usenames,dvipsnames,handout]{beamer}
+%\usepackage[latin1]{inputenc}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel} 
+\usepackage{color}
+\usepackage{multirow,array}
+%\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{fit,arrows,calc,positioning}
+% http://tex.stackexchange.com/questions/33231/how-to-change-the-color-of-a-block-within-a-custom-beamer-sty-theme-file
+\usepackage{color}
+\definecolor{mygreen}{cmyk}{0.82,0.11,1,0.25}
+\usetheme[secheader]{Boadilla}
+\newenvironment{variableblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
+
+
+\begin{document}
+\author[Dr. Mariana Nold]{Dr. Mariana Nold}
+% \begin{center}
+\institute[Institut für Soziologie]{ Institut für Soziologie, Fakultät für Sozial- und Verhaltenswissenschaften, Lehrstuhl für
+ empirische Sozialforschung und Sozialstrukturanalyse}
+% \end{center}
+ \date{}
+\title [Deskriptive lineare Regressionsmodellierung und Streuungszerlegung]{Deskriptive lineare Regressionsmodellierung und  Streuungszerlegung}
+\date{19. Juni 2017}
+\begin{frame}
+\maketitle
+
+  \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.15\textwidth]{index.jpeg}
+ 	\end{figure}
+\end{frame}
+
+\end{document}
