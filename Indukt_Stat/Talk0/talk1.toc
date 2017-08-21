@@ -1,6 +1,0 @@
-\select@language {ngerman}
-\beamer@sectionintoc {1}{Organisatorisches}{2}{0}{1}
-\beamer@sectionintoc {2}{R\IeC {\"u}ckblick: Deskriptive Statistik}{5}{0}{2}
-\beamer@sectionintoc {3}{Statistische Inferenz}{6}{0}{3}
-\beamer@sectionintoc {4}{Zufallsvorgang}{18}{0}{4}
-\beamer@sectionintoc {5}{Zufallsvorgang am Beispiel}{22}{0}{5}
