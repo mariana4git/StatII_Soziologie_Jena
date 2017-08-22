@@ -1,0 +1,674 @@
+% multi: https://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/
+
+% Mit pdflatex mindestens 2mal uebersetzen und Ergebnis mit einem pdf-Viewer betrachten
+%\documentclass{beamer}
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+\documentclass[usenames,dvipsnames,handout]{beamer}
+%\usepackage[latin1]{inputenc}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel} 
+\usepackage{color}
+\usepackage{kpfonts}
+\newcommand{\oldtextdied}{{\fontfamily{cmr}\selectfont\textdied}}
+\newcommand{\oldtextborn}{{\fontfamily{cmr}\selectfont\textborn}}
+\usepackage{multirow,array}
+%\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{fit,arrows,calc,positioning}
+% http://tex.stackexchange.com/questions/33231/how-to-change-the-color-of-a-block-within-a-custom-beamer-sty-theme-file
+\usepackage{color}
+\definecolor{mygreen}{cmyk}{0.82,0.11,1,0.25}
+\usetheme[secheader]{Boadilla}
+\newenvironment{variableblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
+
+
+\begin{document}
+\author[Dr. Mariana Nold]{Dr. Mariana Nold}
+% \begin{center}
+\institute[Institut für Soziologie]{ Institut für Soziologie,\\ Fakultät für Sozial- und Verhaltenswissenschaften,\\ Lehrstuhl für
+ empirische Sozialforschung und Sozialstrukturanalyse}
+% \end{center}
+ \date{}
+\title [Deskriptive und Induktive Statistik]{Stetige und diskrete 
+parametrische  Wahrscheinlichkeitsverteilungen}
+\date{16. Oktober 2017}
+\begin{frame}
+\maketitle
+
+  \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.15\textwidth]{index.jpeg}
+ 	\end{figure}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Übersicht}
+  \tableofcontents
+\end{frame}
+
+
+
+\begin{frame}{Ziel der heutigen Veranstaltung \dots}
+ist es die folgenden Fragen beantworten zu können:
+\begin{block}{Zielfragen für heute}
+\begin{enumerate}
+\item{Wie interpretiert man die Normalverteilung als stetige
+parametrische Wahrscheinlichkeitsverteilung?}
+\item{Was ist die Binomialverteilung?}
+\item{Wie interpretiert man die Parameter der Binomialverteilung?}
+\item{Was bedeuten die Aussagen:}
+\begin{description}
+\item{Die Zufallsvariable $X$ ist normalverteilt.}
+\item{Die Zufallsvariable $Y$ ist binomialverteilt.}
+\end{description}
+\item{Welche Kenngrößen dienen der Beschreibung von Zufallsvariablen?}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\section{Erinnerung: Fiktive Befragung zum Taschengeld}
+
+
+
+\begin{frame}{Erinnerung: Einfache Zufallsstichprobe und Inferenzschluss}
+\begin{variableblock}{Definition: Einfache Zufallsstichprobe}{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+Eine einfache Zufallsstichprobe liegt dann vor, wenn jede der möglichen auf diese Weise gezogenen Stichproben vom Umfang n aus einer Grundgesamtheit vom Umfang N die gleiche Chance hat aufzutreten. 
+\end{variableblock}
+\begin{enumerate}
+\item{Nur bei Realisierung einer Zufallsauswahl kann von einer Stichprobe
+\textbf{mit kontrollierter Irrtumswahrscheinlichkeit} auf die zugrundeliegende
+Grundgesamtheit zurückgeschlossen werden. }
+\item{Dieser auch \textbf{Inferenzschluss} bezeichnete Rückschluss
+von Eigenschaften der Stichprobe auf Eigenschaften der Grundgesamtheit ist
+Gegenstand der induktiven Statistik.}
+\item{Ein Inferenzschluss ist stets mit Unsicherheit behaftet. Dies ergibt sich
+zwingend daraus, dass nur eine Teilinformation zu Verfügung steht.}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Erinnerung: Fiktive Befragung zum Taschengeld}
+
+\begin{itemize}
+\item{Annahme: Bei der fiktiven Stichprobe von $100$ Grundschulkindern handelt es sich um eine einfache Zufallsstichprobe.}
+\item{Die nächsten Folien sind aus der letzten Vorlesung und zeigen das Ergebnis.}
+\item{Wir wollen einen Inferenzschluss ziehen. Das heißt wir wollen eine Aussage machen, die sich auf alle
+$N$ Grundschulkinder in Jena bezieht. }
+\item{Wir gehen davon aus, dass sich die Normalverteilung eignet, um die Verteilung in der Grundgesamtheit
+zu beschreiben.}
+\item{Wir nennen die entsprechenden Parameter $\mu_{G}$ und $\sigma_{G}.$ }
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Grafische Darstellung: Empirische Verteilungsfunktion und beschreibende Verteilungsfunktion}
+        \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.55\textwidth]{taschengeld_theo.pdf}
+ 	\end{figure}
+\end{frame}
+
+\begin{frame}{Grafische Darstellung: Histogramm und deskriptive Normalverteilung}
+        \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.65\textwidth]{taschengeld_dens.pdf}
+ 	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Erinnerung: Ergebnis der fiktiven Erhebung in Zahlen}
+Wir haben die fiktive Erhebung zum Thema Taschengeld abgeschlossen und wollen herausfinden,
+ob sich die Normalverteilung eignet um die Daten zu beschreiben.
+\begin{itemize}
+\item{Ist die beobachtetet Verteilung der Daten symmetrisch?}
+\begin{itemize}
+\item{Mittelwert: $\bar{x}=12.33,$ Median (= $50\%$ Quantil): $\tilde{x}=12,34$}\pause
+\item{1. Quartil (= $25\%$ Quantil): $x_{0.25}=10.52$}\pause
+\item{3. Quartil (= $75\%$ Quantil): $x_{0.75}=14.07$}\pause
+\item{Minimum: 5.36 und Maximum: 19.2}\pause
+\end{itemize}
+\item{Sprechen die Lagemaße für eine symmetrische Verteilung?}\pause
+\item{Grafische Verfahren werden genutzt um einen Eindruck von den Daten zu bekommen. Wir setzen $\mu \equiv \hat{\mu}=\bar{x}=12.33$ und $\sigma^{2} \equiv \hat{\sigma}^{2}=7.26.$}\pause
+\item{Das Zeichen $\equiv$ bedeutet, dass wir für den Modellparameter einen bestimmten Wert einsetzen.}
+\end{itemize}
+%Lage- und Streuungsmaße (auch Quantile)
+% Begriff Zufallsvariable Mittag S. 156, FT S. 226
+%VORSICHT: mean und sd nicht echt sondern geschätzt!!!
+\end{frame}
+
+
+\begin{frame}{Die Normalverteilung }
+\begin{itemize}
+\item{Wenn wir eine symmetrische Verteilung beobachtet haben,
+haben wir die Normalverteilung genutzt um die Daten zu approximieren}
+\begin{itemize}
+\item{Entweder indem wir die Dichte durch das Histogramm der Daten legen oder}
+\item{indem wir die Verteilungsfunktion durch die empirische Verteilungsfunktion der Daten legen.}
+\end{itemize}
+\item{Wenn wir für die Parameter $\mu$ und $\sigma$ bestimmte Werte festlegen, sind damit sowohl
+die Dichte als auch die Verteilungsfunktion bestimmt.}
+\end{itemize}
+\begin{block}{Dichte als auch die Verteilungsfunktion \dots}
+sind zwei verschiedene Möglichkeiten die sich entsprechen. Wenn man eins von beiden festlegt,
+ist auch das andere bestimmt.
+\end{block}
+\end{frame}
+
+\begin{frame}{Die Parameter schätzen}
+\begin{itemize}
+\item{Wenn wir die Parameter $$\mu_{G}:=\frac{1}{N} \sum_{i=1}^{N} x_{i}$$ und 
+$$\sigma_{G}:= \sqrt {\frac{1}{N} \sum_{i=1}^{N} ( x_{i}- \mu_{G})}$$ kennen, dann kennen
+wir die Verteilung in der Grundgesamtheit.}
+\item{Wir kennen diese Parameter nicht und nutzen Verfahren um diese Parameter zu schätzen.}
+\item{Wichtig ist, dass wir die mit dieser Vorgehensweise verbundene Unsicherheit quantifizieren können.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Erinnerung: Zufallsvariable}
+Ein ganz zentraler Begriff in diesem Semester ist der der Zufallsvariable:
+\begin{variableblock}{Definition: Zufallsvariable }{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+    	Eine Variable oder ein Merkmal $X,$ dessen Werte oder Ausprägungen die Ergebnisse eines 
+    	Zufallsvorgangs sind, heißt Zufallsvariable $X.$ Die Zahl $x,$ die $X$ bei der Durchführung
+    	eines Zufallsvorgangs annimmt, heißt Realisierung oder Wert von $X$
+\end{variableblock}
+Für unser Beispiel definiere ich die Zufallsvariable  $X:$
+\begin{equation*}
+X := \text{Höhe des Taschengeld von Grundschulkind aus Jena in  Euro}
+\end{equation*}
+
+\end{frame}
+
+\begin{frame}{Eine typisches Aufgabe in der Statistik}
+\begin{enumerate}
+\item{Wir machen die Annahme das die Zufallsvariable $X$
+\begin{equation*}
+X = \text{Höhe des Taschengeld von Grundschulkind aus Jena in  Euro}
+\end{equation*} in der Grundgesamtheit normalverteilt ist. Diese Verteilung wird in der Grundgesamtheit
+festgelegt durch die Parameter $\mu_{G}$ und $\sigma_{G}.$ 
+}
+\item{Wir wollen diese Parameter durch Zahlen schätzen und so eine Aussage über die Grundgesamtheit machen.}
+\item{Wir sagen: Wir schätzen die Parameter der Verteilung der Zufallsvariable $X.$ }
+\end{enumerate}
+\end{frame}
+\section{Das Verhalten von Zufallsvariablen}
+\subsection{Die Wahrscheinlichkeitsverteilung}% Mittag S. 158
+\begin{frame}{Die Wahrscheinlichkeitsverteilung}
+
+\begin{variableblock}{Definition: Wahrscheinlichkeitsverteilung}{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+Ein Modell, welches das Verhalten einer Zufallsvariable vollständig beschreibt, nennt man Wahrscheinlichkeitsverteilung
+oder kurz Verteilung der betreffenden Zufallsvariable.
+\end{variableblock}
+\begin{itemize}
+\item{Wenn im obigen Beispiel $\mu_{G}$ und $\sigma_{G}$ bekannt sind, ist jede Wahrscheinlichkeit
+bekannt. Eben das bedeutet es, dass das Verhalten der Zufallsvariable vollständig beschrieben ist. }
+\item{Es ist z. B. möglich die Wahrscheinlichkeit zu berechnen, dass ein Kind höchstens zehn Euro Taschengeld
+bekommt.}
+\end{itemize}
+\begin{block}{Zwei Parameter genügen}
+Zur vollständigen Beschreibung des Verhaltens einer normalverteilten Zufallsvariablen $X$ genügt es,
+ ihre beiden Parameter $\mu$ und $\sigma$ zu kennen.
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Das Verhalten einer Zufallsvariable}
+\begin{block}{Verteilung einer Zufallsvariable}
+Die Begriffe ``Verhalten einer Zufallsvariable'' und ``Verteilung einer Zufallsvariable'' sind 
+gleichbedeutend. Sie legen das probabilistische Gesetz des entsprechenden Zufallsvorgangs 
+fest.
+\end{block}
+Diesen wichtigen Zusammenhang werde ich an eignen Beispielen verständlicher machen.\pause
+\begin{variableblock}{Definition: Zufallsvorgang }{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+    	Ein Zufallsvorgang führt zu einem von mehreren, sich gegenseitig ausschließenden Ergebnissen. Es ist vor der Durchführung ungewiss, welches Ergebnis
+    	tatsächlich eintreten wird.
+\end{variableblock}\pause
+\end{frame}
+
+
+% Es bedeutet, jede Wahrscheinlichkeit angeben zu können.
+%
+
+\begin{frame}{Beispiel: Befragung nach dem Taschengeld}
+\begin{itemize}
+\item{Die Befragung von Kindern nach ihrem Taschengeld ist ein Zufallsvorgang.}\pause
+\item{Wir bezeichnen diesen Vorgang mit einer Zufallsvariable $X.$}\pause
+\item{Das Verhalten dieser Zufallsvariable wird beschrieben durch Wahrscheinlichkeiten mit
+denen bestimmte Ereignisse im Zufallsvorgang eintreten.}\pause
+\item{Wenn man die Verteilung in der Grundgesamtheit kennt und eine einfache Zufallsstichprobe zieht,
+dann ist das Verhalten der Zufallsvariable $X$ vollständig bekannt.}\pause
+\item{Für die obigen Daten, kenne ich die Verteilung und damit das Verhalten der Zufallsvariable $X.$}
+\end{itemize}
+\end{frame}
+% http://onlinestatbook.com/2/sampling_distributions/samp_dist_mean.html
+% https://www.mathsisfun.com/data/standard-normal-distribution.html
+\begin{frame}{Was möchten Sie wissen?}
+Wie hoch ist die Wahrscheinlichkeit, dass \dots
+\begin{itemize}
+\item{die ersten drei Kinder die befragt werden in der Summe weniger als $33$ Euro Taschengeld bekommen?}\pause
+\item{$28.19\%$}\pause
+\item{Die ersten zwei befragten Kinder jeweils höchstens $12$ Euro Taschengeld erhalten?}\pause
+\item{$25\%$}
+\item{Wie hoch ist die Wahrscheinlichkeit, dass der Mittelwert einer Stichprobe von $10$ Kindern
+mindestens den Wert $10$ hat?}\pause
+\item{$98.25\%$}
+\end{itemize}\pause
+
+\end{frame}
+
+\begin{frame}{Die stetige Wahrscheinlichkeitsverteilung}
+\begin{block}{Eine Zahl hat immer die Wahrscheinlichkeit Null}
+Es ist eine Eigenschaft von stetigen Wahrscheinlichkeitsverteilungen, dass eine konkrete Zahl mit
+Wahrscheinlichkeit Null auftritt.
+\end{block}
+\begin{itemize}
+\item{Man kann eine Zahl beliebig genau angeben, wenn die Zahl Realisation einer stetigen Zufallsvariable ist.}\pause
+\item{Daher macht es  bei stetigen Variablen keinen Sinn, nach der Wahrscheinlichkeit zu fragen, dass genau
+ein bestimmter Wert angenommen wird.}\pause
+\item{Man kann z. B. fragen, wie hoch die Wahrscheinlichkeit ist, dass ein Kinder gerundet auf ganze Euro $12$
+Euro Taschengeld bekommt. Dann fragt man nach dem Intervall $[11.5,12.5).$}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Diskrete Zufallsvariable}
+
+\begin{frame}{Stetige und diskrete Zufallsvariablen}% Mittag S. 156
+Wenn man die Ausprägungen eines Merkmals als Ergebnis eines Zufallsvorgang interpretiert,
+spricht man das Merkmal als Zufallsvariable an und die Ergebnisse des Zufallsvorgangs als Realisierungen
+oder Werte
+der entsprechenden Zufallsvariable.
+\begin{itemize}
+\item{Eine Zufallsvariable heißt stetig, wenn gilt: Wenn die Zufallsvariable die Werte $a$ und $b$ annehmen kann,
+dann kann sie auch jeden Wert zwischen $a$ und $b$ annehmen.}\pause
+\item{Bei einer diskreten Zufallsvariable ist die Anzahl der Werte abzählbar. Das heißt man kann sie den natürlichen Zahlen
+zuordnen. Diese sind \{1,2,3,\dots\}}\pause
+\item{Insbesondere ist jede Zufallsvariable mit endlich vielen Ausprägungen diskret.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Beispiele für diskrete Zufallsvariablen} 
+\begin{itemize}
+\item{Anzahl der Kinder die $2018$ geboren werden.}\pause
+\item{Anzahl der SMS die Sie heute bekommen.}\pause
+\item{Das Geschlecht einer befragten Person.}
+\end{itemize}
+Die bekanntesten diskreten Verteilungen sind die\pause
+\begin{enumerate}
+\item{Bernoulliverteilung}\pause
+\item{Binomialverteilung}\pause
+\item{Poissonverteilung}\pause
+\end{enumerate}
+Ich möchte Sie mit der Bernoulliverteilung und der Binomialverteilung vertraut machen.\\
+Die Bernoulliverteilung ist ein Spezialfall der Binomialverteilung.
+\end{frame}
+
+%\begin{frame}{Das Verhalten von Zufallsvariablen am Beispiel der Klausureinsicht}
+%\end{frame}
+%
+%\begin{frame}
+%\begin{equation*}
+%Y := \text{Anzahl der Studierenden, die zur Klausureinsicht kommen}
+%\end{equation*}
+%\end{frame}
+
+\begin{frame}{Beispiel: Wie oft trifft ein Basketballer den Korb?}
+\begin{itemize}
+\item{Ein Basketballer hat zehn versuche auf einen Korb zu werfen.}
+\item{Diesen Vorgang können wir als  Zufallsvorgang  interpretieren.
+  \[
+     Z_{i}=\left\{\begin{array}{ll} 1, & \text{Treffer bei $i.$ Wurf } \\
+         0, &  \text{kein Treffer bei $i.$ Wurf}\end{array}\right.,
+  \]
+  wobei der Index $i$ die Zahlen von $1$ bis $10$ annehmen kann.
+}
+\item{$z_{1}=0,z_{2}=1,z_{3}=0$ bedeutet, dass von den ersten drei Würfen nur der zweite ein Treffer war.}
+\end{itemize}
+Die Zufallsvariable $Y$ ist gleich:
+\begin{equation*}
+Y := \text{Anzahl der Treffer bei $10$ Würfen}=\sum_{i=1}^{10} Z_{i}.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Das Verhalten der Zufallsvariable $Y$}
+Wenn wir das Verhalten der Zufallsvariable $Y$ kennen, können wir alle Fragen
+über Ereignisse mit Bezug auf diese Variable beantworten:\\
+Wie wahrscheinlich ist es, dass \dots
+\begin{itemize}
+\item{\dots kein einziger Treffer erzielt wird?}
+\item{\dots genau ein Treffer erzielt wird?}
+\item{\dots weniger als acht Treffer erzielt werden?}
+\item{\dots mindestens drei Treffer erzielt werden?}\pause
+\end{itemize}
+Dieses Beispiel stammt aus dem Abitur 2008 in NRW und \dots
+\end{frame}
+
+\begin{frame}{Fiasko beim Zentralabitur 2008 in NRW}
+\begin{itemize}
+\item{In NRW gab es erhebliche Kritik an einer Aufgabe zur Wahrscheinlichkeitstheorie im Abitur 2008.}\pause
+\item{Den Schülerinnen und Schülern wurde sogar angeboten, die Prüfung zu wiederholen.}\pause
+\item{Damit Sie verstehen können, was passiert ist, möchte ich Ihnen zunächst die Aufgabenstellung
+vorlesen und dann das Modell der Binomialverteilung zunächst am Beispiel der Werfens einer Münze 
+einführen.}\pause
+\item{Kann man das selbe Modell nutzen, um das Werfen einer Münze und das Werfen eines Basketballers auf einen Korb
+zu modellieren?}\pause
+\item{Man brauch eine Modellebene um Daten zu analysieren und eben bei der Wahl der Modellierung für diese Modelleben kann auch
+viel schief gehen.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Was soll ein  Modell leisten?}
+\begin{itemize}
+\item{Die soziale Wirklichkeit wird von probabilistischen Gesetzen bestimmt.}\pause
+\item{Die Verteilung der Zufallsvariable ist ein \textbf{ Modell}, welches das Verhalten der entsprechenden Zufallsvariable vollständig beschreibt.}\pause
+\item{Es geht nicht darum, die Wirklichkeit in einem Modell abzubilden. }\pause
+\end{itemize}
+\begin{block}{All models are wrong, but some are useful (Zitat von G. Box)}
+Now it would be very remarkable if any system existing in the real world could be exactly represented by any simple model.  \dots
+For such a model there is no need to ask the question ``Is the model true?". If ``truth'' is to be the ``whole truth" the answer must be ``No". The only question of interest is ``\textbf{Is the model illuminating and useful?}".
+\end{block}
+\end{frame}
+%https://en.wikipedia.org/wiki/All_models_are_wrong
+\begin{frame}{Was kann ein Modell leisten?}
+"The most that can be expected from any model is that it can supply a useful approximation to reality: \textbf{All models are wrong, some models are useful}"
+%GeorgeEPBox.jpg
+  \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.25\textwidth]{GeorgeEPBox.jpg}
+ 	      \caption{George  Box, \oldtextborn 1919- \oldtextdied 2013}
+ 	\end{figure}
+\end{frame}
+
+%  \[
+%     Z_{i}=\left\{\begin{array}{ll} 1, & \text{Treffer bei $i.$ Wurf } \\
+%         0, &  \text{kein Treffer bei $i.$ Wurf}\end{array}\right.,
+%  \]
+%  wobei der Index $i$ die Zahlen von $1$ bis $10$ annehmen kann.
+%}
+%\item{$z_{1}=0,z_{2}=1,z_{3}=0$ bedeutet, dass von den ersten drei Würfen nur der zweite ein Treffer war.}
+%\end{itemize}
+%Die Zufallsvariable $Y$ ist gleich:
+%\begin{equation*}
+%Y := \text{Anzahl der Treffer bei $10$ Würfen}=\sum_{i=1}^{10} Z_{i}.
+%\end{equation*}
+
+\begin{frame}{Die Binomialverteilung am Beispiel Münzwurf}% Mittag S. 
+Wir Beginnen mit dem Werfen einer Münze und lernen das Modell der Binomialverteilung kennen. 
+\begin{itemize}
+\item{Nehmen Sie eine Münze und Werfen Sie diese zehn mal.\\ Wir legen fest: Treffer=Zahl}
+\item{Es sei 
+  \[
+     \tilde{Z}_{i}=\left\{\begin{array}{ll} 1, & \text{Treffer bei $i.$ Münzwurf } \\
+         0, &  \text{kein Treffer bei $i.$ Münzwurf}\end{array}\right.,
+  \]
+}
+\item{Notieren Sie das Ergebnis der Zufallsvariable 
+\begin{equation*}
+\tilde{Y} := \text{Anzahl der Treffer bei $10$ Münzwürfen}=\sum_{i=1}^{10} \tilde{Z}_{i}
+\end{equation*}
+und heben Sie den Zettel auf.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Die Verteilung der Zufallsvariable $\tilde{Z}_{i}$}
+Zwei zentrale Eigenschaften:
+\begin{enumerate}
+\item{Die Wahrscheinlichkeit für einen Treffer ist $50\%.$}
+\item{Die einzelnen Münzwürfe sind unabhängig, d. h. wenn Sie beim ersten Wurf einen Treffer
+hatten, hat es keinen Einfluss auf den zweiten Wurf.}\pause
+\end{enumerate}
+\begin{itemize}
+\item{Mit Gesetzen der Wahrscheinlichkeitstheorie lässt sich damit die Verteilung von $\tilde{Y}$ herleiten. 
+Man nennt sie Binomialverteilung.}
+\item{Die Verteilung der Zufallsvariablen $\tilde{Z}_{i}$ ist jeweils identisch (also 
+$\tilde{Z}_{1}$ hat die selbe Verteilung wie $\tilde{Z}_{2}$ und wie $\tilde{Z}_{3}$ \dots). Sie heißt Bernoulliverteilung.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Die Bernoulliverteilung} %FT S.228,229
+\begin{variableblock}{Definition: Binäre Variable und  Bernoulliverteilung}{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+Es sein ein Ereignis mit $A$ bezeichnet.
+Die Zufallsvariable  V
+  \[
+     \tilde{V}=\left\{\begin{array}{ll} 1, & \text{falls $A$ eintritt } \\
+         0, &  \text{falls $A$ nicht eintritt }\end{array}\right.,
+  \] kann die Werte $\{0,1\}$ annehmen und indiziert, ob $A$ eintritt oder nicht. Sie heißt \textbf{binäre Variable.}\\
+  Wenn die Wahrscheinlichkeit dass $A$ eintritt mit $p$ bezeichnet wird, also $\mathbb{P}(A)=p,$ so folgt
+  \begin{equation*}
+ \mathbb{P}(V=1) = p, \:\:\: \mathbb{P}(V=0) = 1-p.
+\end{equation*}
+Diese heißt Bernoulliverteilung. Man schreibt:
+ $$ V \sim Be(p)$$
+\end{variableblock}
+\end{frame}
+
+
+
+\begin{frame}{Die Binomialverteilung}
+\begin{variableblock}{Definition: Binomialverteilung}{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+Wenn man ein Zufallsvariable $U$ auffassen kann als die Summe von $n$ unabhängig und identisch Bernoulli-verteilten
+Zufallsvariablen $V_{i},$ $i \in \{1, \dots, n\},$ dann nennt man die Verteilung dieser Zufallsvariable Binomialverteilung.
+Man schreibt:
+ $$ U \sim Bin(n,p)$$
+\end{variableblock}\pause
+In Formelsprache:\pause
+  \begin{equation*}
+V_{i} \sim Be(p), \: iid, \: i \in \: \{1, \dots n\}
+\end{equation*}
+  \begin{equation*}
+U := \sum_{i=1}^{n} V_{i}.
+\end{equation*}
+ (iid = independent identically distributed)
+\end{frame}
+
+% Wahrscheinlichkeitsfunktion und verteilung (diskret u. stetig)
+% kann man in Formeln angeben oder grafisch
+% die Formeln brauchen wir nicht
+\begin{frame}{Wahrscheinlichkeitsfunktion bzw. Dichtefunktion}
+\begin{itemize}
+\item{Man kann die Verteilung von stetigen und diskreten Zufallsvariablen in mathematischen Formeln
+aufschreiben. }\pause
+\item{Die Formeln sind ein Möglichkeit ein probabilistisches Gesetzt auszudrücken. Man nennt sie Dichte(funktion)
+oder Wahrscheinlichkeitsfunktion.}\pause
+\item{Sie haben bereits die Dichte der Normalverteilung kennengelernt. Allerdings nicht in Form
+einer mathematischen Ausdrucks sondern grafisch.}\pause
+\item{Wir brauchen um die Kernkompetenzen umsetzen zu können, diese mathematischen Ausdrücke nicht.}\pause
+\item{Sie sollten allerdings wissen, dass es sie gibt und sie sollten die entsprechenden Grafiken interpretieren können.}
+\end{itemize}
+\end{frame}
+%https://www.stat.berkeley.edu/~stark/Java/Html/BinHist.htm
+%viel besser:
+%https://www.geogebra.org/m/CmHJuJxs
+
+\begin{frame}{Der 10-fache Münzwurf: Wie hoch ist die Wahrscheinlichkeit, dass \dots}
+  \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.55\textwidth]{muenze.pdf}
+ 	   %   \caption{George  Box, \oldtextborn 1919- \oldtextdied 2013}
+ 	\end{figure}
+\end{frame}
+
+\begin{frame}{Wie ist die relative Häufigkeit hier im Hörsaal?}
+\begin{itemize}
+\item{Bitte werfen Sie ihr Ergebnis in den Korb.}
+\item{Ich kann das Histogramm der relativen Häufigkeit erstellen.}
+\item{Es sollte der Binomialverteilung ähnlich sein. Der Vergleich erfolgt in er Übung.}
+\item{Bitte nutzen Sie den folgenden Link: \url{https://www.geogebra.org/m/CmHJuJxs}\\
+um die Binomialverteilung kennen zu lernen.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Für welche realen Mechanismen ist die Binomialverteilung ein gutes Modell?}
+\begin{itemize}
+\item{Es gibt zwei Parameter $n$ und $p.$}\pause
+\item{Man nennt $n$ die Anzahl der Versuche und $p$ die (Treffer-)Wahrscheinlichkeit.}\pause
+\item{Man stellt sich $n$ unabhängige binäre Variablen vor, die summiert werden.}\pause
+\item{Beispiele:
+\begin{itemize}
+\item{Wenn man $20$ Personen (jeweils einzeln) fragt, ob sie die Grünen bei einer Bundestagswahl wählen würden.
+Wie ist $p$ hier zu interpretieren?}\pause
+\item{p: Anteil der Personen, die die Grünen wählen würden.}
+\item{Treffer wenn eine Person $10$ mal auf einen Basketballkorb wirft und man annimmt,
+sie trifft mit $20\%$ und zwar unabhängig.}\pause
+\end{itemize}
+}
+\end{itemize}
+\end{frame}
+\subsection{Aufgabenstellung im Mathe-Abi 2008: Wo lag das Problem?}
+%\subsection{Die Aufgabenstellung}
+\begin{frame}{Die Aufgabenstellung: }%Mittag S.
+Wir wollen die Aufgabe nicht lösen, sondern überlegen, ob die Binomialverteilung hier anwendbar ist.\\ \pause
+\begin{block}{Die Aufgabenstellung: E-Book von H.-J. Mittag S. 175}
+Der deutsche Basketball-Profi Dirk Nowitzki spielte in der amerikanischen Profiliga beim Club Dallas Mavericks. In der Saison 2006/07
+erzielte er bei Freiwürfen eine Trefferquote von $90.4\%.$ Berechnen Sie die Wahrscheinlichkeit dafür, dass er
+\begin{itemize}
+\item[(1)]{genau $8$ Treffer bei $10$ Versuchen erzielt,}
+\item[(2)]{höchstens $8$ Treffer bei $10$ Versuchen erzielt,}
+\item[(3)]{höchstens viermal nacheinander bei Freiwürfen erfolgreich ist.}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Einige Kritikpunkte an der Aufgabenstellung}
+\begin{itemize}
+
+\item{Die Analogie zwischen Freiwurf und Münzwurf liegt auf der Hand: Es sind binäre Merkmale}\pause
+\item{Identische Verteilung: Beim Münzwurf bleibt die Wahrscheinlichkeit dafür Zahl zu werfen, von Wurf zu Wurf konstant. Trifft das auch
+auf den Freiwurf beim Basketball zu?}\pause
+\item{Beim Münzwurf sind die Würfe unabhängig, gilt das auch beim Freiwurf?}\pause
+\item{Beim Münzwurf lässt sich die Trefferwahrscheinlichkeit von $0.5$ aus physikalischen Gründen als beständig ansehen.
+Gilt das auch für die Trefferquote von $90.4\%$ ?}
+\item{Der Teil (3) der Aufgabenstellung ist unvollständig und daher \colorbox{yellow!20}{nicht lösbar.} Hier fehlt die Anzahl der
+Versuche $n.$}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Welches Modell eignet sich?}
+\begin{description}
+\item{An der Aufgabe lässt sich verdeutlichen, wie wichtig es ist, zwischen empirischen Befunden (Datenebene) und
+Modellansätzen zur approximativen Beschreibung solcher Befunde (Modellebene) zu unterscheiden.}\pause
+\item{Es wird auch deutlich: Es ist ein Unterschied, ob man Daten die vorliegen beschreibt, oder ob man beruhend auf 
+diesen Daten eine Vorhersage machen möchte, für zukünftige Ereignisse.}\pause
+\item{Man kann darüber diskutieren, ob sich das Modell der Binomialverteilung hier als nützlich erweist. (" All models are wrong, some models are useful")}\pause
+%\item{Man kann diese Frage nicht klar mit ja oder nein beantworten.}
+%\item{Ein Modell bedeutet immer einen Kompromiss zu machen zwischen einer komplexen Wirklichkeit und dem Wunsch 
+%probabilistische Gesetzmäßigkeiten dieser Wirklichkeit entdecken zu können.}
+\end{description}
+\end{frame}
+
+\begin{frame}{Daten- und Modellebene}% Mittag S. 158
+\begin{description}
+\item{Zwischen empirischen Verteilungen von Merkmalen (Häufigkeitsverteilungen) und theoretischen
+Verteilungen von Zufallsvariablen gibt es zentrale Analogien.}\pause
+\item{Wichtig ist die Unterscheidung beider Konzepte, also Daten- und Modellebene.}\pause
+\item{Verteilungen von Zufallsvariablen sind als Modelle zu verstehen, die oft gut geeignet sind, \textbf{Strukturen und Gesetzmäßigkeiten,}
+die großen Datenmengen zu Grunde liegen können, \textbf{zu approximieren.}}
+\end{description}
+\end{frame}
+\section{Kenngrößen  einer Zufallsvariable}
+
+\begin{frame}{Empirische Verteilung und theoretische Verteilung}
+       
+       \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.55\textwidth]{taschengeld_theo.pdf}
+ 	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Kenngrößen für Zufallsvariablen}% Mittag S. 158
+Wie bei empirischen Verteilungen lassen sich auch bei theoretischen Verteilungen Kenngrößen angeben, die das \textbf{Zentrum der Verteilung}
+beschreiben oder die \textbf{Variabilität der Zufallsvariable,} die dieser Verteilung folgt.
+\begin{itemize}
+%\item{ }
+\item{Im letzten Semester hatten wir in der deskriptiven Statistik Lage- und Streuungsmaße verwendet, um empirische Verteilungen zu beschreiben. }
+\item{Wen man mit Daten arbeitet beschreibt man die empirische Verteilung.}
+\item{Wenn man mit Modellen für Zufallsvariablen arbeitet, beschreibt man die (theoretische) Verteilung.}
+%\item{Wenn wir die theoretische Verteilung beschreiben, wollen wir von Lage- und Streuungs\textbf{parametern} sprechen. Bei der empirischen
+%Verteilung von Lage- und Streuungs\textbf{maßen}. }
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Wiederholung: Lagemaße in der deskriptiven Statistik}
+ \begin{table}[ht]
+\centering
+%\caption{Was darf ich mit den Ausprägungen tun?}
+\begin{center}
+\caption{Messniveau und Lagemaße}
+\begin{tabular}{c|c|c|c|c}
+	\hline
+	\multicolumn{5}{c}{Zulässige Lagemaße}\\ \hline
+	Skala& Modus & Median & Quantile & Mittelwert\\\hline
+	Nominals.    & \colorbox{green!30}{ja} & \colorbox{red!30}{nein} & \colorbox{red!30}{nein} & \colorbox{red!30}{nein} \\
+	Ordinals.    & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{orange!30}{jein\footnote{Eigentlich nein, aber es gibt Merkmale, die sich als ordinal oder intervallskaliert auffassen lassen.}} \\ \hline
+	Intervalls.  & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja}\\
+	Verhältniss. & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} \\
+	\hline
+\end{tabular}
+\end{center}
+\label{tab:multicol0}
+\end{table}
+\end{frame}
+
+\begin{frame}{Wiederholung: Streuungsmaße in der deskriptiven Statistik}
+ \begin{table}[ht]
+\centering
+%\caption{Was darf ich mit den Ausprägungen tun?}
+\begin{center}
+\caption{Messniveau und Streuungsmaße}
+\begin{tabular}{c|c|c|c|c}
+	\hline
+	\multicolumn{5}{c}{Zulässige Streuungsmaße}\\ \hline
+	Skala& Spannweite & Interquartilsabst.& Varianz & Standardab.\\\hline
+	Nominals.    & \colorbox{red!30}{nein} & \colorbox{red!30}{nein} & \colorbox{red!30}{nein} & \colorbox{red!30}{nein} \\
+	Ordinals.    & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{red!30}{nein} & \colorbox{red!30}{nein} \\ \hline
+	Intervalls.  & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja}\\
+	Verhältniss. & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} & \colorbox{green!30}{ja} \\
+	\hline
+\end{tabular}
+\end{center}
+\label{tab:multicol0}
+\end{table}
+\end{frame}
+
+\begin{frame}{Lagemaße und Streuungsmaße einer Zufallsvariable}
+Häufig verwendete  Lagemaße der Verteilung einer Zufallsvariable sind:
+\begin{itemize}
+\item{der Erwartungswert}
+\item{und die (theoretischen) Quantile}
+\end{itemize}
+Häufig verwendete Streuungsmaße der Verteilung einer Zufallsvariable sind:
+\begin{itemize}
+\item{die (theoretische) Varianz}
+\item{und ihre Wurzel die (theoretischen) Standardabweichung}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Erwartungswert}
+Der Erwartungswert einer Zufallsvariable wird gebildet indem man die Werte die die Zufallsvariable annehmen kann mit der entsprechenden
+Wahrscheinlichkeit gewichtet.
+\begin{description}
+\item{Bei stetigen Zufallsvariablen entspricht das mathematisch einer Integration.}\pause
+\item{Bei diskreten Zufallsvariablen ist die Berechnung sehr ähnlich zur Berechnung des Mittelwertes. Man gewichtet die Ausprägung mit der Wahrscheinlichkeit.}\pause
+\item{Für das Beispiel 10-facher Münzwurf werden wir uns diese Analogie in der Übung ansehen.}
+\end{description}
+\end{frame}
+
+\begin{frame}{Erwartungswert und Varianz der Normal- und Binomialverteilung}
+\begin{description}
+\item{Der Erwartungswert der Normalverteilung entspricht dem Parameter $\mu.$ Die Standardabweichung ist $\sigma,$
+die Varianz ist $\sigma^{2}.$}
+\item{Die Normalverteilung ist durch Angabe von $\mu$ und $\sigma$ eindeutig bestimmt.}
+\item{Der Erwartungswert der Binomialverteilung entspricht ist $n \cdot p.$ Die Standardabweichung ist $n \cdot p \cdot (1-p).$
+}
+\end{description}
+\end{frame}
+\end{document}
+

@@ -1,0 +1,761 @@
+% multi: https://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/
+
+% Mit pdflatex mindestens 2mal uebersetzen und Ergebnis mit einem pdf-Viewer betrachten
+%\documentclass{beamer}
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+\documentclass[usenames,dvipsnames,handout]{beamer}
+%\usepackage[latin1]{inputenc}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel} 
+\usepackage{color}
+\usepackage{multirow,array}
+%\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{fit,arrows,calc,positioning}
+% http://tex.stackexchange.com/questions/33231/how-to-change-the-color-of-a-block-within-a-custom-beamer-sty-theme-file
+\usepackage{color}
+\definecolor{mygreen}{cmyk}{0.82,0.11,1,0.25}
+\usetheme[secheader]{Boadilla}
+\newenvironment{variableblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
+
+
+\begin{document}
+\author[Dr. Mariana Nold]{Dr. Mariana Nold}
+% \begin{center}
+\institute[Institut für Soziologie]{ Institut für Soziologie,\\ Fakultät für Sozial- und Verhaltenswissenschaften,\\ Lehrstuhl für
+ empirische Sozialforschung und Sozialstrukturanalyse}
+% \end{center}
+ \date{}
+\title [Deskriptive und Induktive Statistik]{Stetige und diskrete 
+parametrische  Wahrscheinlichkeitsverteilungen}
+\date{16. Oktober 2017}
+\begin{frame}
+\maketitle
+
+  \begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.15\textwidth]{index.jpeg}
+ 	\end{figure}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Übersicht}
+  \tableofcontents
+\end{frame}
+
+\section{Themen und Ziele}
+
+\begin{frame}{Ziel der heutigen Veranstaltung \dots}
+ist es die folgenden Fragen beantworten zu können:
+\begin{block}{Zielfragen für heute}
+\begin{enumerate}
+\item{Wie interpretiert man die Normalverteilung als stetige
+parametrische Wahrscheinlichkeitsverteilung?}
+\item{Was ist die Binomialverteilung?}
+\item{Wie interpretiert man die Parameter der Binomialverteilung?}
+\item{Was bedeuten die Aussagen:}
+\begin{enumerate}
+\item{Die Zufallsvariable $X$ ist normalverteilt.}
+\item{Die Zufallsvariable $Y$ ist binomialverteilt.}
+\end{enumerate}
+%\item{Was ist eine einfache Zufallsstichprobe?}
+%\item{Was ist die Normalverteilung und wie kann man sie nutzen,
+%um einen Datensatz zu beschreiben?}
+%\item{Was versteht man unter einem Inferenzschluss?}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Kernkompetenzen}
+Folgende Kernkompetenzen sollen Sie im Laufe des Semesters aufbauen:
+\begin{block}{Statistische Methoden}
+\begin{enumerate}
+\item{Daten selbst analysieren: Thüringen-Monitor 2015 und Pisa-Daten mit \texttt{STATA}}
+\item{Statistische Informationen nutzen und sachadäquat interpretieren: \texttt{STATA}-Output und Information aus Presse oder Fachliteratur }
+\item{Statistische Ergebnisse verständlich kommunizieren, wesentliche Aussagen in eigenen Worten ausdrücken können}\\
+\vspace{0.5cm}
+\textbf{Voraussetzung dafür:}
+\begin{itemize}
+\item{Zentrale Definition kennen und verstehen}
+\item{Den Umgang mit \texttt{STATA} üben}
+\end{itemize}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Ziel der heutigen Veranstaltung \dots}
+ist es die folgenden Fragen beantworten zu können:
+\begin{block}{Zielfragen für heute}
+\begin{enumerate}
+\item{Welche Intention hat die deskriptive Statistik?}
+\item{Welche Intention hat die induktive Statistik?}
+\item{Was ist ein Zufallsvorgang?}
+\item{Was ist eine einfache Zufallsstichprobe?}
+\item{Was ist die Normalverteilung und wie kann man sie nutzen,
+um einen Datensatz zu beschreiben?}
+\item{Was versteht man unter einem Inferenzschluss?}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Thematische Schwerpunkte in diesem Semester}
+Es gibt in diesem Semester drei thematische Schwerpunkte:
+\begin{enumerate}
+\item{\colorbox{blue!10}{Probabilistische Gesetze:   }
+\begin{itemize}
+\item{Was ist eine Zufallsvorgang bzw. eine Zufallsvariable?}
+\item{Was ist eine parametrische  Wahrscheinlichkeitsverteilung?}
+\end{itemize}
+}
+\item{\colorbox{green!40}{Testen und Schätzen:} 
+\begin{itemize}
+\item{Wie kommt man zu einer Punktschätzung?}
+\item{Was ist ein Konfidenzintervall?}
+\item{Auf welchen Prinzipien beruht das Konzept des Hypothesentests?}
+\end{itemize}
+}
+\item{ \colorbox{violet!40}{Regression und Varianzanalyse}
+\begin{itemize}
+\item{Wie interpretiert man die Regressionskoeffizienten im linearen Regressionsmodell?}
+\item{Wie nutzt man die Varianzanalyse zum Mittelwertvergleich bei mehr als zwei Gruppen?}
+\end{itemize}
+}
+\end{enumerate}
+\end{frame}
+
+
+
+%\subsection{Die Vorlesung}
+ \begin{frame}
+ \frametitle{Übersicht über die Vorlesungen (jeweils Montag 10-12 Uhr)}%
+    \begin{table}
+  %  \caption{Mit zwei Ausnahmen findet die Vorlesung $14$-tägig statt}
+\begin{center}
+\caption{\colorbox{yellow!40}{Es gibt ein Aufgabenblatt zur Abgabe}}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Nr. & Datum & Thema \\ \hline
+    0 &   $ 16.10.2017$   &  \colorbox{blue!10}{  Der Zufallsvorgang und der Inferenzschluss}   \\ \hline
+    \colorbox{yellow!40}{1} &  $23.10.2017$  &   \colorbox{blue!10}{Die parametrische  Wahrscheinlichkeitsverteilung } \\ \hline
+    \colorbox{yellow!40}{2} &   $13.11.2017$   &   \colorbox{green!40}{Punktschätzer und Konfidenzintervalle }\\ \hline
+    \colorbox{yellow!40}{3} &   $27.11.2017$   &   \colorbox{green!40}{Grundlagen des statistischen Testens}\\ \hline
+%    \multirow{2}{*}{3} &  \multirow{2}{*}{$27.11.2017$}& \colorbox{red!20}{Grundlagen des statistischen Testens}\\
+%               &               & von quantitativen Merkmalen\\ \hline
+  \multirow{2}{*}{\colorbox{yellow!40}{4}} &  \multirow{2}{*}{$11.12.2017$}& \colorbox{violet!40}{Bivariate lineare Regression} \\
+                   &        & \colorbox{violet!40}{und Varianzanalyse}\\ \hline  
+    \colorbox{yellow!40}{5} & $08.01.2018$      &  \colorbox{violet!40}{Multiple lineare Regression}  \\ \hline   
+    6 &   $22.01.2018$     &  \colorbox{violet!40}{Varianzanalyse} \\ \hline
+  \end{tabular}
+  \end{center}
+  \label{tab:multicol}
+  \end{table}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+ \frametitle{Übersicht über die Übungsgruppen }%
+ %Die Übung findet dienstags statt, jeweils von 10-12 Uhr und 14-16 Uhr
+ \begin{itemize}
+ \item{Die Übung findet 14-tägig statt (1. Woche Gruppen 1 und 3, 2.Woche Gruppen 2 und 4 )}
+ \item{Die Übung findet dienstags statt, jeweils von 10-12 Uhr (1 und 3) und 14-16 Uhr (2 und 4)}
+ \end{itemize}
+    \begin{table}
+ %   \caption{Die Übung findet $14$-tägig statt}
+\begin{center}
+ \begin{tabular}{|c|c|c|}
+    \hline
+   Übung Nr.    &    Datum Gruppe   1 u. 3 &  Datum  Gruppe  2 u. 4      \\ \hline
+    $1$   &   $24.10.2017$   &  07.11.2017         \\ \hline
+    $2$   &   $14.11.2017$   &  21.11.2017          \\ \hline
+    $3$   &   $28.11.2017$   &  05.12.2017         \\ \hline
+    $4$   &   $12.12.2017$   &  19.12.2017         \\ \hline
+    $5$   &   $09.01.2018$   & 16.01.2017           \\ \hline
+    $6$   &   $23.01.2018$   & 30.01.2017           \\ \hline
+  \end{tabular}
+  \end{center}
+  \label{tab:multicol}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Übersicht über die Tutorien }%
+ %Die Übung findet dienstags statt, jeweils von 10-12 Uhr und 14-16 Uhr
+ \begin{itemize}
+ \item{Das Tutorium findet 14-tägig statt (1. Woche Gruppen 1 und 3, 2.Woche Gruppen 2 und 4 )}
+ \item{Das Tutorium findet dienstags statt, jeweils von 16-18 Uhr  und 18-20 Uhr }
+ \item{Der Besuch ist freiwillig und sehr zu empfehlen, sie dürfen mehre Tutorien besuchen.}
+ \end{itemize}
+    \begin{table}
+ %   \caption{Die Übung findet $14$-tägig statt}
+\begin{center}
+ \begin{tabular}{|c|c|c|}
+    \hline
+   Übung Nr.    &    Datum Gruppe   1 u. 3 &  Datum  Gruppe  2 u. 4      \\ \hline
+    $1$   &   $24.10.2017$   &  07.11.2017         \\ \hline
+    $2$   &   $14.11.2017$   &  21.11.2017          \\ \hline
+    $3$   &   $28.11.2017$   &  05.12.2017         \\ \hline
+    $4$   &   $12.12.2017$   &  19.12.2017         \\ \hline
+    $5$   &   $09.01.2018$   & 16.01.2017           \\ \hline
+    $6$   &   $23.01.2018$   & 30.01.2017           \\ \hline
+  \end{tabular}
+  \end{center}
+  \label{tab:multicol}
+  \end{table}
+\end{frame}
+
+\begin{frame}{Die Abgabe der Aufgabenblätter}
+\begin{itemize}
+ \item{Sie geben wieder in Gruppen (3-4 Personen) ab, in diesem Semester gibt es ein standardisiertes Deckblatt, dieses finden Sie unter \dots}\pause
+  \item{Falls Sie das Aufgabenblatt aus gesundheitlichen Gründen nicht abgeben können,
+  wird das auf dem Deckblatt vermerkt.}\pause
+  \item{Bitte Gruppe anmelden bei \dots}
+  \item{Die Lösungen werden in den Übungen zurückgegeben. Bei der Anmeldung wird festgelegt,
+  in welcher Gruppe ihr Blatt zurück gegeben werden soll.}
+  \item{Das letzte Aufgabenblatt ist das Blatt 5, es erscheint am Freitag den 5. Januar. 
+  Die Abgabe des letzten Aufgabenblattes ist am Freitag den 19. Januar}\pause
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Die Klausur}
+ \begin{itemize}
+%\item {In der Woche vom 22. Januar bis 26. Januar erfolgt die Zulassung}\pause
+\item {Sie müssen bei vier von fünf Aufgabenblättern mindestens $50\%$ richtig gelöst haben, um an der Klausur teilnehmen zu dürfen.}\pause
+  \item {Die Klausur findet am Montag den 12. Februar um 10-12 Uhr statt.}\
+  \item {Die Nachholklausur findet am Montag den 12. Februar um 10-12 Uhr statt.}
+  \item {Das Aufgabenblatt 6 wird durch eine Probeklausur ersetzt. 
+  \begin{itemize}
+  \item{So können Sich mehr auf die Art der Aufgaben einstellen. }
+  \item{Die Art der Aufgaben für die Aufgabenblätter und die Klausur orientiert sich an den Kernkompetenzen.}
+  \item{Es wird dann auch vom Umfang einer erwarteten Bearbeitungszeit von 90
+  Minuten entsprechen.}
+  \item{Zeilenabstände werden größer sein.}
+  \end{itemize}
+   }
+  \end{itemize}
+
+\end{frame}
+% http://minisconlatex.blogspot.de/2012/05/como-cambiar-el-color-de-una-palabra.html
+\begin{frame}
+ \frametitle{Mein Kontaktdaten}
+ \begin{block}{Kontakt}
+   \begin{enumerate}
+  \item {Sprechstunde: Freitag von $10-11$ Uhr}
+  \item {Mein Büro: Bachstraße 18k, 1. OG, R132}
+  \item {Telefonnummer: 03641 9 45013}
+  \item {E-Mail-Adresse: \url{mariana.nold@uni-jena.de}}
+ \end{enumerate}
+ \end{block}
+   \begin{variableblock}{Material zur Vorlesung und Übung}{bg=Gray!20,fg=black}{bg=LimeGreen!50,fg=black}
+  wo ?  %  \url{www.dt-workspace.de} (nur Registrierung nötig) %
+    \end{variableblock}
+
+
+ % www.dt-workspace.de (nur Registrierung nötig)
+ %Sprechzeiten, Wo ist das Büro, E-Mail, Homepage wo das Skript zu finden ist und die Übungsblätter \dots
+ %Wo befindet sich der Briefkasten für die Übungsblätter?
+\end{frame}
+%\section{Organisatorisches}
+%\begin{frame}{Organisatorisches}
+%\end{frame}
+%
+%\begin{frame}{Organisatorisches}
+%\end{frame}
+%
+%\begin{frame}{Organisatorisches}
+%\end{frame}
+
+% Lage und Streuungsmaße, emp. Verteilungsfunktion
+% S. 159, Mittag
+\section{Rückblick: Deskriptive Statistik}
+
+
+
+\begin{frame}
+ \frametitle{Univariate deskriptive Statistik: Den Datensatz verstehen} %Wer redet, sät - und wer hört, erntet. (Sprichwort aus Argentinien)
+ %\textbf{statistische Methoden sind brauchbare Werkzeuge,
+ % um Information zu ordnen und zusammen zu fassen}
+%  \begin{block}{Zitat von Elisabeth Noelle-Neumann, Pionierin der Demoskopie}
+%   Statistik ist für mich das Informationsmittel der Mündigen. 
+%   Wer mit ihr umgehen kann, kann weniger leicht manipuliert werden. \\
+%   Der Satz: ``Mit Statistik kann man alles beweisen'' gilt nur für die Bequemen, die keine Lust haben, genau hinzusehen.
+%  \end{block}
+
+ %\begin{block}{Selbstbewusst durch gute Grundkenntnisse}
+  \begin{itemize}
+   \item {Man braucht deskriptive Methoden um den Datensatz kennen zu lernen:
+   \begin{itemize}
+   \item{Was bedeuten die Merkmale im Datensatz inhaltlich?}\pause
+   \item{Wie wurden latente Merkmale operationalisiert?}\pause
+   \item{Auf welchem Messniveau wurden sie erhoben?}\pause
+   \item{Gibt es unrealistische Messwerte? (Beispiel: Person gibt an $100$ Kinder zu haben)}
+   \end{itemize}
+   }\pause
+    \item {Wir haben im letzten Semester  Lage- und Streuungsmaße für die univariate
+    Deskription kennen gelernt.}\pause
+    \item{Die univariate Deskription wird mit Hilfe von Grafiken, wie dem Boxplot, der empr.
+    Verteilungsfunktion, dem Balkendiagramm oder Histogramm illustriert.}
+   
+   % \item {Und dafür brauch man Sachverstand und kaum Mathematik.}
+%    \item {Wirklich spannend ist auch, dass man die Datensätze (und ihre Geschichten) oft unterschiedlich auslegen
+%    und interpretieren kann.}
+  \end{itemize}
+ % \end{block}
+  
+\end{frame}
+
+\begin{frame}{Bivariate deskriptive Statistik: Erste Eindrücke von Zusammenhängen}
+\begin{itemize}
+ \item {Kreuztabellen und insbesondere die Spaltenprozentuierung sind wichtige Werkzeuge 
+    der bivariaten Deskription für zwei qualitative Merkmale.}\pause
+    \item{Gruppierte Balkendiagramme dienen der Veranschaulichen der  Spaltenprozentuierung.}\pause
+    \item{Der Vergleich von Boxplots von verschiedenen Gruppen dient der bivariaten Deskription 
+    von einem qualitativen und einem metrischen Merkmal.}\pause
+    \item{Zwei metrische Merkmale können mit Hilfe der Korrelation und der Regression beschrieben werden.}
+    \item{Das Streudiagramm (mit Regressionsgerade) dient der grafischen Analyse.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Die beschreibende Statistik und ihre Intention}
+Die deskriptive Statistik hat die Intention einen gegebenen Datensatz zu beschreiben, dazu nutzt sie
+\begin{itemize}
+\item{Lagemaße wie Mittelwert, Modus, Median und andere empirische Quantile}\pause
+\item{Streuungsmaße wie empirische Varianz oder Interquartilsabstand}\pause
+\item{Kreuztabellen und bedingte relative Häufigkeiten, insbesondere die Spaltenprozentuierung}\pause
+\item{Grafiken wie die empirische Verteilungsfunktion, Boxplots, Histogramme
+oder (gruppierte) Balkendiagramme}\pause
+\item{Eine \colorbox{yellow!40}{\textbf{gute}} Deskription ist eine 
+\colorbox{yellow!40}{\textbf{notwendige}} Voraussetzung für die 
+sinnvolle Analyse des Datensatzes.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sie möchten Begriffe  nachschlagen
+oder wiederholen?}
+\begin{enumerate}
+\item{Online Lexikon von Prof. Ludwig-Mayerhofer: \url{http://wlm.userweb.mwn.de/Ilmes/}}\pause
+\item{(ThULB Jena) Buch:\\ \textbf{Statistik: Eine Einführung für Sozialwissenschaftler (Grundlagentexte Soziologie)},\\
+ Wolfgang Ludwig-Mayerhofer , Uta Liebeskind , Ferdinand Geißler }\pause
+ \item{ThULB Jena E-Book: \\
+ \textbf{Statistik-
+ Eine Einführung mit interaktiven Elementen}, Hans-Joachim Mittag}\\ \pause
+  \item{ThULB Jena E-Book: \\
+   \textbf{Statistik für Soziologen} (2. Auflage), Rainer Diaz-Bone}\pause
+   \item{ThULB Jena E-Book: \\
+   \textbf{Statistik- Der Weg zur Datenanalyse} (8. Auflage), Ludwig Fahrmeir und andere}
+\end{enumerate}
+\end{frame}
+\section{Statistische Inferenz}
+\subsection{Der klassische Inferenzschluss}
+\begin{frame}
+ \frametitle{Was ist eigentlich Statistik?}
+ \begin{block}{Zwei Wiener Statistiker haben sich mit dieser Frage beschäftigt}
+  Während  die  meisten  Wissenschaften  eine  zumindest  \textbf{formal  klare  
+Definition besitzen} und sich somit von 
+anderen Wissenschaften abgrenzen können, 
+gelingt dies bei der Statistik nicht so einfach. 
+Ein Anhaltspunkt dafür sind schon die 
+vielen sehr unterschiedlichen Definitionen 
+von ``Statistik'', die in den verschiedenen 
+Lehrbüchern  zu  finden  sind. 
+ \end{block}
+ (Quelle: Marcus Hudec, Christian Neumann, Institut für Statistik der Universität Wien)
+\begin{block}{Fazit von Hudec und Neumann \dots}
+  Statistik wird  als Hilfswissenschaft aufgefasst. Sie ist eine der
+  Methoden, mit der die Theorie und Erfahrung (Empirie) systematisch
+  reflektiert wird.
+  \end{block}
+\end{frame}
+% Yudi Pawitan: Wie gehen wir mit Unsicherheit um?
+\begin{frame}{Die schließende Statistik und ihre Bedeutung}
+Welche Bedeutung bzw. Aufgabe hat die Statistik als Wissenschaft? 
+\begin{block}{Antwort von Yudi Pawitan}
+Uncertainty is pervasive in problems that deal with the real world, but statistics is the only branch of scinence that puts systematic effort into dealing with uncertainty.\\
+Statistics is suited to problems with \textbf{inherent uncertainty due to limited inforamtion}, 
+\begin{enumerate}
+\item{it does not aim to remove uncertainty,}
+\item{ but in many cases it merely quantifies it,}
+\item{uncertainty can remain even after
+analysis is finished.}
+\end{enumerate}
+ \end{block}
+%Ich möchte Ihnen in diesem Semester einen Einblick in methodischen Ansätze (systematic efforts) geben, die die klassische Inferenz bietet. 
+%Die klassische Inferenz ist
+%ein Hauptzweig der induktiven Statistik.
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Was wird als gültiger Zusammenhang anerkannt?}
+ 
+  
+  \begin{block}{\dots im Laufe der Zeit immer wichtiger wird}
+   Die Bedeutung der Statistik ist zur Zeit einem großen Wachstum
+   unterworfen.
+   \end{block}
+   \begin{variableblock}{Ein Grund für die zunehmende Bedeutung}{bg=GreenYellow!70,fg=black}{bg=YellowGreen!70,fg=black}
+     Statistische Methoden sind oft entscheidend dafür, 
+   welche Zusammenhänge in der Gesellschaft als gültig anerkannt werden.
+    \end{variableblock}
+   Beispiel:
+   \begin{enumerate}
+   \item{Pisa-Studie: Sollte man Geld investieren, um die Jungs bei Lesen lernen zu unterstützen?}
+   \item{Unfallstatistik: Sollte man Geld investieren, um für mehr Sicherheit auf deutschen Autobahnen
+   zu sorgen?}
+   \end{enumerate}
+
+\end{frame}
+%\begin{frame}{Modelle in deskriptiver und induktiver Statistik} % spielen sehr zentrale Rolle in der induktiven Statistik
+%\end{frame}
+
+\begin{frame}{ Beispiel: PISA-Studie }%und verschieden Inferenzkonzepte
+%Uncertainty is pervasive in problems that deal with the real world:\\ 
+Warum sind viele wissenschaftliche Fragestellungen von Unsicherheit durchdrungen?
+\begin{itemize}
+%\item{Wenn wir Aussagen über die reale Welt machen, dann haben wir nur einen Teil der möglichen Information. Wir haben in der Regel eine Stichprobe
+%und möchten eine Aussage über die Grundgesamtheit machen.}
+\item{Wir wollen basierend auf den PISA-Daten  eine Antwort auf die Frage finden, ob die Leseleistung von 15-jährigen  Mädchen
+in Deutschland besser ist als die von 15-jährigen  Jungen.}\pause
+\item{Unsere Stichprobe enthält nicht die Information über die Leseleistung aller 15-Jährigen in Deutschland.\\
+(inherent uncertainty due to limited inforamtion) }\pause
+\item{Wenn wir eine Aussage über die Grundgesamtheit machen,
+kann diese Aussage falsch sein. Die Wissenschaftlichkeit der Aussage entsteht dadurch, dass wir ihre Unsicherheit quantifizieren. }
+\end{itemize}
+\end{frame}
+% http://www.spiegel.de/auto/aktuell/unfallstatistik-2015-erneut-mehr-verkehrstote-in-deutschland-a-1079184.html
+% http://www.spiegel.de/auto/aktuell/zahl-der-verkehrstoten-sinkt-mehr-unfalltote-auf-autobahnen-a-955494.html
+\begin{frame}{ Beispiel: Unfalltod  auf der Autobahn}
+%Warum sind viele wissenschaftliche Fragestellungen von Unsicherheit durchdrungen?
+\begin{itemize}
+\item{Wir wollen eine Aussage darüber machen, ob die Wahrscheinlichkeit für den Unfalltod auf deutschen Autobahnen gestiegen ist.}\pause
+\item{ Die Zahl der Unfalltoten ist von \colorbox{yellow!40}{$358$} (2012) auf \colorbox{yellow!40}{$387$}
+ (2013) gestiegen. 
+Ist das dann eine ``wirkliche'' Veränderung? }\pause
+\item{Die Statistik fragt: Hat sich etwas an dem stochastischen Mechanismus geändert der diese Unfalltoden hervorbringt?}\pause
+\item{Um wie viel muss die Zahl steigen bzw. sinken, damit man davon ausgeht, dass sich dieser Mechanismus verändert hat?}\pause
+\item{Diese Frage kann nicht willkürlich beantwortet werden. Es muss klar sein, wann man von einer signifikanten Veränderung spricht und was damit gemeint ist.}
+%\item{}
+\end{itemize}
+\end{frame}
+%poisson.test(c(358, 387), c(1, 1), alternative = c("less"))
+\begin{frame}{Inferenzkonzepte}
+\begin{itemize}
+\item{Durch welche Legitimation ist es erlaubt davon zu sprechen, dass Mädchen besser lesen als Jungen oder dass die Anzahl der Unfalltoten signifikant gestiegen ist?}\pause
+\item{Wenn ich die entsprechenden statistischen Tests rechne, dann ist der Unterschied in der Leseleistung signifikant, der Unterschied in der Zahl der Unfalltoden nicht.}\pause
+\item{Was bedeuten solche Aussagen bzw. Behauptungen und wodurch werden sie legitimiert?}\pause
+\item{Unter einem Inferenzkonzept versteht man ein statistisches Konzept, das die Schlussfolgerung von Beobachtungen (Daten) auf inhaltliche Aussagen rechtfertigt.}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Klassische Inferenz}
+\begin{itemize}
+\item{Wie werden innerhalb der Statistik Schlüsse von Beobachtungen auf Hypothesen gerechtfertigt?}\pause
+\item{Angesichts der Vielfalt wissenschaftstheoretischer und philosophischer Ansätze zur Erklärung des empirischen Forschungsansatzes
+ist es nicht verwunderlich, dass es auf diese Frage innerhalb der Statistik mehre Antworten gibt und 
+\textbf{nicht eine einzige, in sich geschlossene statistische Inferenztheorie
+existiert. }}\pause% Rüger I S. 116,117
+\item{Die drei bekanntesten Inferenztheorien sind die Likelihood-Inferenz, die Bayes-Inferenz und die Klassische Inferenz.}
+\item{Wir beschäftigen uns in diesem Semester mit Ansätzen aus der Klassischen Inferenz.}
+\end{itemize}
+\end{frame}
+% Mittag S. 35
+\begin{frame}{Der Inferenzschluss der Klassischen Inferenz}
+\begin{itemize}
+\item{Um ein valides  Abbild der Grundgesamtheit zu bekommen,
+zieht man eine Zufallsstichprobe.}
+\item{Nur bei Realisierung einer Zufallsauswahl kann von einer Stichprobe
+\textbf{mit kontrollierter Irrtumswahrscheinlichkeit} auf die zugrundeliegende
+Grundgesamtheit zurückgeschlossen werden. }
+\item{Dieser auch \textbf{Inferenzschluss} bezeichnete Rückschluss
+von Eigenschaften der Stichprobe auf Eigenschaften der Grundgesamtheit ist
+Gegenstand der induktiven Statistik.}
+\item{Ein Inferenzschluss ist stets mit Unsicherheit behaftet. Dies ergibt sich
+zwingend daraus, dass nur eine Teilinformation zu Verfügung steht.}
+\end{itemize}
+\end{frame}
+
+\subsection{Die Intention der empirischen Forschung}
+\begin{frame}
+ \frametitle{Empirische Forschung: Muster in Daten erkennen und bewerten}
+ \begin{enumerate}
+  \item {Die Statistik stellt Methoden zur Verfügung um Information aus Beobachtungen
+  gut zusammen zu fassen und diese Information zielgerichtet zu verarbeiten.}
+ % \item {Information aus Beobachtungen nennt man \\ \textbf{empirische Information.}}
+  \item {Die Statistik gibt uns Werkzeuge um empirische Information übersichtlich darzustellen.
+  (Deskriptive Statistik)}
+  \item {Beruhend auf einer übersichtlichen Darstellung können wir z. B. Vermutungen über Zusammenhänge
+  ableiten. (Explorative Statistik)}
+  \item {Die Statistik erlaubt u. U. von der beobachteten empirischen Information  auf eine über die Stichprobe hinaus gültige Aussagen zu schließen. (Induktive Statistik)}
+ \end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Restauration: Was es zu beachten gilt}
+\begin{enumerate}
+\item{Transparenz ist wichtig. Man muss sagen, welche Teile man zu Beginn hatte und durch welche 
+Annahmen und Methoden man zu dem Gesamtbild kommt.}\pause
+\item{Das Bild das, nach der Restauration entsteht, kann (in Teilen) fehlerhaft sein. Es ist mit Unsicherheit behaftet.}\pause
+\item{Je weniger Teile man zu Beginn hat bzw. je komplizierter das Bild ist, desto größer ist die Unsicherheit über das Ergebnis.}\pause
+\item{Es gibt  viele Möglichkeiten zu dem Ergebnis zu kommen, es gibt nicht den einen richtigen Weg,
+auch wenn es nur ein richtiges Bild gibt.}\pause
+%\item{Konstruktiv-kritisches Nachfragen daher ist sinnvoll. Man braucht den Blick von unterschiedlichen Personen (aus verschiedenen Disziplinen)
+%um die Güte des Bildes beurteilen zu können.}
+\end{enumerate}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Werkzeugkiste für die Restauration}
+Wir wollen einen Ausschnitt der sozialen Wirklichkeit erforschen und erheben Daten,
+um aus dieser  ``limited information'' eine Aussage über die dahinter stehenden 
+Mechanismen machen.\\
+Was gehört in die Werkzeugkiste?\pause
+\begin{enumerate}
+\item{Kreativität und Fingerspitzengefühl im Umgang mit den Daten}\pause
+\item{Sachwissen über den Hintergrund der Daten (inhaltliches Wissen)}\pause
+\item{Grundlagen der Methoden der empirischen Sozialforschung}\pause
+\item{Grundlagen der deskriptiven Statistik}\pause
+\item{Grundlagen der Inferenzstatistik, insbesondere der Test- und Schätztheorie}\pause
+\item{Die Fähigkeit Statistik-Software zu nutzen}
+\end{enumerate}
+
+\end{frame}
+
+\section{Zufallsvorgang}% Fahrmeier-Tutz S. 174, Yudi Pawitan S.4 manchmal ist es auch einfach zu komplex
+
+\begin{frame}{Beispiel: Befragung nach Höhe des Taschengeldes}
+\begin{itemize}
+\item{Fiktiv: In einem Artikel einer regionalen Zeitung aus dem Jahr 2015 steht, dass Grundschulkinder in Jena im Durchschnitt
+elf Euro Taschengeld im Monat gekommen.}\pause
+\item{Wir möchten empirische Information zu diesem Thema sammeln und befragen 
+$n=100$ Grundschulkinder in Jena nach ihrem monatlichen Taschengeld (gerundet auf ganze Euro).}\pause
+\item{Zwei Eigenschaften kennzeichnen den Vorgang:}\pause
+\begin{enumerate}
+\item{Man kennt im Vorfeld bereits die möglichen Ausgänge, wobei unbekannt ist, welcher Eintritt.}
+\item{Es hängt ``vom Zufall'' ab, welchen Ausgang man beobachtet.}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Zufallsvorgang}
+
+Gerade diese beiden Eigenschaften kennzeichnen den Zufallsvorgang. Das Zufallsexperiment ist ein Spezialfall
+des Zufallsvorgangs.
+\begin{variableblock}{Definition: Zufallsvorgang }{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+    	Ein Zufallsvorgang führt zu einem von mehreren, sich gegenseitig ausschließenden Ergebnissen. Es ist vor der Durchführung ungewiss, welches Ergebnis
+    	tatsächlich eintreten wird.
+\end{variableblock}\pause
+\begin{itemize}
+\item{Die Ziehung einer Stichprobe ist ein Beispiel für einen Zufallsvorgang. }\pause
+\begin{itemize}
+\item{ Befragung von Grundschulkindern nach der Höhe ihres Taschengeldes}\pause
+\item{Ergebnisse des Kompetenztest Lesen in der PISA-Studie}
+\end{itemize}
+\item{Viele Prozesse die wir beobachten können sind Zufallsvorgänge. }
+\begin{itemize}
+\item{Beispiel: Wie viel Personen nehmen heute an der Vorlesung teil? }\pause
+\item{Wie viele Unfalltode gab es im Jahr 2016?}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+% Durchschnittswert abziehen, dass Verteilung um Null schwankt. Der ist uns bekannt aus der Zeitung
+
+% Zufallsvariable: Beispiel Taschengeld, Beispiel Normalverteilung
+%\section{Zufallsvorgang am Beispiel}
+
+
+
+
+\begin{frame}{Zufallsvariable}
+Ein ganz zentraler Begriff in diesem Semester ist der der Zufallsvariable:
+\begin{variableblock}{Definition: Zufallsvariable }{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+    	Eine Variable oder ein Merkmal $X,$ dessen Werte oder Ausprägungen die Ergebnisse eines 
+    	Zufallsvorgangs sind, heißt Zufallsvariable $X.$ Die Zahl $x,$ die $X$ bei der Durchführung
+    	eines Zufallsvorgangs annimmt, heißt Realisierung oder Wert von $X$
+\end{variableblock}
+Für unser Beispiel definiere ich die Zufallsvariable  $X:$
+\begin{equation}
+X := \text{Höhe des Taschengeld von Grundschulkind aus Jena in  Euro}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}{Die Notation der Zufallsvariable und ihrer Realisation}
+\begin{itemize}
+\item{Großbuchstaben bezeichnen  den Zufallsvorgang selbst. Sie also eine Abkürzung
+für den Zufallsvorgang. }
+\item{Die entsprechenden Kleinbuchstaben werden mit einem Index versehen und sind die Werte,
+die konkret beobachtet wurden.}
+\item{So bedeutet z. B. $x_{1}=14,$ dass das erste Kind in der Befragung $14$ Euro Taschengeld
+im Monat bekommt.}
+\item{Entsprechend bedeutet $x_{2}=9,$ dass das zweite Kind $9$ Euro Taschengeld bekommt.}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Die Intention der deskriptive Modellierung}
+
+\begin{itemize}
+\item{Man beschreibt die beobachteten Daten mit Hilfe einer Modellverteilung.}\pause
+\item{Ziel ist es, die in den den Daten bestehen Sachverhalte zu kommunizieren.}\pause
+\item{Ziel ist es \textbf{nicht,} eine Aussage zu machen, die über das Beschreiben der Daten
+hinausgeht.}\pause
+\item{Insbesondere bezieht sich ein deskriptives Modell nur auf die vorliegende Stichprobe.}
+%\item{Wie hatten}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Modellebene und Datenebene}
+
+\begin{itemize}
+\item{Die Normalverteilung ist ein Modell, dass sich für symmetrische
+Verteilungen eignet.}\pause
+\item{Die Parameter $\mu$ und $\sigma$ sind Platzhalter
+für den Ort der Symmetrieachse und die Breite der Dichte.}\pause
+\item{Wenn man diese Parameter aus Daten schätzt,
+werden die Schätzer üblicherweise mit $\hat{\mu}$
+und $\hat{\sigma}$ bezeichnet.}\pause
+\item{Durch die  Spezifikation der Parameter mit Hilfe der
+Daten wendet man das Modell auf der Datenebene an.}\pause
+\item{Datenebene bedeutet: Man nimmt Bezug zu den vorliegenden Daten}
+\item{Modellebene bedeutet: Man spricht über Modellannahmen}
+%\item{Bei einer deskriptiven Modellierung dient es 
+%ausschließlich der Beschreibung
+%der vorliegenden Daten.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ergebnis der fiktiven Erhebung in Zahlen}
+Wir haben die fiktive Erhebung zum Thema Taschengeld abgeschlossen und wollen herausfinden,
+ob sich die Normalverteilung eignet um die Daten zu beschreiben.
+\begin{itemize}
+\item{Ist die beobachtetet Verteilung der Daten symmetrisch?}
+\begin{itemize}
+\item{Mittelwert: $\bar{x}=12.33,$ Median (= $50\%$ Quantil): $\tilde{x}=12,34$}\pause
+\item{1. Quartil (= $25\%$ Quantil): $x_{0.25}=10.52$}\pause
+\item{3. Quartil (= $75\%$ Quantil): $x_{0.75}=14.07$}\pause
+\item{Minimum: 5.36 und Maximum: 19.2}\pause
+\end{itemize}
+\item{Sprechen die Lagemaße für eine symmetrische Verteilung?}\pause
+\item{Grafische Verfahren werden genutzt um einen Eindruck von den Daten zu bekommen. Wir setzen $\mu \equiv \hat{\mu}=\bar{x}=12.33$ und $\sigma^{2} \equiv \hat{\sigma}^{2}=7.26.$}\pause
+\item{Das Zeichen $\equiv$ bedeutet, dass wir für den Modellparameter einen bestimmten Wert einsetzen.}
+\end{itemize}
+%Lage- und Streuungsmaße (auch Quantile)
+% Begriff Zufallsvariable Mittag S. 156, FT S. 226
+%VORSICHT: mean und sd nicht echt sondern geschätzt!!!
+\end{frame}
+%% Man fragt in einer Schule Schülerinnen und Schüler die Vorbei kommen, danach, wie viel Taschengeld sie bekommen
+%
+%%\begin{frame}{Was möchte eine statistisches Modell}
+%%\end{frame}
+%
+%\begin{frame}{Verteilung einer Zufallsvariable} % Mittag S. 156
+%
+%\end{frame}
+
+
+
+
+
+
+% siehe: LösungÜbung3Neu.pdf
+\begin{frame}{Was haben wir bisher gemacht?}
+\begin{itemize}
+\item{Wir haben $n=100$ Realisationen der Zufallsvariable Taschengeld beobachtet
+und beschreiben.}\pause
+\item{Bisher haben wir nur Methoden der deskriptiven Statistik genutzt. Wir machen also
+noch keine Aussage die über die Stichprobe hinausgeht.}\pause
+\item{Wir nutzen die Normalverteilung als Modell um unsere Daten zu beschreiben
+und gewinnen den Eindruck, dass diese Modell gut zu den Daten passt}\pause
+\item{Wie können Sie die 68-95-99.7-Regel nutzen um die Daten zu beschreiben?}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Darf ich aus der Stichprobe eine allgemeinere Aussage machen?}
+\begin{itemize}
+\item{Können wir mit Bezug auf unsere Stichprobe behaupten, dass sich das Taschengeld 
+der Grundschulkinder signifikant erhöht hat?}\pause
+\item{Es waren im Durchschnitt elf Euro im Jahr 2015.}\pause
+\item{Eine Zufallsstichprobe erlaubt genau das zu tun. }\pause
+\item{Bei der Art und Weise zu schließen hat man verschiedene 
+Inferenzkonzepte zu Auswahl. Oft führen sie zu ähnlichen Schlüssen.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Die Zufallsstichprobe}
+\begin{block}{Bedingungen für eine Zufallsauswahl (aus Methoden I)}
+\begin{enumerate}
+\item{Regelgeleitete Auswahl und}
+\item{für jedes Element der Grundgesamtheit ist die Wahrscheinlichkeit in die Stichprobe
+aufgenommen zu werden bekannt und}
+\item{größer Null}
+\end{enumerate}
+\end{block}
+\begin{variableblock}{Definition: Einfache Zufallsstichprobe}{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
+ Spezialfall: Eine einfache Zufallsstichprobe liegt dann vor, wenn jede der möglichen auf diese Weise gezogenen Stichproben vom Umfang n aus einer Grundgesamtheit vom Umfang N die gleiche Chance hat aufzutreten. 
+\end{variableblock}
+
+\end{frame}
+
+
+\section{Plan für die nächsten Wochen}
+\begin{frame}{Was wir in den nächsten drei Wochen machen (bis 10.11.2017)}
+%%Wird in der Übung wiederholt
+\begin{itemize}
+%\item{ha}
+\item{Wir wiederholen den zentralen Zusammenhang: Beschreibende Dichte und Verteilungsfunktion}
+\item{Wir nutzen \texttt{STATA} um den fiktiven Taschengelddatensatz zu beschreiben}
+\item{Es wird auch das Geschlecht erhoben, so dass wir die Verteilung des
+Taschengelds in den beiden Gruppen vergleichen können.}
+\item{In der nächsten Vorlesung lernen Sie das Modell der Binomialverteilung kennen.}
+\item{In der Übung werden wir auch dieses Modell mit \texttt{STATA} erkunden.}
+\item{Inferenzschlüsse werden noch nicht gezogen, aber wir sprechen darüber,
+was es bedeutet das zu tun und unter welchen Voraussetzungen wir es tun dürfen.
+(\url{http://www.fernuni-hagen.de/ksw/neuestatistik/content/MOD_27531/html/comp_27634.html)}
+}
+%%}
+\end{itemize}
+\end{frame}
+% Daten und Modellebene: Unterscheidung finde ich nicht mehr sinnvoll?
+% Beispiel: Aufgabe: Ein Punkt auf Bezug zu diesem Wert.
+% Umformulieren in: Daten mit Modell in Verbindung bringen: ja oder nein
+% Man kann Daten deskriptiv mit Modell in Verbindung bringen
+
+%Wir haben aufgehört mit dem Gruppenunterschied (Jungen-Mädchen: Lesen sie besser)
+%Wir fangen wieder an mit Taschengeld (aktueller Bezug: http://www.spiegel.de/lebenundlernen/schule/jungen-bekommen-mehr-taschengeld-als-maedchen-a-1161915.html)
+% http://www.spiegel.de/wissenschaft/mensch/taschengeld-gibt-es-wirklich-einen-gender-pay-gap-a-1100475.html
+\begin{frame}{Bekommen Jungen mehr Taschengeld als Mädchen?}
+Bitte lesen sie die beiden Artikel 
+\begin{enumerate}
+\item{ \colorbox{yellow!20}{Statistik und Wahrheit - Hauptsache spektakulär} \footnotesize{ \url{http://www.spiegel.de/wissenschaft/mensch/taschengeld-gibt-es-wirklich-einen-gender-pay-gap-a-1100475.html} } 
+Erscheinungsdatum: 27.7.2016}
+\item{ \colorbox{yellow!20}{ Umfrage: Jungen bekommen mehr Taschengeld als Mädchen} \footnotesize{ \url{http://www.spiegel.de/lebenundlernen/schule/jungen-bekommen-mehr-taschengeld-als-maedchen-a-1161915.html} }
+Erscheinungsdatum:  8.8.2017}
+\end{enumerate}
+\colorbox{green!20}{Machen Sie sich ein paar Stichpunkte zu dem Ergebnis, }
+\colorbox{green!20}{dass der zweite Artikel Ihnen Nahe legt und kommentieren Sie es kritisch.}
+\end{frame}
+\end{document}
+

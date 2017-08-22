@@ -1,0 +1,8 @@
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Themen und Ziele}{3}{0}{1}
+\beamer@sectionintoc {2}{R\IeC {\"u}ckblick: Deskriptive Statistik}{13}{0}{2}
+\beamer@sectionintoc {3}{Statistische Inferenz}{17}{0}{3}
+\beamer@subsectionintoc {3}{1}{Der klassische Inferenzschluss}{17}{0}{3}
+\beamer@subsectionintoc {3}{2}{Die Intention der empirischen Forschung}{25}{0}{3}
+\beamer@sectionintoc {4}{Zufallsvorgang}{28}{0}{4}
+\beamer@sectionintoc {5}{Plan f\IeC {\"u}r die n\IeC {\"a}chsten Wochen}{38}{0}{5}

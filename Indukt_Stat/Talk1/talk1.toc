@@ -1,0 +1,7 @@
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Erinnerung: Fiktive Befragung zum Taschengeld}{4}{0}{1}
+\beamer@sectionintoc {2}{Das Verhalten von Zufallsvariablen}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Die Wahrscheinlichkeitsverteilung}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Diskrete Zufallsvariable}{18}{0}{2}
+\beamer@subsectionintoc {2}{3}{Aufgabenstellung im Mathe-Abi 2008: Wo lag das Problem?}{33}{0}{2}
+\beamer@sectionintoc {3}{Kenngr\IeC {\"o}\IeC {\ss }en einer Zufallsvariable}{37}{0}{3}
