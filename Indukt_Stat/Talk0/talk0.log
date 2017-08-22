@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  17 AUG 2017 09:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  21 AUG 2017 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1223,8 +1223,14 @@ er/beamerinnerthemerounded.sty)
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/beamer/themes/col
 or/beamercolorthemedolphin.sty)
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/beamer/themes/out
-er/beamerouterthemeinfolines.sty))
-No file talk0.aux.
+er/beamerouterthemeinfolines.sty)) (./talk0.aux
+
+LaTeX Warning: Label `tab:multicol' multiply defined.
+
+
+LaTeX Warning: Label `tab:multicol' multiply defined.
+
+)
 \openout1 = `talk0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -1241,6 +1247,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1327,6 +1334,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 28.
 LaTeX Info: Redefining \pageref on input line 28.
 LaTeX Info: Redefining \nameref on input line 28.
+ (./talk0.out) (./talk0.out)
 \@outlinefile=\write5
 \openout5 = `talk0.out'.
 
@@ -1410,13 +1418,12 @@ Dictionary: translator-numbers-dictionary, Language: English
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 28.
-
-No file talk0.nav.
+ (./talk0.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 29.
 
-<index.jpeg, id=14, 106.3975pt x 124.465pt>
+<index.jpeg, id=42, 106.3975pt x 124.465pt>
 File: index.jpeg Graphic file (type jpg)
  <use index.jpeg>
 Package pdftex.def Info: index.jpeg used on input line 44.
@@ -1429,9 +1436,26 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1
 
 {c:/Users/zo95yup/Programme/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdft
-ex.map} <./index.jpeg>] [2
+ex.map} <./index.jpeg>] (./talk0.toc) [2
 
-] [3
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+
+(c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+(c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 68.
+
+(c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/sansmathaccent/ot
+1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) [3
 
 ] [4
 
@@ -1439,128 +1463,156 @@ ex.map} <./index.jpeg>] [2
 
 ] [6
 
-] [7
+]pdfTeX warning (ext4): destination with the same identifier (name{tab:multicol
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.167 \end{frame}
+                  [7
 
-] [8
+]pdfTeX warning (ext4): destination with the same identifier (name{tab:multicol
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.193 \end{frame}
+                  [8
 
 ] [9
 
 ] [10
 
-]
-<incomplete.jpg, id=102, 259.97125pt x 194.7275pt>
-File: incomplete.jpg Graphic file (type jpg)
- <use incomplete.jpg>
-Package pdftex.def Info: incomplete.jpg used on input line 140.
-(pdftex.def)             Requested size: 222.48985pt x 166.6512pt.
+] [11
 
-[11
+] [12
 
- <./incomplete.jpg>] [12
+] [13
 
-] <pattern.jpg, id=117, 702.625pt x 702.625pt>
-File: pattern.jpg Graphic file (type jpg)
+] [14
 
-<use pattern.jpg>
-Package pdftex.def Info: pattern.jpg used on input line 159.
-(pdftex.def)             Requested size: 205.37926pt x 205.37492pt.
- [13
+] [15
 
- <./pattern.jpg>]
-<incomplete2.jpg, id=126, 99.9735pt x 65.043pt>
-File: incomplete2.jpg Graphic file (type jpg)
- <use incomplete2.jpg>
-Package pdftex.def Info: incomplete2.jpg used on input line 166.
-(pdftex.def)             Requested size: 222.48985pt x 144.7584pt.
- [14
+] [16
 
- <./incomplete2.jpg>] <mosaic-pattern.jpg, id=134, 508.90125pt x 339.2675pt>
-File: mosaic-pattern.jpg Graphic file (type jpg)
+] [17
 
-<use mosaic-pattern.jpg>
-Package pdftex.def Info: mosaic-pattern.jpg used on input line 173.
-(pdftex.def)             Requested size: 222.48985pt x 148.32562pt.
- [15
-
- <./mosaic-pattern.jpg>]
-<patchwork.jpg, id=142, 433.62pt x 532.6299pt>
-File: patchwork.jpg Graphic file (type jpg)
- <use patchwork.jpg>
-Package pdftex.def Info: patchwork.jpg used on input line 180.
-(pdftex.def)             Requested size: 433.61894pt x 532.62859pt.
- [16
-
- <./patchwork.jpg>] [17
-
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 210.
-
-(c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 210.
-(c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 210.
-
-(c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/sansmathaccent/ot
-1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-) [18
+] [18
 
 ] [19
 
-] [20
+]
+[20
 
 ] [21
 
 ] [22
 
+] [23
+
+] [24
+
+] <incomplete.jpg, id=262, 259.97125pt x 194.7275pt>
+File: incomplete.jpg Graphic file (type jpg)
+
+<use incomplete.jpg>
+Package pdftex.def Info: incomplete.jpg used on input line 489.
+(pdftex.def)             Requested size: 222.48985pt x 166.6512pt.
+ [25
+
+ <./incomplete.jpg>] [26
+
 ]
-<diffnorm2_leer.pdf, id=199, 505.89pt x 505.89pt>
-File: diffnorm2_leer.pdf Graphic file (type pdf)
- <use diffnorm2_leer.pdf>
-Package pdftex.def Info: diffnorm2_leer.pdf used on input line 272.
+<pattern.jpg, id=281, 702.625pt x 702.625pt>
+File: pattern.jpg Graphic file (type jpg)
+ <use pattern.jpg>
+Package pdftex.def Info: pattern.jpg used on input line 509.
+(pdftex.def)             Requested size: 205.37926pt x 205.37492pt.
+ [27
+
+ <./pattern.jpg>] <incomplete2.jpg, id=290, 99.9735pt x 65.043pt>
+File: incomplete2.jpg Graphic file (type jpg)
+ <use incomplete2.jpg>
+Package pdftex.def Info: incomplete2.jpg used on input line 516.
+(pdftex.def)             Requested size: 222.48985pt x 144.7584pt.
+
+[28
+
+ <./incomplete2.jpg>]
+<mosaic-pattern.jpg, id=299, 508.90125pt x 339.2675pt>
+File: mosaic-pattern.jpg Graphic file (type jpg)
+
+<use mosaic-pattern.jpg>
+Package pdftex.def Info: mosaic-pattern.jpg used on input line 523.
+(pdftex.def)             Requested size: 222.48985pt x 148.32562pt.
+ [29
+
+ <./mosaic-pattern.jpg>]
+<patchwork.jpg, id=308, 433.62pt x 532.6299pt>
+File: patchwork.jpg Graphic file (type jpg)
+ <use patchwork.jpg>
+Package pdftex.def Info: patchwork.jpg used on input line 530.
+(pdftex.def)             Requested size: 433.61894pt x 532.62859pt.
+ [30
+
+ <./patchwork.jpg>] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+]
+<taschengeld_box.pdf, id=379, 505.89pt x 505.89pt>
+File: taschengeld_box.pdf Graphic file (type pdf)
+ <use taschengeld_box.pdf>
+Package pdftex.def Info: taschengeld_box.pdf used on input line 694.
+(pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
+
+[39
+
+ <./taschengeld_box.pdf>]
+<taschengeld_theo.pdf, id=393, 505.89pt x 505.89pt>
+File: taschengeld_theo.pdf Graphic file (type pdf)
+ <use taschengeld_theo.pdf>
+Package pdftex.def Info: taschengeld_theo.pdf used on input line 701.
+(pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
+
+[40
+
+ <./taschengeld_theo.pdf>]
+<taschengeld_dens.pdf, id=408, 505.89pt x 505.89pt>
+File: taschengeld_dens.pdf Graphic file (type pdf)
+ <use taschengeld_dens.pdf>
+Package pdftex.def Info: taschengeld_dens.pdf used on input line 708.
 (pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-Overfull \vbox (8.95204pt too high) detected at line 272
+Overfull \vbox (26.95204pt too high) detected at line 708
  []
 
-[23
+[41
 
- <./diffnorm2_leer.pdf>] <diffnorm2.pdf, id=213, 505.89pt x 505.89pt>
-File: diffnorm2.pdf Graphic file (type pdf)
+ <./taschengeld_dens.pdf>] [42
 
-<use diffnorm2.pdf>
-Package pdftex.def Info: diffnorm2.pdf used on input line 279.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+] [43
 
-Overfull \vbox (8.95204pt too high) detected at line 279
- []
+] [44
 
-[24
+] [45
 
- <./diffnorm2.pdf>] <diffnorm1.pdf, id=228, 505.89pt x 505.89pt>
-File: diffnorm1.pdf Graphic file (type pdf)
-
-<use diffnorm1.pdf>
-Package pdftex.def Info: diffnorm1.pdf used on input line 286.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
-
-Overfull \vbox (8.95204pt too high) detected at line 286
- []
-
-[25
-
- <./diffnorm1.pdf>]
-Overfull \hbox (0.94986pt too wide) in paragraph at lines 306--306
+]
+Overfull \hbox (0.94986pt too wide) in paragraph at lines 787--787
 [][][][][][]  
  []
 
-[26
+[46
 
 ]
 \tf@nav=\write6
@@ -1572,45 +1624,49 @@ Overfull \hbox (0.94986pt too wide) in paragraph at lines 306--306
 \tf@snm=\write8
 \openout8 = `talk0.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 788.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 788.
  (./talk0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 788.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 788.
+Package rerunfilecheck Info: File `talk0.out' has not changed.
+(rerunfilecheck)             Checksum: 5023FEEEB34E6394C404FF72A1820EC3;465.
 
-
-Package rerunfilecheck Warning: File `talk0.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `talk0.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7D3451EBC08C0CB9B973B29389B5C891;288.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 22096 strings out of 494852
- 446025 string characters out of 6175638
- 516477 words of memory out of 5000000
- 24838 multiletter control sequences out of 15000+600000
- 10875 words of font info for 40 fonts, out of 8000000 for 9000
+ 22389 strings out of 494852
+ 450667 string characters out of 6175638
+ 520694 words of memory out of 5000000
+ 25072 multiletter control sequences out of 15000+600000
+ 16941 words of font info for 63 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,17n,59p,800b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,62p,800b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmss10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmss12.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/Users/zo95yup/Programme/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><c:/Users/zo95yup/P
-rogramme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/U
-sers/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msam7.pfb>
-Output written on talk0.pdf (26 pages, 746317 bytes).
+ts/cm/cmmi10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/Users/zo95yup/Programme/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/Users/zo95yup/
+Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/
+Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmss9.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssbx10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/Users/zo95yup/Programme/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/zo95yup/Pro
+gramme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Us
+ers/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt9.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam7.pfb>
+Output written on talk0.pdf (46 pages, 812138 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
