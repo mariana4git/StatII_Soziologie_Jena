@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+\pagestyle{empty}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{german}
+\usepackage{multirow,array}
+\usepackage{hyperref}
+ \usepackage{graphicx}
+%\usepackage{ipe}
+%\input{thmstyle-ger}
+
+\parindent0mm
+\sloppy
+
+% Basic data
+\newcommand{\VORLESUNG}{Deskriptive Statistik für Soziologinnen und Soziologen}
+\newcommand{\STAFF}{Mariana Nold}
+\newcommand{\ASSIGNMENT}{4}
+\newcommand{\HANDOUT}{Montag, den 22.Mai   2017}
+\newcommand{\DELIVER}{bis Freitag, den 2. Juni 2017, Briefkasten des Instituts für Soziologie, in der Nähe der Cafeteria der Carls-Zeiss-Straße (In einem Umschlag, an mich adressiert) \textbf{oder} Mittwoch, Donnerstag und Freitag von 13-15 Uhr im Sekretariat von Frau Prof. Leuze, CZ-Straße 2, R286}
+\newcommand{\PRACTICAL}[1]{\marginpar{\tiny {\bf Aufgabe \\ abgeben!} #1}}
+\newcommand{\FAUFTRAG}[1]{\marginpar{\tiny {\bf selbst entdeckendes Verstehen} #1}}
+\newcommand{\titel}{Bivariate Exploration von  quantitativen und qualitativen 
+Merkmalen: Korrelation}
+\newcommand{\startwert}{14}
+
+% Arbitrary packages and settings
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\newcommand{\half}[1]{\frac{#1}{2}}
+\newcommand{\punkte}[1]{{\small{ }(#1 Punkte)}}
+\newcommand{\punkt}[1]{{\small{ }(#1 Punkt)}}
+
+\newcommand{\aufgabe}[1]{\item{\bf #1}}
+\newcommand{\hinweis}{{\em Hinweis}}
+
+\begin{document}
+% Document title
+
+\begin{center}
+\ASSIGNMENT{}. Aufgabenblatt vom \HANDOUT{} zur Vorlesung 
+\vspace*{0.5cm}
+
+%FT S149 + 156
+{\Large \VORLESUNG{}}
+%\PRACTICAL{}
+(\STAFF{}) 
+
+
+\vspace*{0.5cm}
+{\textbf{Thema:} \titel{}\\}
+\vspace*{0.2cm}
+
+{\small Abgabe: \DELIVER{}}
+\vspace*{1cm}
+\end{center}
+
+\begin{enumerate}\addtocounter{enumi}{\startwert}
+
+
+
+
+\aufgabe{Wortschatz von Kindern} \punkte{20} \PRACTICAL{}\\
+(in Anlehnung an: Fahrmeir et al, Statistik Der Weg zur Datenanalyse, S .151)\\
+Bei fünf zufällig ausgewählten Kindern wurden der Wortschatz $X$ und die 
+Körpergröße $Y$ in cm gemessen. Dabei erfolgte die Messung des Wortschatzes
+über die Anzahl der verschiedenen Wörter, die die Kinder in einem Aufsatz über die 
+Ergebnisse in ihren Sommerferien benutzten. Nehmen wir an,
+wir hätten folgende Daten erhalten:
+
+ \begin{table}[h]
+ \centering 
+\begin{tabular}{|r|r|r|r|r|r|}
+  \hline
+   Kind  $i$     &   $1$    & $2$   & $3$   & $4$   & $5$ \\ \hline
+   Körpergröße $x_{i}$ & $37$ & $30$ & $20$ & $28$ & $35$  \\ \hline
+   Wortschatz  $y_{i}$ & $130$& $112$ & $108$&  $114$ & $136$ \\ \hline
+  \end{tabular}
+ \caption{Der Wortschatz $X$ und die Körpergröße $Y$ in cm gemessen von $5$
+ zufällig ausgewählten Kindern. \label{tab1}}
+ \end{table}  
+ 
+\begin{enumerate}
+\item{Zeichnen Sie ein Streudiagramm.} \punkte{2}
+\item{Erklären Sie an Hand dieses Beispiels was eine \punkte{4}
+\begin{itemize}
+\item{positive bzw. negative lineare Korrelation} %\punkte{3}
+\item{positive bzw. negative monotone Korrelation} %\punkte{2}
+\end{itemize}
+inhaltlich bedeuten.} 
+\item{Ist die folgende Aussage falsch oder richtig: Es ist im Allgemeinen möglich,
+dass ein positiver linearer Zusammenhang vorliegt, aber kein positiver
+monotoner Zusammenhang.} \punkte{2}
+\item{Schreiben Sie die Tabelle der Ränge von $X$ und $Y,$
+berechnen die den Rangkorrelationskoeffizient $r^{SP}_{XY}$ und interpretieren Sie
+diesen Wert.}\punkte{4}
+\item{Berechnen Sie nun  den Korrelationskoeffizienten nach Pearson $r_{XY}$
+und interpretieren Sie diesen Wert.}\punkte{4}
+ \begin{table}[h]
+ \centering 
+\begin{tabular}{|r|r|r|r|r|r|}
+  \hline
+  Kind   $i$     &   $1$    & $2$   & $3$   & $4$   & $5$ \\ \hline
+  Körpergröße  $x_{i}$ & $37$ & $30$ & $20$ & $28$ & $35$  \\ \hline
+  Wortschatz  $y_{i}$ & $130$& $112$ & $108$&  $114$ & $136$ \\ \hline
+  Alter  $z_{i}$ & $12$& $7$ & $6$&  $7$ & $13$ \\ \hline
+  \end{tabular}
+ \caption{Der Wortschatz $X,$  die Körpergröße $Y$ in cm gemessen
+ und das Alter $Z$ von $5$
+ zufällig ausgewählten Kindern. \label{tab2}}
+ \end{table}  
+ \item{Die Tabelle \ref{tab2} enthält zusätzlich das Alter $Z$ der Kinder,
+berechnen Sie jeweils $r_{YZ}$ und $r_{XZ}$ und interpretieren
+Sie auch diese Werte.}\punkte{4}
+
+\end{enumerate}
+
+
+\aufgabe{Kreuztabellen interpretieren: Habilitationsdichte}   \punkte{11} \PRACTICAL{}\\
+
+Die Habilitation ist die höchstrangige Hochschulprüfung in Deutschland durch Anfertigung einer wissenschaftlichen Arbeit.
+In einer Untersuchung zur Habilitationsdichte an deutschen Hochschulen wurden u. a. die Merkmale Geschlecht und Habilitationsfach erhoben. In Tabelle 
+\ref{tab4} ist - nach Fächern aufgeschlüsselt- zusammengefasst, wieviele Habilitationen im Jahre 2015 erfolgreich abgeschlossen wurden 
+(Quelle: Statistisches Bundesamt) Hier stellt sich die Frage, ob die Habilitationsdichte in den einzelnen Fächern im Jahr 2015
+geschlechtsspezifisch ist, d. h. man interessiert sich dafür, ob zwischen den Merkmalen Geschlecht (=:Y) und Habilitationsfach (=:X) ein Zusammenhang besteht.
+
+
+   \[
+   \text{Ausprägungen} \: X  \overset{\wedge}{=} \left\{\begin{array}{ll} % K, &  \text{\glqq keine Ausbildung\grqq} \\
+         a_1, &  \text{ Geisteswissenschaften} \\
+         a_2, &  \text{ Rechts-,Wirtschafts-,Sozialwiss.} \\
+         a_3, &  \text{ Mathe u. Naturwiss.} \\
+         a_4, &  \text{Human-,Gesundheitswiss.} \\
+         a_5, &  \text{ übrige Fächer} \\
+        \end{array}\right.
+  \]
+  
+     \[
+    \text{Ausprägungen} \:  Y  \overset{\wedge}{=} \left\{\begin{array}{ll}  
+         b_1, &  \text{  Frauen} \\
+         b_2, &  \text{ Männer } \\
+        \end{array}\right.
+  \]
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l|c|c|c|c|c|c}
+\multicolumn{2}{c}{}&\multicolumn{4}{c}{$X$}& &$\sum$\\
+%\cline{3-7}
+\multicolumn{2}{c}{}&$a_{1}$& $a_{2}$& $a_{3}$& $a_{4}$ & $a_{5}$&\\
+\cline{3-7}
+\multirow{2}{*}{$Y$}& $b_{1}$ & $77 $ & $62$ &  $ 66$ & $225$ & $32$&\\
+\cline{2-7}
+& $b_{2}$ & $159$ & $139$ &  $181$ & $571$ & $115$&\\
+\cline{2-7}
+& $\sum$ &  &  &   &  & &\\
+%\caption{\label{tab4}}
+\end{tabular}
+\caption{Habilitationen im Jahre 2015 erfolgreich abgeschlossen wurden nach Fächern und Geschlecht aufgeschlüsselt\label{tab4} mit Randhäufigkeiten.}
+\end{table}
+\begin{enumerate}
+\item{Ergänzen sie die fehlenden Randhäufigkeiten.} \punkt{1}
+\item{Berechnen Sie die Randverteilungen.}\punkte{2}
+\item{Wie hoch ist der Anteil der Frauen, die im Jahr $2015$ ein Habilitation abgeschlossen
+haben.}\punkt{1}
+\item{Wie hoch ist der Anteil an Habilitationen aus dem Fachbereich \glqq Mathematik
+und Naturwissenschaften\grqq?}\punkt{1}
+\item{Berechnen Sie die  bedingten Verteilungen gegeben dem Fachbereich
+und interpretieren Sie das Ergebnis. } \punkte{3}
+\item{Berechnen Sie die  bedingten Verteilungen gegeben das Geschlecht
+und interpretieren Sie das Ergebnis. } \punkte{3}
+\end{enumerate}
+
+\newpage
+\aufgabe{Die Korrelation mit STATA berechnen}
+
+
+Das Streudiagramm \ref{fig1} zeigt die Spielbewertung eines neuen Spiels aufgetragen
+auf der Ordinate und die Mathe-Punkte (hier simuliert, nicht aus den PISA-Daten)
+von $300$ Schülerinnen bzw. Schülern. Sie finden den entsprechenden Datensatz
+auf den Rechnern im Methoden-Labor im Ordner \texttt{Methoden/Statistik.}
+% https://statistics.laerd.com/stata-tutorials/spearmans-correlation-using-stata.php
+% https://statistics.laerd.com/stata-tutorials/pearsons-correlation-using-stata.php
+%  \begin{figure}[ht]
+% 	\centering
+% 	      \includegraphics[width=0.75\textwidth]{scatter_curve2.pdf}
+% 	      \caption{Spielfreude der Schülerinnen und Schüler versus Mathe-Score beruhend auf 
+% 	      simulierten Daten. \label{fig1}}
+% 	\end{figure}
+ 	\begin{enumerate}
+ 	\item{Öffnen Sie den Datensatz und geben Sie den Befehl \texttt{summarize} in das \texttt{command}-Fenster
+ 	ein. Interpretieren Sie die von \texttt{STATA} erzeugte Tabelle.}
+ 	\item{Geben Sie die Befehle \texttt{graph box x} und \texttt{graph box y} ein und interpretieren Sie
+ 	die entsprechenden Boxplots.}
+ 	\item{Erzeugen Sie mit dem Befehl \texttt{scatter y x} das Streudiagramm.}
+ 	\item{Berechnen Sie mit \texttt{pwcorr x y} den Korrelationskoeffizient nach Pearson.
+ 	Wie ändert sich das Ergebnis, wenn Sie den Befehl \texttt{pwcorr y x} eingeben.
+ 	Interpretieren Sie diese Veränderung inhaltlich.}
+ 	\item{Berechnen Sie mit Hilfe des Befehls \texttt{ spearman x y} den Wert des Rangkorrelationskoeffizienten.}
+ 	\end{enumerate}
+%http://stackoverflow.com/questions/10711395/spearman-correlation-and-ties
+
+
+
+\end{enumerate}
+
+\end{document}

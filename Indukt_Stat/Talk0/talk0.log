@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  21 AUG 2017 12:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  24 AUG 2017 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1510,52 +1510,52 @@ l.193 \end{frame}
 
 ] [24
 
-] <incomplete.jpg, id=262, 259.97125pt x 194.7275pt>
-File: incomplete.jpg Graphic file (type jpg)
-
-<use incomplete.jpg>
-Package pdftex.def Info: incomplete.jpg used on input line 489.
-(pdftex.def)             Requested size: 222.48985pt x 166.6512pt.
- [25
-
- <./incomplete.jpg>] [26
+] [25
 
 ]
-<pattern.jpg, id=281, 702.625pt x 702.625pt>
-File: pattern.jpg Graphic file (type jpg)
- <use pattern.jpg>
-Package pdftex.def Info: pattern.jpg used on input line 509.
-(pdftex.def)             Requested size: 205.37926pt x 205.37492pt.
- [27
+<incomplete.jpg, id=275, 259.97125pt x 194.7275pt>
+File: incomplete.jpg Graphic file (type jpg)
+ <use incomplete.jpg>
+Package pdftex.def Info: incomplete.jpg used on input line 499.
+(pdftex.def)             Requested size: 222.48985pt x 166.6512pt.
 
- <./pattern.jpg>] <incomplete2.jpg, id=290, 99.9735pt x 65.043pt>
+[26
+
+ <./incomplete.jpg>] [27
+
+] <pattern.jpg, id=292, 702.625pt x 702.625pt>
+File: pattern.jpg Graphic file (type jpg)
+
+<use pattern.jpg>
+Package pdftex.def Info: pattern.jpg used on input line 519.
+(pdftex.def)             Requested size: 205.37926pt x 205.37492pt.
+ [28
+
+ <./pattern.jpg>]
+<incomplete2.jpg, id=301, 99.9735pt x 65.043pt>
 File: incomplete2.jpg Graphic file (type jpg)
  <use incomplete2.jpg>
-Package pdftex.def Info: incomplete2.jpg used on input line 516.
+Package pdftex.def Info: incomplete2.jpg used on input line 526.
 (pdftex.def)             Requested size: 222.48985pt x 144.7584pt.
+ [29
 
-[28
-
- <./incomplete2.jpg>]
-<mosaic-pattern.jpg, id=299, 508.90125pt x 339.2675pt>
+ <./incomplete2.jpg>] <mosaic-pattern.jpg, id=310, 508.90125pt x 339.2675pt>
 File: mosaic-pattern.jpg Graphic file (type jpg)
 
 <use mosaic-pattern.jpg>
-Package pdftex.def Info: mosaic-pattern.jpg used on input line 523.
+Package pdftex.def Info: mosaic-pattern.jpg used on input line 533.
 (pdftex.def)             Requested size: 222.48985pt x 148.32562pt.
- [29
-
- <./mosaic-pattern.jpg>]
-<patchwork.jpg, id=308, 433.62pt x 532.6299pt>
-File: patchwork.jpg Graphic file (type jpg)
- <use patchwork.jpg>
-Package pdftex.def Info: patchwork.jpg used on input line 530.
-(pdftex.def)             Requested size: 433.61894pt x 532.62859pt.
  [30
 
- <./patchwork.jpg>] [31
+ <./mosaic-pattern.jpg>]
+<patchwork.jpg, id=319, 433.62pt x 532.6299pt>
+File: patchwork.jpg Graphic file (type jpg)
+ <use patchwork.jpg>
+Package pdftex.def Info: patchwork.jpg used on input line 540.
+(pdftex.def)             Requested size: 433.61894pt x 532.62859pt.
+ [31
 
-] [32
+ <./patchwork.jpg>] [32
 
 ] [33
 
@@ -1569,50 +1569,52 @@ Package pdftex.def Info: patchwork.jpg used on input line 530.
 
 ] [38
 
+] [39
+
 ]
-<taschengeld_box.pdf, id=379, 505.89pt x 505.89pt>
+<taschengeld_box.pdf, id=390, 505.89pt x 505.89pt>
 File: taschengeld_box.pdf Graphic file (type pdf)
  <use taschengeld_box.pdf>
-Package pdftex.def Info: taschengeld_box.pdf used on input line 694.
-(pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
-
-[39
-
- <./taschengeld_box.pdf>]
-<taschengeld_theo.pdf, id=393, 505.89pt x 505.89pt>
-File: taschengeld_theo.pdf Graphic file (type pdf)
- <use taschengeld_theo.pdf>
-Package pdftex.def Info: taschengeld_theo.pdf used on input line 701.
+Package pdftex.def Info: taschengeld_box.pdf used on input line 704.
 (pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
 
 [40
 
- <./taschengeld_theo.pdf>]
-<taschengeld_dens.pdf, id=408, 505.89pt x 505.89pt>
-File: taschengeld_dens.pdf Graphic file (type pdf)
- <use taschengeld_dens.pdf>
-Package pdftex.def Info: taschengeld_dens.pdf used on input line 708.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
-
-Overfull \vbox (26.95204pt too high) detected at line 708
- []
+ <./taschengeld_box.pdf>]
+<taschengeld_theo.pdf, id=405, 505.89pt x 505.89pt>
+File: taschengeld_theo.pdf Graphic file (type pdf)
+ <use taschengeld_theo.pdf>
+Package pdftex.def Info: taschengeld_theo.pdf used on input line 711.
+(pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
 
 [41
 
- <./taschengeld_dens.pdf>] [42
+ <./taschengeld_theo.pdf>]
+<taschengeld_dens.pdf, id=419, 505.89pt x 505.89pt>
+File: taschengeld_dens.pdf Graphic file (type pdf)
+ <use taschengeld_dens.pdf>
+Package pdftex.def Info: taschengeld_dens.pdf used on input line 718.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-] [43
+Overfull \vbox (26.95204pt too high) detected at line 718
+ []
+
+[42
+
+ <./taschengeld_dens.pdf>] [43
 
 ] [44
 
 ] [45
 
+] [46
+
 ]
-Overfull \hbox (0.94986pt too wide) in paragraph at lines 787--787
+Overfull \hbox (0.94986pt too wide) in paragraph at lines 797--797
 [][][][][][]  
  []
 
-[46
+[47
 
 ]
 \tf@nav=\write6
@@ -1624,13 +1626,13 @@ Overfull \hbox (0.94986pt too wide) in paragraph at lines 787--787
 \tf@snm=\write8
 \openout8 = `talk0.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 788.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 788.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 798.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 798.
  (./talk0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 788.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 788.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 798.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 798.
 Package rerunfilecheck Info: File `talk0.out' has not changed.
-(rerunfilecheck)             Checksum: 5023FEEEB34E6394C404FF72A1820EC3;465.
+(rerunfilecheck)             Checksum: 14359C783699F1264F97764CE1765EA7;465.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1641,10 +1643,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22389 strings out of 494852
- 450667 string characters out of 6175638
+ 22393 strings out of 494852
+ 450704 string characters out of 6175638
  520694 words of memory out of 5000000
- 25072 multiletter control sequences out of 15000+600000
+ 25074 multiletter control sequences out of 15000+600000
  16941 words of font info for 63 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  56i,17n,62p,800b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1663,10 +1665,10 @@ gramme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Us
 ers/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt9.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msam7.pfb>
-Output written on talk0.pdf (46 pages, 812138 bytes).
+Output written on talk0.pdf (47 pages, 814080 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 435 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 444 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
  204 words of extra memory for PDF output out of 10000 (max. 10000000)
 

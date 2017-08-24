@@ -1,3 +1,5 @@
+# 12.35    2.709411  
+
 plotGamma.dens <- function(shape=2, rate=0.5, to=0.99, p=c(0.1, 0.9), cex=1.5, ...){
   to <- qgamma(p=to, shape=shape, rate=rate)
   curve(dgamma(x, shape, rate), from=0, to=to, n=500, type="l", 
@@ -40,15 +42,16 @@ plotGamma.cum <- function(shape=2, rate=0.5, to=0.99, p=c(0.1,0.9), cex=1.5, ...
 # http://www.bib-demografie.de/DE/ZahlenundFakten/02/Abbildungen/abbildungen_node.html
 #qgamma(0.1,shape=7, rate=2/3)
 
-plotGauss.dens <- function(mean=0, sd=1.0, to1=0.999, p=c(0.05,0.25,0.75, 0.95), cex=1.5,
-                           cex.main=1.75,cex.axis=1.75,cex.lab=1.75,...){
+
+plotGauss.dens <- function(mean=0, sd=1.0, to1=0.999, p=c(0.05,0.25,0.75, 0.95), cex=1.0,
+                           cex.main=1.0,cex.axis=1.5,cex.lab=1.5,...){
   to <- qnorm(p=to1, mean=mean, sd=sd)
   from<-qnorm(p=1-to1, mean=mean, sd=sd)
   curve(dnorm(x, mean, sd), from=from, to=to, n=500, type="l", 
         main=sprintf("Dichte", mean, sd),#gamma.dens(x, shape=%1.2f, rate=%1.2f)
         bty="n",axes = FALSE, col="red", xlab="", ylab="", #
         las=1, lwd=2, cex=cex, cex.axis=cex, cex.main=cex, ...)
-  axis(side = 1, at = seq(0,80,10),cex=cex, cex.axis=cex.axis, cex.lab=cex.lab)
+  axis(side = 1, at = seq(0,25,2),cex=cex, cex.axis=cex.axis, cex.lab=cex.lab)
   gx <- qnorm(p=p,  mean=mean, sd=sd)
   gy <- dnorm(x=gx, mean=mean, sd=sd)
   for(i in seq_along(p)) { lines(x=rep(gx[i], 2), y=c(0, gy[i]), col="darkblue") }
@@ -56,14 +59,14 @@ plotGauss.dens <- function(mean=0, sd=1.0, to1=0.999, p=c(0.05,0.25,0.75, 0.95),
 }
 # gamma.cdf(x, shape=%1.2f, rate=%1.2f)
 plotGauss.cdf <- function(mean=0, sd=1.0, to1=0.999, p=c(0.05,0.25,0.75, 0.95), cex=1.5, 
-                          cex.main=1.75,cex.axis=1.75,cex.lab=1.75, ...){
+                          cex.main=1.5,cex.axis=1.5,cex.lab=1.5, ...){
   to <- qnorm(p=to1, mean=mean, sd=sd)
   from<-qnorm(p=1-to1, mean=mean, sd=sd)
   curve(pnorm(x, mean=mean, sd=sd), from=from, to=to, n=500, type="l", 
         main=sprintf("Verteilungsfunktion", mean, sd),
         bty="n", axes = FALSE, col="darkgreen", xlab="", ylab="", ylim=c(0,1),
         las=1, lwd=2, cex=cex, cex.axis=cex.axis, cex.lab=cex.lab, ...)
-  axis(side = 1, at = seq(0,100,10), cex.axis=cex.axis, cex.lab=cex.lab)
+  axis(side = 1, at = seq(0,25,2), cex.axis=cex.axis, cex.lab=cex.lab)
   axis(side = 2, at = seq(0,1,0.1), cex.axis=cex.axis, cex.lab=cex.lab)
   #gx <- qgamma(p=p,  shape=shape, rate=rate)
   gx<- qnorm(p=p,  mean=mean, sd=sd)
@@ -71,48 +74,28 @@ plotGauss.cdf <- function(mean=0, sd=1.0, to1=0.999, p=c(0.05,0.25,0.75, 0.95), 
   for(i in seq_along(p)) { lines(x=rep(gx[i], 2), y=c(0, gy[i]), col="darkblue") }
   for(i in seq_along(p)) { text(x=gx[i], 0, p[i], adj=c(1.1, -0.2), cex=cex) }
 }
-mean75 <- 37.2
-sd75 <-20
 
-#setwd("DeskrStatistik/Übung/Übung2")
-pdf("normDens_1975.pdf")
-plotGauss.dens(mean=mean75, sd=sd75,cex=2.0)
-abline(v=mean75,lty=2,col="grey")
+      
+meanTG<- 12.35
+  sdTG<- 2.709411
+
+
+pdf("normDens_TG.pdf")
+plotGauss.dens(mean=meanTG, sd=sdTG,cex=2.0)
+abline(v=meanTG,lty=2,col="grey")
 dev.off()
 
-pdf("normCDF_1975.pdf")
-plotGauss.cdf(mean=mean75, sd=sd75,cex=2.0)
+pdf("normCDF_TG.pdf")
+plotGauss.cdf(mean=meanTG, sd=sdTG,cex=2.0)
 #abline(v=mean75,lty=2,col="grey")
 abline(h=c(0.05,0.25,0.5,0.75,0.95),lty=2,col="grey")
 dev.off()
 
-pdf("normDens_2015.pdf")
-plotGauss.dens(mean=44, sd=sd75,cex=2.0)
-abline(v=44,lty=2,col="grey")
-dev.off()
-
-pdf("normDens_2015B.pdf")
-plotGauss.dens(mean=44, sd=sd75,cex=2.0)
-abline(v=44,lty=2,col="grey")
-abline(v=c(22,66),lty=2)
-dev.off()
-
-pdf("normCDF1.pdf")
-plotGauss.cdf(mean=mean, sd=sd,cex=2.0)
-dev.off()
-
-
-pdf("norm_CDF_DENS.pdf")
+pdf("both.pdf")
 par(mfrow=c(2,1))
-plotGauss.dens(mean=mean, sd=sd)
-plotGauss.cdf(mean=mean, sd=sd)
+plotGauss.dens(mean=meanTG, sd=sdTG,cex=2.0)
+abline(v=meanTG,lty=2,col="grey")
+plotGauss.cdf(mean=meanTG, sd=sdTG,cex=2.0)
+#abline(v=mean75,lty=2,col="grey")
+abline(h=c(0.05,0.25,0.5,0.75,0.95),lty=2,col="grey")
 dev.off()
-
-qnorm(0.05, mean=mean, sd=sd)
-# 27.64377
-round(qnorm(c(0.05,0.25,0.75,0.95), mean=mean, sd=sd),2)
-# 27.64 43.01 64.37 79.73
-
-round(qnorm(0.5, mean=mean, sd=sd),2)
-
-15.8/53.7

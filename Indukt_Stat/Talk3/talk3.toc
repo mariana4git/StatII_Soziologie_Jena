@@ -1,0 +1,3 @@
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Ziel der heutigen Veranstaltung }{3}{0}{1}
+\beamer@sectionintoc {2}{Kann das Zufall sein?}{5}{0}{2}

@@ -1,0 +1,438 @@
+\documentclass[11pt]{article}
+\pagestyle{empty}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{german}
+\usepackage{multirow,array}
+\usepackage{hyperref}
+ \usepackage{graphicx}
+%\usepackage{ipe}
+%\input{thmstyle-ger}
+
+\parindent0mm
+\sloppy
+
+% Basic data
+\newcommand{\VORLESUNG}{Deskriptive Statistik für Soziologinnen und Soziologen}
+\newcommand{\STAFF}{Mariana Nold}
+\newcommand{\ASSIGNMENT}{4}
+\newcommand{\HANDOUT}{Montag, den 22.Mai   2017}
+\newcommand{\DELIVER}{bis Freitag, den 2. Juni 2017, Briefkasten des Instituts für Soziologie, in der Nähe der Cafeteria der Carls-Zeiss-Straße (In einem Umschlag, an mich adressiert) \textbf{oder} Mittwoch, Donnerstag und Freitag von 13-15 Uhr im Sekretariat von Frau Prof. Leuze, CZ-Straße 2, R286}
+\newcommand{\PRACTICAL}[1]{\marginpar{\tiny {\bf Aufgabe \\ abgeben!} #1}}
+\newcommand{\FAUFTRAG}[1]{\marginpar{\tiny {\bf selbst entdeckendes Verstehen} #1}}
+\newcommand{\titel}{Bivariate Exploration von  quantitativen und qualitativen 
+Merkmalen: Korrelation}
+\newcommand{\startwert}{14}
+
+% Arbitrary packages and settings
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\newcommand{\half}[1]{\frac{#1}{2}}
+\newcommand{\punkte}[1]{{\small{ }(#1 Punkte)}}
+\newcommand{\punkt}[1]{{\small{ }(#1 Punkt)}}
+
+\newcommand{\aufgabe}[1]{\item{\bf #1}}
+\newcommand{\hinweis}{{\em Hinweis}}
+
+\begin{document}
+% Document title
+
+\begin{center}
+\ASSIGNMENT{}. Aufgabenblatt vom \HANDOUT{} zur Vorlesung 
+\vspace*{0.5cm}
+
+%FT S149 + 156
+{\Large \VORLESUNG{}}
+%\PRACTICAL{}
+(\STAFF{}) 
+
+
+\vspace*{0.5cm}
+{\textbf{Thema:} \titel{}\\}
+\vspace*{0.2cm}
+
+{\small Abgabe: \DELIVER{}}
+\vspace*{1cm}
+\end{center}
+
+\begin{enumerate}\addtocounter{enumi}{\startwert}
+
+
+
+
+\aufgabe{Wortschatz von Kindern} \punkte{20} \PRACTICAL{}\\
+(in Anlehnung an: Fahrmeir et al, Statistik Der Weg zur Datenanalyse, S .151)\\
+Bei fünf zufällig ausgewählten Kindern wurden der Körpergröße  $X$  in cm und die 
+Wortschatz $Y$  gemessen. Dabei erfolgte die Messung des Wortschatzes
+über die Anzahl der verschiedenen Wörter, die die Kinder in einem Aufsatz über die 
+Ergebnisse in ihren Sommerferien benutzten. Nehmen wir an,
+wir hätten folgende Daten erhalten:
+
+ \begin{table}[h]
+ \centering 
+\begin{tabular}{|r|r|r|r|r|r|}
+  \hline
+  Kind   $i$     &   $1$    & $2$   & $3$   & $4$   & $5$ \\ \hline
+  Körpergröße  $x_{i}$ & $130$ & $112$ & $108$ & $114$ & $136$  \\ \hline
+  Wortschatz  $y_{i}$ & $37$& $30$ & $20$&  $28$ & $35$ \\ \hline
+ % Alter  $z_{i}$ & $12$& $7$ & $6$&  $7$ & $13$ \\ \hline
+  \end{tabular}
+ \caption{Die Körpergröße  $X$ und der Wortschatz $Y$ in cm gemessen von $5$
+ zufällig ausgewählten Kindern. \label{tab1}}
+ \end{table}  
+ 
+\begin{enumerate}
+\item{Zeichnen Sie ein Streudiagramm.\\
+\textbf{Lösung:}\\
+\textit{Siehe Abbildung \ref{fig_kw}.}
+} 
+
+%  \begin{figure}[ht]
+% 	\centering
+% 	      \includegraphics[width=0.75\textwidth]{scatter_15.pdf}
+% 	      \caption{Körpergröße in cm und Wortschatz von fünf Kindern. \label{fig_kw}}
+% 	\end{figure}
+\item{Erklären Sie an Hand dieses Beispiels was eine
+\begin{itemize}
+\item{positive bzw. negative lineare Korrelation} %\punkte{3}
+\item{positive bzw. negative monotone Korrelation} %\punkte{2}
+\end{itemize}
+inhaltlich bedeuten.\\
+\textbf{Lösung:}\\
+\textit{Eine Korrelation beschreibt die Beziehung zwischen zwei Merkmalen. Man kann als 
+Synonym für Korrelation den Begriff Wechselbeziehung verwenden. Es bedeutet,
+dass einen Einfluss von einem Merkmal $X$ auf eine anderes Merkmal $Y$ gibt,
+wenigstens in eine Richtung. Ist der Einfluss nur in eine Richtung, dann liegt
+eine Spezialfall einer Wechselbeziehung vor. Dann sind die Rollen des abhängigen
+und des unabhängigen Merkmals klar verteilt. Das abhängige Merkmal wird vom unabhängigen
+Merkmal beeinflusst.\\ Die Korrelation mach keine Aussage darüber,
+ob die Rollen klar verteilt sind.
+Ein \textbf{positive} Korrelation der Merkmale $X$ und $Y$ bedeutet, einfach gesagt,
+\glqq je mehr $X,$ desto mehr $Y$.\grqq Diese Aussage beschreibt eine mittlere Tendenz.
+Eine positive Korrelation zwischen Körpergröße und Wortschatz bedeutet,
+dass man im Mittel beobachtet, dass größere Kinder einen höheren Wortschatz haben,
+oder umgekehrt, Kinder mit größerem Wortschatz größer sind. Die Korrelation
+macht keine Aussage über die Richtung des Zusammenhangs.\\
+Analog beschreibt eine \textbf{negative} Korrelation zwischen zwei Merkmalen $X$ und $Y$
+eine negative mittlere Tendenz. Wenn z. B. mit zunehmender Zeit, seit 
+Beginn der Bearbeitung einer Aufgabe die Konzentration sinkt, dann sind die
+Bearbeitungsdauer $X$ und die Konzentrationsleistung $Y$ negativ korreliert.
+In diesem Beispiel ist inhaltlich klar, dass die Bearbeitungsdauer ursächlich ist
+für die fallende Konzentration. Die Korrelation selbst beschreibt eine
+ungerichtete Wechselbeziehung. \\
+In folgendem Artikel wir Korrelation
+am Beispiel gemessener Intelligenz und der Schulleistung diskutiert und erklärt:\\
+\url{http://www.zeit.de/1974/44/was-ist-eine-korrelation}
+}
+} 
+\item{Ist die folgende Aussage falsch oder richtig: Es ist im Allgemeinen möglich,
+dass ein positiver linearer Zusammenhang vorliegt, aber kein positiver
+monotoner Zusammenhang.\\
+\textbf{Lösung:}
+\textit{Diese Aussage ist falsch. Wenn ein positiver linearer Zusammenhang vorliegt,
+dann ist dieser Zusammenhang auch monoton. Jede Gerade mit positiver 
+Steigung ist eine monoton wachsende Funktion. Umgekehrt gilt allerdings,
+ein positiver monotoner Zusammenhang braucht nicht linear zu sein. 
+}
+} 
+\item{Schreiben Sie die Tabelle der Ränge von $X$ und $Y,$
+berechnen die den Rangkorrelationskoeffizient $r^{SP}_{XY}$ und interpretieren Sie
+diesen Wert.\\
+\textbf{Lösung:}\\
+\textit{Siehe Tabelle \ref{tab2_sol}. 
+Die Formel für den Rangkorrelationskoeffizient ist:
+\begin{equation}
+\label{sp}
+r^{SP}_{XY}= 
+  \frac{\sum_{i=1}^{n}(rg(x_{i})-\bar{rg}_{X})\cdot(rg(y_{i})-\bar{rg}_{Y})}
+  		{\sqrt{ \sum_{i=1}^{n} (rg(x_{i})-\bar{rg}_{X})^2}\cdot 
+  		\sqrt{ \sum_{i=1}^{n}(rg(y_{i})-\bar{rg}_{Y})^2}},
+\end{equation}
+dabei gilt:
+$$
+\bar{rg}_{X}=\frac{1}{n} \sum_{i=1}^{n} rg(x_{i}) = \frac{1}{n} \sum_{i=1}^{n} i = (n+1)/2
+$$
+und 
+$$
+\bar{rg}_{Y}=\frac{1}{n} \sum_{i=1}^{n} rg(y_{i}) = \frac{1}{n} \sum_{i=1}^{n} i = (n+1)/2
+$$
+Für die mittleren Ränge $\bar{rg}_{X}$ und $\bar{rg}_{Y}$ ergibt sich also in unserem Beispiel:
+$\bar{rg}_{X}=\bar{rg}_{Y}=(5+1)/2=3$
+}
+ \begin{table}[h]
+ \centering 
+\begin{tabular}{|r|r|r|r|r|r|}
+  \hline
+  Kind   $i$     &   $1$    & $2$   & $3$   & $4$   & $5$ \\ \hline
+   $rg(x_{i})$ & $4$ & $2$ & $1$ & $3$ & $5$  \\ \hline
+  $rg(y_{i})$   & $5$& $3$ & $1$&  $2$ & $4$ \\ \hline
+   $rg(x_{i})-\bar{rg}_{X}$ & $1$ & $-1$ & $-2$ & $0$ & $2$  \\ \hline
+  $rg(y_{i})-\bar{rg}_{Y}$   & $2$& $0$ & $-2$&  $-1$ & $1$ \\ \hline
+   $(rg(x_{i})-\bar{rg}_{X})(rg(y_{i})-\bar{rg}_{Y})$   & $2$& $0$ & $4$&  $0$ & $2$ \\ \hline
+  $(rg(x_{i})-\bar{rg}_{X})^2$   & $1$ & $1$ & $4$ & $0$ & $4$  \\ \hline
+  $(rg(y_{i})-\bar{rg}_{Y})^2$   & $4$& $0$ & $4$&  $1$ & $1$ \\ \hline
+  \end{tabular}
+ \caption{Die Ränge der Körpergröße   $X$  und  des Wortschatzes $Y$ 
+ von fünf
+ zufällig ausgewählten Kindern. Erweiterte Tabelle zur Berechnung des Rangkorrelationskoeffizient.
+ \label{tab2_sol}}
+ \end{table}  
+ 
+ \textit{Mit Hilfe der Tabelle kann man die Formel \eqref{sp} in drei Teile zerlegen. Im Zähler steht die 
+ Summe über die Produkte die in Zeile 6 der Tabelle berechnet sind. Summiert man diese Summe auf,
+ so erhält man den Wert $8.$ Der Nenner besteht aus zwei Teilen, die miteinander multipliziert 
+ werden. Um den ersten Teil zu berechnen, summiert man die 7. Zeile auf und zieht dann die Wurzel.
+ Es ergibt sich der Wert $\sqrt{10} \approx 3.162.$ Entsprechend erhält man den zweiten Teil aus 
+ Zeile 8. Der Werte ist $\sqrt{10} \approx 3.162.$ Insgesamt ergibt sich also
+ $$r_{X,Y}^{SP} =\frac{8}{\sqrt{10}\cdot \sqrt{10}}=0.8.$$ Dieser Wert spricht für einen ziemlich starken
+ monotonen Zusammenhang. Er macht keine Aussage darüber, ob dieser Zusammenhang
+ linear ist, oder nicht.
+ }
+}
+\item{Berechnen Sie nun  den Korrelationskoeffizienten nach Pearson $r_{X,Y}$
+und interpretieren Sie diesen Wert.\\
+\textbf{Lösung:}\\
+\textit{Die Formel für den Korrelationskoeffizienten nach Pearson $r_{X,Y}$ ist:
+\begin{equation}
+\label{pear}
+r_{X,Y}= \frac{\hat{\sigma}_{X,Y}}{\hat{\sigma}_{X}\cdot \hat{\sigma}_{Y}}=
+  \frac{\sum_{i=1}^{n}(x_{i}-\bar{x}) \cdot
+  		(y_{i}-\bar{y})}{\sqrt{ \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}}\cdot \sqrt{ \sum_{i=1}^{n} (y_{i}-\bar{y})^2}}
+\end{equation}
+Man erkennt, dass der Aufbau der gleiche ist, wie im Rangkorrelationskoeffizienten. Der Unterschied
+ist: Man rechnet hier nicht mit den Rängen der Beobachtungen, sondern mit den 
+Beobachtungen selbst. Man berechnet $\bar{x}=120$ und $\bar{y}=30.$ Entsprechend bildet man die Tabelle:
+ \begin{table}[h]
+ \centering % 49   0 100   4  25
+\begin{tabular}{|r|r|r|r|r|r|}
+  \hline
+  Kind   $i$     &   $1$    & $2$   & $3$   & $4$   & $5$ \\ \hline
+    Körpergröße  $x_{i}$ & $130$ & $112$ & $108$ & $114$ & $136$  \\ \hline
+  Wortschatz  $y_{i}$ & $37$& $30$ & $20$&  $28$ & $35$ \\ \hline
+$x_{i}-\bar{x}$ & $10$ & $-8$ & $-12$ & $-6$ & $16$  \\ \hline
+  $y_{i}-\bar{y}$   & $7$& $0$ & $-10$&  $-2$ & $5$ \\ \hline
+   $(x_{i}-\bar{x})(y_{i}-\bar{y})$   & $70$& $0$ & $120$&  $12$ & $80$ \\ \hline
+  $(x_{i}-\bar{x})^2$   & $100$ & $64$ & $144$ & $36$ & $256$  \\ \hline
+  $(y_{i}-\bar{y})^2$   & $49$& $0$ & $100$&  $4$ & $25$ \\ \hline
+  \end{tabular}
+ \caption{Die Körpergröße   $X$  und  des Wortschatzes $Y$ 
+ von fünf
+ zufällig ausgewählten Kindern. Erweiterte Tabelle zur Berechnung des Korrelationskoeffizient.
+ \label{tab3_sol}}
+ \end{table}  
+ Wie oben berechnet man die Summer der 6. Zeile um den Zähler zu bestimmen. Man erhält $282.$
+ Für den Zähler erhält man beruhend auf der 7. Zeile. Es ergibt sich $\sqrt{600}.$ Den zweiten 
+ Teil des Produkts im Zähler erhält man mit Zeile 9. Es ergibt sich $\sqrt{178.}$ Zusammenfassend 
+ erhält man 
+ $$
+ r_{X,Y}=\frac{282}{\sqrt{600}\cdot \sqrt{178}}=0.863.
+ $$
+ Diese Zahl spricht für einen starken linearen Zusammenhang. 
+}
+}
+ \begin{table}[h]
+ \centering 
+\begin{tabular}{|r|r|r|r|r|r|}
+  \hline
+  Kind   $i$     &   $1$    & $2$   & $3$   & $4$   & $5$ \\ \hline
+  Körpergröße  $x_{i}$ & $130$ & $112$ & $108$ & $114$ & $136$  \\ \hline
+  Wortschatz  $y_{i}$ & $37$& $30$ & $20$&  $28$ & $35$ \\ \hline
+  Alter  $z_{i}$ & $12$& $7$ & $6$&  $7$ & $13$ \\ \hline
+  \end{tabular}
+ \caption{Die Körpergröße   $X$  in cm gemessen, der Wortschatz $Y$
+ und das Alter $Z$ von fünf
+ zufällig ausgewählten Kindern. \label{tab2}}
+ \end{table}  
+ \item{Die Tabelle \ref{tab2} enthält zusätzlich das Alter $Z$ der Kinder,
+berechnen Sie jeweils $r_{YZ}$ und $r_{XZ}$ und interpretieren
+Sie auch diese Werte.\\
+\textbf{Lösung:}\\
+\textit{Wie oben in Teilaufgabe e, berechnet man $r_{X,Z}=0.995$ und $r_{Y,Z}=0.867.$
+Man erkennt, dass der Körpergröße $X$ und dem Alter $Z$ ein sehr deutlicher linearer 
+Zusammenhang besteht. Auch zwischen dem Alter $Z$ und dem Wortschatz $Y$ besteht ein
+deutlicher Zusammenhang.
+}
+}
+
+\end{enumerate}
+
+\newpage
+
+\aufgabe{Kreuztabellen interpretieren: Habilitationsdichte}   \punkte{11} \PRACTICAL{}\\
+
+Die Habilitation ist die höchstrangige Hochschulprüfung in Deutschland durch Anfertigung einer wissenschaftlichen Arbeit.
+In einer Untersuchung zur Habilitationsdichte an deutschen Hochschulen wurden u. a. die Merkmale Geschlecht und Habilitationsfach erhoben. In Tabelle 
+\ref{tab4} ist - nach Fächern aufgeschlüsselt- zusammengefasst, wieviele Habilitationen im Jahre 2015 erfolgreich abgeschlossen wurden 
+(Quelle: Statistisches Bundesamt) Hier stellt sich die Frage, ob die Habilitationsdichte in den einzelnen Fächern im Jahr 2015
+geschlechtsspezifisch ist, d. h. man interessiert sich dafür, ob zwischen den Merkmalen Geschlecht (=:Y) und Habilitationsfach (=:X) ein Zusammenhang besteht.
+
+
+   \[
+   \text{Ausprägungen} \: X  \overset{\wedge}{=} \left\{\begin{array}{ll} % K, &  \text{\glqq keine Ausbildung\grqq} \\
+         a_1, &  \text{ Geisteswissenschaften} \\
+         a_2, &  \text{ Rechts-,Wirtschafts-,Sozialwiss.} \\
+         a_3, &  \text{ Mathe u. Naturwiss.} \\
+         a_4, &  \text{Human-,Gesundheitswiss.} \\
+         a_5, &  \text{ übrige Fächer} \\
+        \end{array}\right.
+  \]
+  
+     \[
+    \text{Ausprägungen} \:  Y  \overset{\wedge}{=} \left\{\begin{array}{ll}  
+         b_1, &  \text{  Frauen} \\
+         b_2, &  \text{ Männer } \\
+        \end{array}\right.
+  \]
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l|c|c|c|c|c|c}
+\multicolumn{2}{c}{}&\multicolumn{4}{c}{$X$}& &$\sum$\\
+%\cline{3-7}
+\multicolumn{2}{c}{}&$a_{1}$& $a_{2}$& $a_{3}$& $a_{4}$ & $a_{5}$&\\
+\cline{3-7}
+\multirow{2}{*}{$Y$}& $b_{1}$ & $77 $ & $62$ &  $ 66$ & $225$ & $32$&\\
+\cline{2-7}
+& $b_{2}$ & $159$ & $139$ &  $181$ & $571$ & $115$&\\
+\cline{2-7}
+& $\sum$ &  &  &   &  & &\\
+%\caption{\label{tab4}}
+\end{tabular}
+\caption{Habilitationen im Jahre 2015 erfolgreich abgeschlossen wurden nach Fächern und Geschlecht aufgeschlüsselt\label{tab4}.}
+\end{table}
+\begin{enumerate}
+\item{Ergänzen sie die fehlenden Randhäufigkeiten.\\
+\textbf{Lösung:}\\
+\textit{Siehe Tabelle \ref{tab4_sol}}
+\begin{table}[h]
+\centering
+\begin{tabular}{l l|c|c|c|c|c|c}
+\multicolumn{2}{c}{}&\multicolumn{4}{c}{$X$}& &$\sum$\\
+%\cline{3-7}
+\multicolumn{2}{c}{}&$a_{1}$& $a_{2}$& $a_{3}$& $a_{4}$ & $a_{5}$&\\
+\cline{3-7}
+\multirow{2}{*}{$Y$}& $b_{1}$ & $77 $ & $62$ &  $ 66$ & $225$ & $32$&462\\
+\cline{2-7}
+& $b_{2}$ & $159$ & $139$ &  $181$ & $571$ & $115$&1165\\
+\cline{2-7}
+& $\sum$ & $236$ & $201$ & $247$   & $796$  & $147$ & $1627$\\
+%\caption{\label{tab4}} %236 201 247 796 147
+\end{tabular}
+\caption{Habilitationen im Jahre 2015 erfolgreich abgeschlossen wurden nach Fächern und Geschlecht aufgeschlüsselt\label{tab4_sol} mit Randhäufigkeiten.}
+\end{table}
+} 
+\item{Berechnen Sie die Randverteilungen (= marginale relative Häufigkeit).\\
+\textbf{Lösung:}\\ Die Randverteilung des Merkmals Geschlecht (Y) ist
+$f_{1,\bullet}=0.284, f_{2,\bullet}=0.716.$ Die Randverteilung des Merkmals Habilitationsfach (X)
+ist:\\ $f_{\bullet,1}=0.145, f_{\bullet,2}=0.124, f_{\bullet,3}= 0.152, f_{\bullet,4}= 0.489,
+f_{\bullet,5}= 0.090$
+}
+
+
+\item{Wie hoch ist der Anteil der Frauen, die im Jahr $2015$ eine Habilitation abgeschlossen
+haben.\\
+\textbf{Lösung:}\\
+\textit{Der Anteil beträgt $\frac{462}{1627}=0.284.$ Von allen die $2015$ eine Habilitation
+abgeschlossen haben, sind $28.4\%$ Frauen.}
+}
+\item{Wie hoch ist der Anteil an Habilitationen aus dem Fachbereich \glqq Mathematik
+und Naturwissenschaften\grqq?\\
+\textbf{Lösung:}\\
+\textit{Der Anteil ist $f_{\bullet,3}= 0.152.$ Damit sind $15.2\%$ der Habilitationen aus
+diesem Fachbereich. }
+}
+\item{Berechnen Sie die  bedingten Verteilungen (= bedingte 
+relative Häufigkeit) gegeben dem Fachbereich
+und interpretieren Sie das Ergebnis. \\
+\textbf{Lösung:}\\
+\textit{Siehe Tabelle \ref{tab4_sol_hab}. Die Tabelle zeigt wie sich in den einzelnen Fachbereichen
+die Anteile an Frauen und Männern darstellen. Ein Vergleich mit der Randverteilung zeigt,
+wo man mehr bzw. weniger Frauen als mit Bezug auf die Randverteilung erwartet, findet.
+In den Geisteswissenschaften ist der Frauenanteil am höchsten.}
+\begin{table}[h]
+\centering
+\begin{tabular}{l l|c|c|c|c|c|c}
+\multicolumn{2}{c}{}&\multicolumn{4}{c}{$X$}& &$$\\
+%\cline{3-7}
+\multicolumn{2}{c}{}&$a_{1}$& $a_{2}$& $a_{3}$& $a_{4}$ & $a_{5}$&\\
+\cline{3-7}
+\multirow{2}{*}{$Y$}& $b_{1}$ & 0.326& 0.308& 0.267& 0.283& 0.218& 0.284\\
+\cline{2-7}
+& $b_{2}$ & 0.674 & 0.692 & 0.733& 0.717& 0.782&0.716\\
+\cline{2-7}
+&  & $1.0$ & $1.0$ & $1.0$   & $1.0$  & $1.0$ & $1.0$\\
+%\caption{\label{tab4}} %236 201 247 796 147
+\end{tabular}
+\caption{Bedingte Verteilung des Geschlechts ($Y$) gegeben dem
+Habilitationsfach ($X$)\label{tab4_sol_hab} .}
+\end{table}
+} 
+\item{Berechnen Sie die  bedingten Verteilungen  (= bedingte 
+relative Häufigkeit) gegeben das Geschlecht
+und interpretieren Sie das Ergebnis. \\
+\textbf{Lösung:}\\
+\textit{Siehe Tabelle \ref{tab4_sol_sex}. Die Tabelle zeigt für die Gruppe der Männer
+und die Gruppe der Frauen jeweils, wie hoch der Anteil der Habilitationen in
+den einzelnen Fachbereichen ist. Unter den Frauen wurden die meisten
+Habilitationen in den Human- und Gesundheitswissenschaften abgeschlossen ($48.7\%$).
+In der Gruppe der Männer liegt dieser Fachbereich ebenfalls ganz vorne mit $49.0\%$}
+\begin{table}[h]
+\centering
+\begin{tabular}{l l|c|c|c|c|c|c}
+\multicolumn{2}{c}{}&\multicolumn{4}{c}{$X$}& &$$\\
+%\cline{3-7}
+\multicolumn{2}{c}{}&$a_{1}$& $a_{2}$& $a_{3}$& $a_{4}$ & $a_{5}$&\\
+\cline{3-7}
+\multirow{2}{*}{$Y$}& $b_{1}$ & 0.167 & 0.134 & 0.143 & 0.487 &0.069& 1.0\\
+\cline{2-7}
+& $b_{2}$ & 0.136& 0.119& 0.155& 0.490& 0.099& 1.0\\
+\cline{2-7}
+&  & 0.145 & 0.124 & 0.152 & 0.489 & 0.090 &1.0\\
+%\caption{\label{tab4}} %236 201 247 796 147
+\end{tabular}
+\caption{Bedingte Verteilung des Habilitationsfach ($X$) gegeben dem
+Geschlechts ($Y$)\label{tab4_sol_sex}.}
+\end{table}
+} 
+\end{enumerate}
+
+\newpage
+\aufgabe{Die Korrelation mit STATA berechnen}
+
+
+Das Streudiagramm \ref{fig1} zeigt die Spielbewertung eines neuen Spiels aufgetragen
+auf der Ordinate und die Mathe-Punkte (hier simuliert, nicht aus den PISA-Daten)
+von $300$ Schülerinnen bzw. Schülern. Sie finden den entsprechenden Datensatz
+auf den Rechnern im Methoden-Labor im Ordner \texttt{Methoden/Statistik.}
+% https://statistics.laerd.com/stata-tutorials/spearmans-correlation-using-stata.php
+% https://statistics.laerd.com/stata-tutorials/pearsons-correlation-using-stata.php
+%  \begin{figure}[ht]
+% 	\centering
+% 	      \includegraphics[width=0.75\textwidth]{scatter_curve2.pdf}
+% 	      \caption{Spielfreude der Schülerinnen und Schüler versus Mathe-Score beruhend auf 
+% 	      simulierten Daten. \label{fig1}}
+% 	\end{figure}
+ 	\begin{enumerate}
+ 	\item{Öffnen Sie den Datensatz und geben Sie den Befehl \texttt{summarize} in das \texttt{command}-Fenster
+ 	ein. Interpretieren Sie die von \texttt{STATA} erzeugte Tabelle.}
+ 	\item{Geben Sie die Befehle \texttt{graph box x} und \texttt{graph box y} ein und interpretieren Sie
+ 	die entsprechenden Boxplots.}
+ 	\item{Erzeugen Sie mit dem Befehl \texttt{scatter y x} das Streudiagramm.}
+ 	\item{Berechnen Sie mit \texttt{pwcorr x y} den Korrelationskoeffizient nach Pearson.
+ 	Wie ändert sich das Ergebnis, wenn Sie den Befehl \texttt{pwcorr y x} eingeben.
+ 	Interpretieren Sie diese Veränderung inhaltlich.}
+ 	\item{Berechnen Sie mit Hilfe des Befehls \texttt{ spearman x y} den Wert des Rangkorrelationskoeffizienten.}
+ 	\end{enumerate}
+%http://stackoverflow.com/questions/10711395/spearman-correlation-and-ties
+%http://www.crashkurs-statistik.de/
+
+
+\end{enumerate}
+
+\end{document}

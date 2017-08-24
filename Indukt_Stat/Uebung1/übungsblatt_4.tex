@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\pagestyle{empty}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{german}
+\usepackage{multirow,array}
+\usepackage{hyperref}
+ \usepackage{graphicx}
+%\usepackage{ipe}
+%\input{thmstyle-ger}
+
+\parindent0mm
+\sloppy
+
+% Basic data
+\newcommand{\VORLESUNG}{Deskriptive Statistik für Soziologinnen und Soziologen}
+\newcommand{\STAFF}{Mariana Nold}
+\newcommand{\ASSIGNMENT}{4}
+\newcommand{\HANDOUT}{Montag, den 22.Mai   2017}
+\newcommand{\DELIVER}{keine Abgabe, wird in der Übung besprochen}
+\newcommand{\PRACTICAL}[1]{\marginpar{\tiny {\bf Aufgabe \\ abgeben!} #1}}
+\newcommand{\FAUFTRAG}[1]{\marginpar{\tiny {\bf selbst entdeckendes Verstehen} #1}}
+\newcommand{\titel}{Bivariate Exploration von  quantitativen und qualitativen 
+Merkmalen: Korrelation}
+\newcommand{\startwert}{14}
+
+% Arbitrary packages and settings
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\newcommand{\half}[1]{\frac{#1}{2}}
+\newcommand{\punkte}[1]{{\small{ }(#1 Punkte)}}
+\newcommand{\punkt}[1]{{\small{ }(#1 Punkt)}}
+
+\newcommand{\aufgabe}[1]{\item{\bf #1}}
+\newcommand{\hinweis}{{\em Hinweis}}
+
+\begin{document}
+% Document title
+
+\begin{center}
+\ASSIGNMENT{}. Übungsblatt vom \HANDOUT{} zur Vorlesung 
+\vspace*{0.5cm}
+
+{\Large \VORLESUNG{}}
+%\PRACTICAL{}
+(\STAFF{}) 
+
+
+\vspace*{0.5cm}
+{\textbf{Thema:} \titel{}\\}
+\vspace*{0.2cm}
+
+{\small Abgabe: \DELIVER{}}
+\vspace*{1cm}
+\end{center}
+
+\begin{enumerate}\addtocounter{enumi}{\startwert}
+
+
+
+
+\aufgabe{Standardisierung} % \PRACTICAL{}
+
+Die folgende Grafik \ref{fig1} ist Ihnen aus der Vorlesung bekannt. Sie zeigt die Verteilung der Lese-Punkte der $5001$ deutschen Schülerinnen und Schüler
+aus der Pisa-Studie von $2012.$ In grün ist
+ eine mögliche Approximation aus der  Familie der Normalverteilungen eingezeichnet. 
+ 
+ Die Lese-Leistung der Person $i$ ($i \in \{1,\dots, 5001\}$) wird mit $y_{i}$
+bezeichnet. Der Mittelwert $\bar{y}$ ergibt sich zu $507.465$ Punkten. Die Standardabweichung $\hat{\sigma}_{Y}$ beträgt $91.263$ Punkte.
+
+%\begin{figure}[ht]
+% 	\centering
+% 	      \includegraphics[width=0.60\textwidth]{dens_hist_lesen.pdf}
+% 	      \caption{Histogramm und Modellverteilung der Lese-Punkte von 15-jährigen deutschen Schülerinnen und Schülern aus der Pisa-Studie $2012.$  \label{fig1}}
+% 	\end{figure}
+
+ \begin{enumerate}
+ \item{Wie können Sie beruhend auf diesen Daten eine Vermutung über die Werte der Parameter $\mu$ und $\sigma$ der Normalverteilung gewinnen?}
+ \item{Erklären Sie jeweils, wie sich die Form der Normalverteilung ändert, wenn man}
+ \begin{itemize}
+ \item{für festes $\sigma$ den Erwartungswert $\mu$ variiert. Interpretieren Sie die inhaltliche Bedeutung.}
+ \item{für festes $\mu$ den Erwartungswert $\sigma$ variiert. Interpretieren Sie die inhaltliche Bedeutung.}
+ \end{itemize}
+ \item{Nutzen Sie die $68-95-99.7$-Regel um beruhend auf ihrer Modellverteilung ein Intervall zu schätzen, indem die Leseleistung von etwa $99.7\%$
+ der Schülerinnen und Schüler liegt. Dieses Intervall soll symmetrisch um den vermuteten Erwartungswert $\mu$ liegen. Interpretieren Sie dieses Intervall.}
+ \item{Berechnen Sie jetzt ein Intervall, so dass es die Leistungen der mittleren $68\%$ enthält und interpretieren Sie auch dieses Intervall.}
+ \item{Die Lese-Punkte $Y$ sollen nun standardisiert werden.   Lesen Sie S. 80 in dem Buch
+  \glqq Statistik- Eine Einführung für Sozialwissenschaftler \grqq von Ludwig-Mayerhofer, Liebeskind und Geißler (auf dt-workspace) und erklären Sie die Bedeutung der Standardisierung.
+  Geben Sie die Berechnungsformel für die standardisierten Lese-Punkte $Z$ an.}
+  \item{Die erste Person im Datensatz hat $y_{1}=475.001$ Lese-Punkte erreicht. Berechnen Sie ihre standardisierte Lese-Punktzahl $z_{1}.$}
+  \item{Nehmen Sie an, es gibt noch andere Tests als die in der Pisa-Studie verwendeten Tests um die Lese-Leistung von $15$-jährigen
+  zu beurteilen. Diese Tests haben eine andere maximale Punktzahl. Wie kann Ihnen das Prinzip der
+  Standardisierung helfen, zu vergleichen, ob die unterschiedlichen Test inhaltlich zu einer vergleichbaren Bewertung kommen?}
+\end{enumerate}
+
+
+\aufgabe{Die durch die Ausgleichsgerade erklärte Streuung}
+
+In der Vorlesung hatten wir über den (vermuteten) linearen Zusammenhang der Mathe- und Lese-Punkte gesprochen. Die Grafik \ref{fig2} zeigt für die ersten $300$
+Schülerinnen und Schüler den Zusammenhang in einem Streudiagramm. 
+
+Die Mathe-Leistung der Person $i$ ($i \in \{1,\dots,300\}$) wird mit $x_{i}$
+bezeichnet. Der Mittelwert dieser Personengruppe $\bar{x}$ ergibt sich zu $538.92$ Punkten. Die Standardabweichung
+dieser Personengruppe $\hat{\sigma}_{X}$ beträgt $101.636$ Punkte. 
+
+Die Lese-Leistung der Person $i$ ($i \in \{1,\dots,300\}$) wird wieder  mit $y_{i}$
+bezeichnet. Der Mittelwert dieser Personengruppe $\bar{y}$ ergibt sich zu $523.431$ Punkten. Die Standardabweichung dieser Personengruppe $\hat{\sigma}_{Y}$ beträgt $94.457$ Punkte.
+Der Korrelationskoeffizient nach Pearson hat den Wert 0.889.
+% Selber rechnen am Beispiel von S.219-222
+%\begin{figure}[ht]
+% 	\centering
+% 	      \includegraphics[width=0.60\textwidth]{scatter_line.pdf}
+% 	      \caption{Lese- und Mathe-Punkte der ersten 300 Schülerinnen und Schüler.\label{fig2}}
+%\end{figure}
+
+\begin{enumerate}
+\item{Berechnen Sie beruhend auf dem Zusammenhang $$\hat{\beta}=\hat{\rho}\cdot \bigg(\frac{\hat{\sigma}_{Y}}{\hat{\sigma}_{X}}\bigg),$$
+die Steigung der in der Grafik \ref{fig2} eingezeichneten Geraden und interpretieren Sie diese Steigung.}
+\item{Um die Gerade festzulegen, muss neben der Steigung noch der Achsenabschnitt $\hat{\alpha}$ berechnet werden. Die verwendete 
+Formel ist $$ \hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}.$$ Berechnen und interpretieren Sie den Achsenabschnitt.}
+\item{Die erste Person im Datensatz hat $x_{i}=475.001$ Lesepunkte und $y_{i}=443.53$ Mathe-Punkte. Berechnen Sie den durch
+die Gerade vorhergesagten Wert für diese Person. Dieser Wert wird mit $\hat{y_{i}}$ bezeichnet.}
+\item{Interpretieren Sie den Abstand $y_{i}-\hat{y_{i}}$ sowohl grafisch als auch inhaltlich.}
+\item{Welcher Spezialfall ergibt sich, wenn für eine Erhebung $\sum_{i}^{300} |y_{i}-\hat{y_{i}}|=0$ gilt. }
+% Wenn dieser Speziallfall gilt, würde die gesamte Streeung sum_{i=1}^{n} (y_{i}-\bar{y}) durch die Gerade erklärt werden
+\end{enumerate}
+
+
+
+\aufgabe{Monotone Funktionen}
+\begin{enumerate}
+\item{Finden Sie je ein Beispiel für eine streng monoton wachsende, eine schwach monoton wachsende,
+eine streng monoton fallende und eine schwach monoton fallenden mathematische Funktion.}
+\item{Überlegen Sie jeweils zu welchem Merkmauszusammenhang 
+zwischen zwei Merkmalen $X$ und $Y$ (Streudiagramm) diese Funktion passen könnte.}
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

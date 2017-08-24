@@ -123,8 +123,8 @@ Es gibt in diesem Semester drei thematische Schwerpunkte:
     Nr. & Datum & Thema \\ \hline
     0 &   $ 16.10.2017$   &  \colorbox{blue!10}{  Der Zufallsvorgang und der Inferenzschluss}   \\ \hline
     \colorbox{yellow!40}{1} &  $23.10.2017$  &   \colorbox{blue!10}{Die parametrische  Wahrscheinlichkeitsverteilung } \\ \hline
-    \colorbox{yellow!40}{2} &   $13.11.2017$   &   \colorbox{green!40}{Punktschätzer und Konfidenzintervalle }\\ \hline
-    \colorbox{yellow!40}{3} &   $27.11.2017$   &   \colorbox{green!40}{Grundlagen des statistischen Testens}\\ \hline
+    \colorbox{yellow!40}{2} &   $13.11.2017$   &   \colorbox{green!40}{Grundlagen des statistischen Testens}\\ \hline
+    \colorbox{yellow!40}{3} &   $27.11.2017$   &   \colorbox{green!40}{Punktschätzer und Konfidenzintervalle }\\ \hline
 %    \multirow{2}{*}{3} &  \multirow{2}{*}{$27.11.2017$}& \colorbox{red!20}{Grundlagen des statistischen Testens}\\
 %               &               & von quantitativen Merkmalen\\ \hline
   \multirow{2}{*}{\colorbox{yellow!40}{4}} &  \multirow{2}{*}{$11.12.2017$}& \colorbox{violet!40}{Bivariate lineare Regression} \\
@@ -210,15 +210,17 @@ Es gibt in diesem Semester drei thematische Schwerpunkte:
  \begin{itemize}
 %\item {In der Woche vom 22. Januar bis 26. Januar erfolgt die Zulassung}\pause
 \item {Sie müssen bei vier von fünf Aufgabenblättern mindestens $50\%$ richtig gelöst haben, um an der Klausur teilnehmen zu dürfen.}\pause
-  \item {Die Klausur findet am Montag den 12. Februar um 10-12 Uhr statt.}\
-  \item {Die Nachholklausur findet am Montag den 12. Februar um 10-12 Uhr statt.}
+  \item {Die Klausur findet am Montag den 12. Februar um 10-12 Uhr statt.}\pause
+  \item {Die Nachholklausur findet am Montag den 12. Februar um 10-12 Uhr statt.}\pause
   \item {Das Aufgabenblatt 6 wird durch eine Probeklausur ersetzt. 
   \begin{itemize}
-  \item{So können Sich mehr auf die Art der Aufgaben einstellen. }
-  \item{Die Art der Aufgaben für die Aufgabenblätter und die Klausur orientiert sich an den Kernkompetenzen.}
+ % \item{So können Sich mehr auf die Art der Aufgaben einstellen. }
+%  \item{Die Art der Aufgaben für die Aufgabenblätter und die Klausur orientiert sich an den Kernkompetenzen.}
   \item{Es wird dann auch vom Umfang einer erwarteten Bearbeitungszeit von 90
   Minuten entsprechen.}
   \item{Zeilenabstände werden größer sein.}
+  \item{Sie brauchen keine \texttt{STATA}-Befehle zu kennen, sollen aber 
+  \texttt{STATA}-Ouput interpretieren können.}
   \end{itemize}
    }
   \end{itemize}
@@ -322,7 +324,6 @@ sinnvolle Analyse des Datensatzes.}
 \begin{frame}{Sie möchten Begriffe  nachschlagen
 oder wiederholen?}
 \begin{enumerate}
-\item{Online Lexikon von Prof. Ludwig-Mayerhofer: \url{http://wlm.userweb.mwn.de/Ilmes/}}\pause
 \item{(ThULB Jena) Buch:\\ \textbf{Statistik: Eine Einführung für Sozialwissenschaftler (Grundlagentexte Soziologie)},\\
  Wolfgang Ludwig-Mayerhofer , Uta Liebeskind , Ferdinand Geißler }\pause
  \item{ThULB Jena E-Book: \\
@@ -332,6 +333,13 @@ oder wiederholen?}
    \textbf{Statistik für Soziologen} (2. Auflage), Rainer Diaz-Bone}\pause
    \item{ThULB Jena E-Book: \\
    \textbf{Statistik- Der Weg zur Datenanalyse} (8. Auflage), Ludwig Fahrmeir und andere}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Lexikon und Online-Karteikarten}
+\begin{enumerate}
+\item{Online Lexikon von Prof. Ludwig-Mayerhofer: \url{http://wlm.userweb.mwn.de/Ilmes/}}\pause
+\item{Karteikarten online: \url{https://www.cobocards.com/pool/de/cardset/7yua50512/online-karteikarten-33209-statistik-i/}}
 \end{enumerate}
 \end{frame}
 \section{Statistische Inferenz}
@@ -454,16 +462,18 @@ existiert. }}\pause% Rüger I S. 116,117
 \begin{frame}{Der Inferenzschluss der Klassischen Inferenz}
 \begin{itemize}
 \item{Um ein valides  Abbild der Grundgesamtheit zu bekommen,
-zieht man eine Zufallsstichprobe.}
+zieht man eine Zufallsstichprobe.}\pause
 \item{Nur bei Realisierung einer Zufallsauswahl kann von einer Stichprobe
 \textbf{mit kontrollierter Irrtumswahrscheinlichkeit} auf die zugrundeliegende
-Grundgesamtheit zurückgeschlossen werden. }
+Grundgesamtheit zurückgeschlossen werden. }\pause
 \item{Dieser auch \textbf{Inferenzschluss} bezeichnete Rückschluss
 von Eigenschaften der Stichprobe auf Eigenschaften der Grundgesamtheit ist
-Gegenstand der induktiven Statistik.}
+Gegenstand der induktiven Statistik.}\pause
 \item{Ein Inferenzschluss ist stets mit Unsicherheit behaftet. Dies ergibt sich
-zwingend daraus, dass nur eine Teilinformation zu Verfügung steht.}
+zwingend daraus, dass nur eine Teilinformation zu Verfügung steht.}\pause
 \end{itemize}
+Leseempfehlung:
+(\url{http://www.fernuni-hagen.de/ksw/neuestatistik/content/MOD_27531/html/comp_27634.html})
 \end{frame}
 
 \subsection{Die Intention der empirischen Forschung}
@@ -693,7 +703,7 @@ ob sich die Normalverteilung eignet um die Daten zu beschreiben.
  	\end{figure}
 \end{frame}
 
-\begin{frame}{Grafische Darstellung: Empirische Verteilungsfunktion und beschreibende Verteilungsfunktion}
+\begin{frame}{Grafische Darstellung: Empirische Verteilungsfunktion und theoretische Verteilungsfunktion}
         \begin{figure}[ht]
  	\centering
  	      \includegraphics[width=0.55\textwidth]{taschengeld_theo.pdf}
@@ -742,7 +752,7 @@ aufgenommen zu werden bekannt und}
 \end{enumerate}
 \end{block}
 \begin{variableblock}{Definition: Einfache Zufallsstichprobe}{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
-Eine einfache Zufallsstichprobe liegt dann vor, wenn jede der möglichen auf diese Weise gezogenen Stichproben vom Umfang n aus einer Grundgesamtheit vom Umfang N die gleiche Chance hat aufzutreten. 
+Eine einfache Zufallsstichprobe liegt dann vor, wenn jede der möglichen auf diese Weise gezogenen Stichproben vom Umfang n aus einer Grundgesamtheit vom Umfang $N$ die gleiche Chance hat aufzutreten. 
 \end{variableblock}
 
 \end{frame}
@@ -753,7 +763,7 @@ Eine einfache Zufallsstichprobe liegt dann vor, wenn jede der möglichen auf die
 %%Wird in der Übung wiederholt
 \begin{itemize}
 %\item{ha}
-\item{Wir wiederholen den zentralen Zusammenhang: Beschreibende Dichte und Verteilungsfunktion}
+\item{Wir wiederholen den zentralen Zusammenhang: Theoretische Dichte und Verteilungsfunktion}
 \item{Wir nutzen \texttt{STATA} um den fiktiven Taschengelddatensatz zu beschreiben}
 \item{Es wird auch das Geschlecht erhoben, so dass wir die Verteilung des
 Taschengelds in den beiden Gruppen vergleichen können.}
@@ -761,7 +771,7 @@ Taschengelds in den beiden Gruppen vergleichen können.}
 \item{In der Übung werden wir auch dieses Modell mit \texttt{STATA} erkunden.}
 \item{Inferenzschlüsse werden noch nicht gezogen, aber wir sprechen darüber,
 was es bedeutet das zu tun und unter welchen Voraussetzungen wir es tun dürfen.
-(\url{http://www.fernuni-hagen.de/ksw/neuestatistik/content/MOD_27531/html/comp_27634.html)}
+
 }
 %%}
 \end{itemize}

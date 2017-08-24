@@ -1,6 +1,14 @@
+# https://www.kiggs-studie.de/fileadmin/KiGGS-Dokumente/kiggs_tn_broschuere_web.pdf
+# https://cran.r-project.org/web/packages/readstata13/readstata13.pdf
+# https://stackoverflow.com/questions/10535235/generate-correlated-random-numbers-from-binomial-distributions-in-r
+# https://stackoverflow.com/questions/16089178/how-to-simulate-correlated-binary-data-with-r
+# Jungs 14% und Mädchen 21%
 # Simuliere Taschengeld von 100 Kindern
 set.seed(1)
 rnorm(100,mean=12,sd=3)->x
+
+
+
 # Summe von drei mean=36, sd=sqrt(27)
 pnorm(12,mean=36, sd=sqrt(27))
 pnorm(12,mean=12, sd=sqrt(9))*pnorm(12,mean=12, sd=sqrt(9))
