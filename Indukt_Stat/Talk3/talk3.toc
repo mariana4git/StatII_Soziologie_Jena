@@ -1,3 +1,8 @@
 \select@language {ngerman}
 \beamer@sectionintoc {1}{Ziel der heutigen Veranstaltung }{3}{0}{1}
-\beamer@sectionintoc {2}{Kann das Zufall sein?}{5}{0}{2}
+\beamer@sectionintoc {2}{Signifikanter Unterschied zwischen den Gruppen}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Kann das Zufall sein?}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Das Modell grafisch}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Die Grundidee des Signifikanztest}{16}{0}{2}
+\beamer@sectionintoc {3}{Die Pr\IeC {\"u}fgr\IeC {\"o}\IeC {\ss }e und die Testentscheidung}{24}{0}{3}
+\beamer@subsectionintoc {3}{1}{Die Pr\IeC {\"u}fgr\IeC {\"o}\IeC {\ss }e}{26}{0}{3}

@@ -20,7 +20,11 @@ graph.emp(anz=200)
 dev.off()
 data.frame(x2)->my.frame
 names(my.frame)
+
+# STATA-Links
 # https://www.beratung-statistik.de/statistik-beratung-infos/r-tutorial/
+# http://data.princeton.edu/stata/
+
 names(my.frame)<-c("AnzTreffer")
 write.dta(my.frame,"muenze.dta")
 #https://stackoverflow.com/questions/17759540/r-graph-of-binomial-distribution
