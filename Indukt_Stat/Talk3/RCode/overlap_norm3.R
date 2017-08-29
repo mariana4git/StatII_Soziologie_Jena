@@ -1,5 +1,6 @@
 # https://mattmazur.com/2014/10/
-# 
+# http://stats.seandolinar.com/one-sample-t-test-with-r-code/
+
 # setClass(
 #   Class = "Distribution",
 #   representation = representation(

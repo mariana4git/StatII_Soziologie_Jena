@@ -53,15 +53,15 @@
 ist es die folgenden Fragen beantworten zu können:
 \begin{block}{Zielfragen für heute}
 \begin{enumerate}
-\item{Was bedeuten die Begriffe Nullhypothese und Alternativhypothese?}
-\item{Welche vier Schritte beschreiben das Vorgehen bei statistischen Test?}
-\item{Bei Mittelwertunterschieden: Wie formulieren Sie eine gerichtete und wie eine ungerichtete 
-Hypothese?}
-\item{Was versteht man unter einer Teststatistik?}
-\item{Was ist ein Ablehnbereich?}
-\item{Was ist ein Signifikanzniveau?}
+\item{Was bedeuten die Begriffe Nullhypothese und Forschungshypothese?}
+\item{Welche der beiden Hypothesen kann man nachweisen?}
 \item{Wie sind der $\alpha$-Fehler und der $\beta$-Fehler definiert?}
-\item{Was versteht man unter der Teststärke?}
+\item{Was ist das Signifikanzniveau bzw. die Irrtumswahrscheinlichkeit?}
+\item{Was versteht man unter einer Teststatistik?}
+\item{Welche Rolle spielt der kritische Wert?}
+\item{Was versteht man unter einem p-Wert?}
+%\item{}
+%\item{Was versteht man unter der Teststärke?}
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -300,14 +300,14 @@ unter Gültigkeit von $H_{0}$ die Daten so wie sind beobachten können. Wir gehe
 die Nullhypothese. Die Wahrscheinlichkeit für einen Irrtum beträgt $5\%.$
 \end{block}
 \end{frame}
-\section{Die Prüfgröße und die Testentscheidung}
+\section{Die Teststatistik und die Testentscheidung}
 
 \begin{frame}{Wie kann man entscheiden, ab wann man $H_{0}$ verwirft?}
 \begin{itemize}
-\item{Für einen (klassischen) parametrischen statistischen Test, braucht man ein Prüfgröße.}\pause
-\item{Ich möchte Ihnen heute eine Prüfgröße vorstellen, um zu zeigen, wie der Test abläuft.}\pause
-\item{Es gibt viele statistische Tests, sie brauchen die Prüfgrößen nicht zu kennen. }\pause
-\item{Für die Herleitung unsere Prüfgröße brauchen wir die Modellannahme der Normalverteilung,
+\item{Für einen (klassischen) parametrischen statistischen Test, braucht man ein Teststatistik.}\pause
+\item{Ich möchte Ihnen heute eine Teststatistik vorstellen, um zu zeigen, wie der Test abläuft.}\pause
+\item{Es gibt viele statistische Tests, sie brauchen die entsprechenden Teststatistiken nicht zu kennen. }\pause
+\item{Für die Herleitung unserer Teststatistik brauchen wir die Modellannahme der Normalverteilung,
 also $X \sim N(\mu_{X},\sigma_{X})$ und $Y \sim N(\mu_{Y},\sigma_{Y}).$ 
 Wir nehmen an $X_{i}$ iid wie $X$ und $Y_{i}$ iid wie Y.}\pause
 \item{Im Folgenden mache ich die zusätzliche Annahme $\sigma_{X}=\sigma_{Y}.$}
@@ -317,8 +317,8 @@ Wir nehmen an $X_{i}$ iid wie $X$ und $Y_{i}$ iid wie Y.}\pause
 \begin{frame}{Die zusätzliche Annahme $\sigma_{X}=\sigma_{Y}.$}
 \begin{itemize}
 \item{Je nachdem ob man diese Annahme macht oder nicht, gibt es zwei unterschiedliche Tests,
-die auch auf unterschiedlichen Prüfgrößen beruhen.}\pause
-\item{Ich mache diese Annahme jetzt, um anhand der entsprechenden Prüfgröße, zu zeigen,
+die auch auf unterschiedlichen Teststatistiken beruhen.}\pause
+\item{Ich mache diese Annahme jetzt, um anhand der entsprechenden Teststatistik, zu zeigen,
 wie man darüber entscheidet, ob man die Nullhypothese beibehält oder nicht.}\pause
 \item{Es gibt auch einen stat. Test mit der Nullhypothese  $H_{0}: \sigma_{X}=\sigma_{Y}.$ }\pause
 \item{Manchmal rechnet man zuerst diesen Test um dann zu entscheiden, ob man von der Gleichheit
@@ -327,9 +327,9 @@ der Standardabweichungen ausgehen kann oder nicht. }
 \end{itemize}
 \end{frame}
 
-\subsection{Die Prüfgröße}
+\subsection{Die Teststatistik}
 % Je ein Besipiel für
-\begin{frame}{Mittelwertvergleich zweier Gruppen: Die Prüfgröße}
+\begin{frame}{Unsere  Teststatistik}
 Leseempfehlung:  (vglm LMLG S. 141- 152)
 \begin{itemize}
 \item{Die Nullhypothese $H_{0}$ bzw. die Forschungshypothese $H_{1}$ beinhalten eine Beziehung
@@ -342,13 +342,13 @@ als Schätzer für den Erwartungswert bei normalverteilten Daten eine hohe Güte
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Die Prüfgröße entwickeln I}
+\begin{frame}{Die Teststatistik entwickeln I}
 Die Nullhypothese lautet: $$H_{0}:  \mu_{X} \geq \mu_{Y}$$ Gleichbedeutend damit ist: $$H_{0}:  \mu_{X} - \mu_{Y} \geq 0$$
 Aus den gerade genannten Gründen ist die Differenz der Mittelwerte 
 $$\bar{X}-\bar{Y}$$ gut geeignet um die Differenz der Modellparameter zu schätzen.
 \end{frame}
 
-\begin{frame}{Die Prüfgröße entwickeln II}
+\begin{frame}{Die Teststatistik entwickeln II}
 \begin{itemize}
 \item{Wir werden also aus den Daten $Z:=\bar{X}-\bar{Y}$ berechnen und auf das Ergebnis dieser Rechnung unsere Entscheidung über die Ablehnung
 bzw. Beibehaltung der Nullhypothese stützen.}\pause
@@ -356,7 +356,7 @@ bzw. Beibehaltung der Nullhypothese stützen.}\pause
 sprechen und auch wie stark sie dagegen sprechen.}\pause
 \item{Ein Problem dabei ist, dass unsere Nullhypothese ein ganzes Intervall abdeckst. Wir ersetzen die Nullhypothese
 für den Moment durch $\tilde{H}_{0}: \mu_{X} = \mu_{Y}$ bzw. analog $\tilde{H}_{0}:  \mu_{X} - \mu_{Y} = 0$}\pause
-\item{Im Klartext bedeutet die modifizierte Nullhypothese, dass wie von völlig identischen Verteilungen ausgehen.}
+\item{Im Klartext bedeutet die modifizierte Nullhypothese, dass wir von völlig identischen Verteilungen der Fleischmengen pro Portion Gulasch ausgehen.}
 \end{itemize}
 \end{frame}
 
@@ -371,7 +371,142 @@ für den Moment durch $\tilde{H}_{0}: \mu_{X} = \mu_{Y}$ bzw. analog $\tilde{H}_
 \dots also davon, dass der Schöpfmechanismus beim Gulasch Schöpfen sich in den beiden Personengruppen gar nicht unterscheidet.
 $$Z:=\bar{X}-\bar{Y}$$
 \begin{itemize}
-\item{Welche Werte für $Z$ erwarten Sie?}
+\item{Ich  simuliere die Datenerhebung . In der Simulation, wird die Fleischmenge von je $100$ Personen der 
+beiden  Gruppen erfragt. In der Simulation gehe ich davon aus, dass kein Unterschied in der Verteilung der Fleischmenge besteht.}\pause
+\item{Ich gehe davon aus, dass die erwarte Fleischmenge $250$ g beträgt, mit einer Standartabweichung von $40$ g. (Das entspricht der Abbildung auf der vorigen
+Folie)} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Die Verteilung der Teststatistik $Z:=\bar{X}-\bar{Y}$}
+
+\begin{itemize}
+\item{Wir haben jetzt Daten, von $10$ Personen jeder Gruppe, wir berechnen jeweils den Mittelwert.}\pause
+\item{Die mittlere Fleischmenge $\bar{x}$ ergibt sich zu $252.1$ g.}\pause
+\item{Die mittlere Fleischmenge $\bar{y}$ ergibt sich zu $247.8$ g.}\pause
+\item{Wir beobachten daher $z=\bar{x}-\bar{y}=4.3$ g.}\pause
+\item{Finden Sie dass ein Unterschied von $4.3$ g als Hinweis darauf gesehen werden kann, dass der Koch unfair schöpft?}\pause
+\item{Welche Werte würden dafür sprechen, dass der Koch unfair schöpft? Werte die größer oder kleiner sind als Null?}\pause
+\item{Um wie viel muss der Wert unter Null liegen, dass sie sagen würden: ``Das kann kein Zufall sein.''?}
+%\item{Welche Werte für $Z$ erwarten Sie?}
+%\item{Erwarten Sie Werte, die Nahe bei Null sind oder Werte die von Null weit entfernt sind?}\pause
+\end{itemize}
+\end{frame}
+%[1] -14.39033
+%> x[47]
+%[1] 237.6495
+%> y[47]
+%[1] 252.0399
+\begin{frame}{Wir wiederholen das Experiment}
+\begin{itemize}
+\item{Wir stellen uns vor, dass wir einen weiteren Monat die Gulasch-Ausgabe beobachten. Wieder gilt die Nullhypothese. Der Koch schöpft
+also gerecht.}\pause
+\item{Wenn wir die Daten simulieren, dann wissen wir, dass der Koch fair schöpft. In der Realität beobachten wir einfach die 
+Daten und wir wissen nicht, ob die Nullhypothese gilt.}\pause
+\item{Die mittlere Fleischmenge $\bar{x}$ ergibt sich zu $237.6$ g.}\pause
+\item{Die mittlere Fleischmenge $\bar{y}$ ergibt sich zu $252.0$ g.}\pause
+\item{Wir beobachten daher $z=\bar{x}-\bar{y}=-14.4$ g.}\pause
+\item{Wenn Sie nicht wüssten, dass die Daten unter Gültigkeit der Nullhypothese entstanden sind, wie würden sie diesen Wert beurteilen?}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ein kritischer Wert wird gebraucht}
+\begin{itemize}
+\item{Wir haben gesehen, auch, wenn die Nullhypothese gilt, kann es passieren, dass $Z$ Werte annimmt, die deutlich 
+unter Null liegen und uns nahe legen, zu glauben, dass der Koch unfair schöpft.}\pause
+\item{Wenn wir dann die Nullhypothese verwerfen, begehen wir den Fehler 1. Art ($\alpha$-Fehler)}\pause
+\item{Für diesen Fehler hatten wir vereinbart, dass er einen Irrtumswahrscheinlichkeit von $5\%$ nicht übersteigen soll.}\pause
+\item{Wir müssen den kritischen Wert also so wählen, dass die Wahrscheinlichkeit die Nullhypothese abzulehnen, wenn der Koch
+in Wirklichkeit fair ist, höchsten $5\%$ beträgt.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Der kritische Wert ist $k:=-9.3$}
+\begin{itemize}
+\item{Der Wert, der die Eigenschaft hat, in unserem Beispiel, dass die Irrtumswahrscheinlichkeit gleich $5\%$ beträgt ist $-9.3$}\pause
+\item{In Worten: Unter der Annahmen dass der Koch gerecht schöpft die die Wahrscheinlichkeit, dass bei je $10$ Portionen
+Gulasch pro Gruppe, die Differenz der Mittelwerte kleiner als $-9.3$ ist, höchstens $5\%$}\pause
+\item{Was sie verstehen sollten ist: }
+\begin{itemize}
+\item{Durch die Irrtumswahrscheinlichkeit ist der kritische Wert festgelegt.}
+\item{Sie brauchen ihn nicht bestimmen zu können.}
+\item{Sie sollten verstehen, welche Bedeutung er hat.}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Verteilung der Teststatistik $Z$}
+\begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.65\textwidth]{distZ.pdf}
+ 	\end{figure}
+\end{frame}
+
+\begin{frame}{Verteilung der Teststatistik $Z$ und kritischer Wert $k$}
+\begin{figure}[ht]
+ 	\centering
+ 	      \includegraphics[width=0.65\textwidth]{distZ2.pdf}
+ 	\end{figure}
+\end{frame}
+
+\begin{frame}{Die Rolle der Stichprobenumfänge $n_{1}$ und $n_{2}.$}
+\begin{itemize}
+\item{Desto mehr Informationen man hat, desto kleiner sind die Unterschiede die der Test aufdecken kann.}\pause
+\item{Nehmen wir an, die Differenz $\delta := \mu_{x}-\mu_{y}$ beträgt in Wirklichkeit nur $10g,$ dann braucht man
+einen große Stichprobenumfänge $n_{1}$ und $n_{2}$ um diese kleine Differenz aufdecken zu können.}\pause
+\item{Wenn $\delta$ einen Wert von $100$ g hat wird bereits ein kleiner Stichprobenumfang von z. B. $10$
+Personen pro Gruppe zu einer Ablehnung der Nullhypothese führen.}\pause
+\item{\colorbox{yellow}{Merksatz: Desto stärker die Nullhypothese verletzt ist,} 
+\colorbox{yellow}{desto weniger empirische Information braucht man,}
+\colorbox{yellow}{um die Forschungshypothese nachzuweisen.}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Von der modifizieren Nullhypothese zu Nullhypothese}
+\end{frame}
+
+
+
+\begin{frame}{ Gulasch-Beispiel}
+Ein paar Anmerkungen: 
+\begin{itemize}
+\item{Die Nullhypothese und die Forschungshypothese sind in ihrer Bedeutung unterschiedlich.}
+\item{Es gibt zwei Möglichkeiten sich zu irren: Den Fehler 1. Art und den Fehler 2. Art. Auch diese werden unterschiedlich
+behandelt.}
+\item{Der Fehler 1. Art wird a-priori festgelegt und durch ihn wird der kritische Wert  bestimmt.}
+\item{Beruhend auf dem kritischen Wert können wir entscheiden, ob wir glauben, dass der Koch frair ist oder nicht. Wir wissen 
+wir hoch die Wahrscheinlichkeit ist, ihn zu unrecht als ungerecht einzustufen.}
+\item{Die Verteilung der Teststatistik $Z$ hängt von den Stichprobenumfängen $n_{1}$ und $n_{2}$ ab.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Zusammenfassung: statistisches Testen allgemein}
+\begin{itemize}
+\item[1)]{Wenn wir die Modellannahmen formuliert haben, und die Hypothesen aufgestellt, dann suchen wir nachdem Test, der für dieses Problem geeignet ist. Das Signifikanzniveau
+wird festgelegt.}
+\item[2)]{Dieser Test hat eine Teststatistik. Die Teststatistik, legt fest, welcher Wert aus den Daten berechnet wird, um die Testentscheidung zu treffen.}
+\item[3)]{Durch die Festlegung der Irrtumswahrscheinlichkeit (=Signifikanzniveau) und der des Auswahl der Teststatistik, ergibt sich ein kritischer Wert. }
+\item[4)]{Die Statistik-Software
+berechnet diesen Wert und informiert uns darüber ob wir die Nullhypothese beibehalten, oder  ob sich die Forschungshypothese nachweisen lässt.}
+\end{itemize}
+\end{frame}
+
+\subsection{Der Ablehnbereich und der p-Wert}
+
+\section{Ausblick Übung: Häufige Testprobleme}% FT S. 433
+
+\begin{frame}{Übung}
+Wir werden für einige Testproblem die häufig auftreten die geeigneten Test auswählen, mit STATA rechnen und die Ergebnisse interpretieren.
+Wir behandeln:
+\begin{itemize}
+\item{Approximative Binominaltest}% S.397, S405
+\item{$\chi^{2}$ Unabhängigkeitstest}
+\item{Test zu Lagealternativen im Ein- und Zwei-Stichprobenfall:}
+\begin{itemize}
+\item{Ein-Stichprobenfall: einfacher Gaußtest und  t-Test}% S. 437
+\item{Zwei-Stichprobenfall (unabhängige Stichproben): doppelter Gauß- und t-Test, Welch-Test
+ } % S. 457 ff
+\end{itemize}
 \end{itemize}
 \end{frame}
 
