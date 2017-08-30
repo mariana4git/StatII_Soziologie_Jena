@@ -1,0 +1,11 @@
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Ziele der heutigen Veranstaltung }{3}{0}{1}
+\beamer@sectionintoc {2}{Signifikanter Unterschied zwischen den Gruppen}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Kann das Zufall sein?}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Das Modell grafisch}{11}{0}{2}
+\beamer@subsectionintoc {2}{3}{Die Grundidee des Signifikanztest}{19}{0}{2}
+\beamer@sectionintoc {3}{Die Teststatistik und die Testentscheidung}{26}{0}{3}
+\beamer@subsectionintoc {3}{1}{Die Teststatistik}{28}{0}{3}
+\beamer@subsectionintoc {3}{2}{Der Zwei-Stichproben t-Test}{39}{0}{3}
+\beamer@subsectionintoc {3}{3}{Der Ablehnbereich und der p-Wert}{43}{0}{3}
+\beamer@sectionintoc {4}{Ausblick \IeC {\"U}bung: Probleme aus dem letzten Semestern mit den neuen Werkzeugen l\IeC {\"o}sen}{46}{0}{4}

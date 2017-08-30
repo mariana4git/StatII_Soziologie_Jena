@@ -1,0 +1,2 @@
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Themen und Ziele}{3}{0}{1}

@@ -1,10 +1,10 @@
 \select@language {ngerman}
-\beamer@sectionintoc {1}{Ziel der heutigen Veranstaltung }{3}{0}{1}
+\beamer@sectionintoc {1}{Ziele der heutigen Veranstaltung }{3}{0}{1}
 \beamer@sectionintoc {2}{Signifikanter Unterschied zwischen den Gruppen}{4}{0}{2}
 \beamer@subsectionintoc {2}{1}{Kann das Zufall sein?}{5}{0}{2}
-\beamer@subsectionintoc {2}{2}{Das Modell grafisch}{10}{0}{2}
-\beamer@subsectionintoc {2}{3}{Die Grundidee des Signifikanztest}{16}{0}{2}
-\beamer@sectionintoc {3}{Die Teststatistik und die Testentscheidung}{24}{0}{3}
-\beamer@subsectionintoc {3}{1}{Die Teststatistik}{26}{0}{3}
-\beamer@subsectionintoc {3}{2}{Der Ablehnbereich und der p-Wert}{41}{0}{3}
-\beamer@sectionintoc {4}{Ausblick \IeC {\"U}bung: H\IeC {\"a}ufige Testprobleme}{41}{0}{4}
+\beamer@subsectionintoc {2}{2}{Das Modell grafisch}{11}{0}{2}
+\beamer@subsectionintoc {2}{3}{Die Grundidee des Signifikanztest}{18}{0}{2}
+\beamer@sectionintoc {3}{Die Teststatistik und die Testentscheidung}{27}{0}{3}
+\beamer@subsectionintoc {3}{1}{Die Teststatistik}{29}{0}{3}
+\beamer@subsectionintoc {3}{2}{Der Ablehnbereich und der p-Wert}{44}{0}{3}
+\beamer@sectionintoc {4}{Ausblick \IeC {\"U}bung: H\IeC {\"a}ufige Testprobleme}{44}{0}{4}

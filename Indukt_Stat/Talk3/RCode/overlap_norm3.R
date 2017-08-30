@@ -95,15 +95,15 @@ get_x_axis_values = function( x_range ) {
 # )
 ##Nur hier ändern
  distributions = list(
-   new( Class = "Distribution", name = "Klient(inn)en", mean = 250, sd = 40, color = "#00cc00" ),
-   new( Class = "Distribution", name = "Miarbeiter(innen)", mean = 250, sd = 40, color = "blue" )
+   new( Class = "Distribution", name = "Klient(inn)en", mean = 240, sd = 40, color = "#00cc00" ),
+   new( Class = "Distribution", name = "Miarbeiter(innen)", mean = 260, sd = 40, color = "blue" )
  )
 
 # Determine the range to use for each axis
 axis_range = get_axis_ranges( distributions )
 xlim = axis_range[[ 1 ]]
 ylim = axis_range[[ 2 ]]
-pdf("nullhyp.pdf")
+pdf("nearlyfair.pdf")
 # Create the plot
 plot( NULL, NULL, type = "n", xlim = xlim, ylim = ylim, xlab = "Fleischmenge in g", ylab = "", 
       main = "", axes = FALSE, cex.lab=2.0 )
