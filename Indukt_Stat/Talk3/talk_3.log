@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  30 AUG 2017 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  9 SEP 2017 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1416,7 +1416,7 @@ LaTeX Info: Redefining \includegraphics on input line 28.
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 29.
 
-<index.jpeg, id=54, 106.3975pt x 124.465pt>
+<index.jpeg, id=26, 106.3975pt x 124.465pt>
 File: index.jpeg Graphic file (type jpg)
  <use index.jpeg>
 Package pdftex.def Info: index.jpeg used on input line 44.
@@ -1431,28 +1431,28 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {c:/Users/zo95yup/Programme/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdft
 ex.map} <./index.jpeg>] (./talk_3.toc) [2
 
+] [3
+
+] [4
+
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 67.
+LaTeX Font Info:    Try loading font information for U+msa on input line 97.
 
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 67.
+LaTeX Font Info:    Try loading font information for U+msb on input line 97.
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 67.
+line 97.
 
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/sansmathaccent/ot
 1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) [3
-
-] [4
-
-] [5
+) [5
 
 ] [6
 
@@ -1467,78 +1467,53 @@ thkerncmss.
 ] [11
 
 ]
-<mx200my300sd25.pdf, id=183, 505.89pt x 505.89pt>
-File: mx200my300sd25.pdf Graphic file (type pdf)
- <use mx200my300sd25.pdf>
-Package pdftex.def Info: mx200my300sd25.pdf used on input line 190.
+<power3.pdf, id=132, 505.89pt x 505.89pt>
+File: power3.pdf Graphic file (type pdf)
+ <use power3.pdf>
+Package pdftex.def Info: power3.pdf used on input line 177.
 (pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-Overfull \vbox (8.95204pt too high) detected at line 190
+Overfull \vbox (8.95204pt too high) detected at line 177
  []
 
 [12
 
- <./mx200my300sd25.pdf>] <mx200my300sd40.pdf, id=202, 505.89pt x 505.89pt>
-File: mx200my300sd40.pdf Graphic file (type pdf)
-
-<use mx200my300sd40.pdf>
-Package pdftex.def Info: mx200my300sd40.pdf used on input line 198.
+ <./power3.pdf>] <power4.pdf, id=148, 505.89pt x 505.89pt>
+File: power4.pdf Graphic file (type pdf)
+ <use power4.pdf>
+Package pdftex.def Info: power4.pdf used on input line 184.
 (pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-Overfull \vbox (8.95204pt too high) detected at line 198
+Overfull \vbox (8.95204pt too high) detected at line 184
  []
 
 [13
 
- <./mx200my300sd40.pdf>] <mx200my300sd60.pdf, id=221, 505.89pt x 505.89pt>
-File: mx200my300sd60.pdf Graphic file (type pdf)
+ <./power4.pdf>] [14
 
-<use mx200my300sd60.pdf>
-Package pdftex.def Info: mx200my300sd60.pdf used on input line 206.
+] [15
+
+] <powerPisa.pdf, id=179, 505.89pt x 505.89pt>
+File: powerPisa.pdf Graphic file (type pdf)
+
+<use powerPisa.pdf>
+Package pdftex.def Info: powerPisa.pdf used on input line 217.
 (pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-Overfull \vbox (8.95204pt too high) detected at line 206
- []
-
-[14
-
- <./mx200my300sd60.pdf>] <mx200my300sd80.pdf, id=239, 505.89pt x 505.89pt>
-File: mx200my300sd80.pdf Graphic file (type pdf)
-
-<use mx200my300sd80.pdf>
-Package pdftex.def Info: mx200my300sd80.pdf used on input line 214.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
-
-Overfull \vbox (8.95204pt too high) detected at line 214
- []
-
-[15
-
- <./mx200my300sd80.pdf>] <mx220my280sd40.pdf, id=257, 505.89pt x 505.89pt>
-File: mx220my280sd40.pdf Graphic file (type pdf)
-
-<use mx220my280sd40.pdf>
-Package pdftex.def Info: mx220my280sd40.pdf used on input line 222.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
-
-Overfull \vbox (8.95204pt too high) detected at line 222
+Overfull \vbox (8.95204pt too high) detected at line 217
  []
 
 [16
 
- <./mx220my280sd40.pdf>] <nearlyfair.pdf, id=275, 505.89pt x 505.89pt>
-File: nearlyfair.pdf Graphic file (type pdf)
+ <./powerPisa.pdf>] <sorgen.jpg, id=194, 1907.125pt x 1072.005pt>
+File: sorgen.jpg Graphic file (type jpg)
 
-<use nearlyfair.pdf>
-Package pdftex.def Info: nearlyfair.pdf used on input line 230.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+<use sorgen.jpg>
+Package pdftex.def Info: sorgen.jpg used on input line 227.
+(pdftex.def)             Requested size: 290.9531pt x 163.54185pt.
+ [17
 
-Overfull \vbox (8.95204pt too high) detected at line 230
- []
-
-[17
-
- <./nearlyfair.pdf>] [18
+ <./sorgen.jpg>] [18
 
 ] [19
 
@@ -1546,86 +1521,104 @@ Overfull \vbox (8.95204pt too high) detected at line 230
 
 ] [21
 
-] [22
-
-] [23
-
-] [24
-
-] [25
-
-] [26
-
-] [27
-
 ]
+<prob_est.pdf, id=230, 505.89pt x 505.89pt>
+File: prob_est.pdf Graphic file (type pdf)
+ <use prob_est.pdf>
+Package pdftex.def Info: prob_est.pdf used on input line 300.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 300
+ []
+
+[22
+
+ <./prob_est.pdf>] <confi.pdf, id=243, 505.89pt x 505.89pt>
+File: confi.pdf Graphic file (type pdf)
+ <use confi.pdf>
+Package pdftex.def Info: confi.pdf used on input line 308.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 308
+ []
+
+[23
+
+ <./confi.pdf>] [24
+
+] <prob_est200.pdf, id=264, 505.89pt x 505.89pt>
+File: prob_est200.pdf Graphic file (type pdf)
+
+<use prob_est200.pdf>
+Package pdftex.def Info: prob_est200.pdf used on input line 328.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 328
+ []
+
+[25
+
+ <./prob_est200.pdf>] <confi200.pdf, id=279, 505.89pt x 505.89pt>
+File: confi200.pdf Graphic file (type pdf)
+
+<use confi200.pdf>
+Package pdftex.def Info: confi200.pdf used on input line 336.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 336
+ []
+
+[26
+
+ <./confi200.pdf>] <prob_est250.pdf, id=293, 505.89pt x 505.89pt>
+File: prob_est250.pdf Graphic file (type pdf)
+
+<use prob_est250.pdf>
+Package pdftex.def Info: prob_est250.pdf used on input line 344.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 344
+ []
+
+[27
+
+ <./prob_est250.pdf>] <confi250.pdf, id=306, 505.89pt x 505.89pt>
+File: confi250.pdf Graphic file (type pdf)
+
+<use confi250.pdf>
+Package pdftex.def Info: confi250.pdf used on input line 352.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 352
+ []
+
 [28
 
-] [29
+ <./confi250.pdf>] <umfrageEst.pdf, id=320, 505.89pt x 505.89pt>
+File: umfrageEst.pdf Graphic file (type pdf)
 
-] [30
-
-] <nullhyp.pdf, id=396, 505.89pt x 505.89pt>
-File: nullhyp.pdf Graphic file (type pdf)
- <use nullhyp.pdf>
-Package pdftex.def Info: nullhyp.pdf used on input line 430.
+<use umfrageEst.pdf>
+Package pdftex.def Info: umfrageEst.pdf used on input line 362.
 (pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-Overfull \vbox (8.95204pt too high) detected at line 430
+Overfull \vbox (8.95204pt too high) detected at line 362
  []
 
-[31
+[29
 
- <./nullhyp.pdf>] [32
+ <./umfrageEst.pdf>] <umfrageConfi.pdf, id=333, 505.89pt x 505.89pt>
+File: umfrageConfi.pdf Graphic file (type pdf)
 
-] [33
-
-] [34
-
-] <distZ.pdf, id=442, 505.89pt x 505.89pt>
-File: distZ.pdf Graphic file (type pdf)
-
-<use distZ.pdf>
-Package pdftex.def Info: distZ.pdf used on input line 514.
+<use umfrageConfi.pdf>
+Package pdftex.def Info: umfrageConfi.pdf used on input line 370.
 (pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-Overfull \vbox (8.95204pt too high) detected at line 514
+Overfull \vbox (8.95204pt too high) detected at line 370
  []
 
-[35
+[30
 
- <./distZ.pdf>] <distZ2.pdf, id=457, 505.89pt x 505.89pt>
-File: distZ2.pdf Graphic file (type pdf)
- <use distZ2.pdf>
-Package pdftex.def Info: distZ2.pdf used on input line 521.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
-
-Overfull \vbox (8.95204pt too high) detected at line 521
- []
-
-[36
-
- <./distZ2.pdf>] [37
-
-] [38
-
-] [39
-
-] [40
-
-] [41
-
-] [42
-
-] [43
-
-] [44
-
-] [45
-
-] [46
-
-]
+ <./umfrageConfi.pdf>]
 \tf@nav=\write6
 \openout6 = `talk_3.nav'.
 
@@ -1635,14 +1628,13 @@ Overfull \vbox (8.95204pt too high) detected at line 521
 \tf@snm=\write8
 \openout8 = `talk_3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 686.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 686.
-
-(./talk_3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 686.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 686.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
+ (./talk_3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
 Package rerunfilecheck Info: File `talk_3.out' has not changed.
-(rerunfilecheck)             Checksum: AE7747ADF55A1A2BA425A44D04053D57;797.
+(rerunfilecheck)             Checksum: 5D4A869890088F30FB70DB46F5EE9769;187.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1650,34 +1642,27 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 22369 strings out of 494852
- 449866 string characters out of 6175638
- 519717 words of memory out of 5000000
- 25050 multiletter control sequences out of 15000+600000
- 18665 words of font info for 68 fonts, out of 8000000 for 9000
+ 22257 strings out of 494852
+ 448260 string characters out of 6175638
+ 518621 words of memory out of 5000000
+ 24977 multiletter control sequences out of 15000+600000
+ 16135 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,17n,62p,801b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,60p,801b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/zo95yup/Programme/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/Users/zo95yup
-/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c
-:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss8.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmssbx10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/Users/zo95yup/Programme/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c:/Users/zo95yup/
-Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:
+ts/cm/cmmi10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/Users/zo95yup/Programme/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/Users/zo95yup
+/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:
 /Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmtt10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msam7.pfb><c:/Users/zo95yup/Programme/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on talk_3.pdf (46 pages, 320191 bytes).
+/cmssbx10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmssi10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on talk_3.pdf (30 pages, 389318 bytes).
 PDF statistics:
- 628 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

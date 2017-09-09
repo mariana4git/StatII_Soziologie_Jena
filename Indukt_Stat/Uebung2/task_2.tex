@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\pagestyle{empty}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{german}
+\usepackage{multirow,array}
+\usepackage{hyperref}
+ \usepackage{graphicx}
+%\usepackage{ipe}
+%\input{thmstyle-ger}
+
+\parindent0mm
+\sloppy
+
+% Basic data
+\newcommand{\VORLESUNG}{Induktive Statistik für Soziologinnen und Soziologen}
+\newcommand{\STAFF}{Mariana Nold}
+\newcommand{\ASSIGNMENT}{2}
+\newcommand{\HANDOUT}{Montag, den 13. November   2017}
+\newcommand{\DELIVER}{Freitag 24. November 2017}
+\newcommand{\PRACTICAL}[1]{\marginpar{\tiny {\bf Aufgabe \\ abgeben!} #1}}
+\newcommand{\FAUFTRAG}[1]{\marginpar{\tiny {\bf selbst entdeckendes Verstehen} #1}}
+\newcommand{\titel}{Grundlagen des statistischen Testens}
+\newcommand{\startwert}{3}
+
+% Arbitrary packages and settings
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\newcommand{\half}[1]{\frac{#1}{2}}
+\newcommand{\punkte}[1]{{\small{ }(#1 Punkte)}}
+\newcommand{\punkt}[1]{{\small{ }(#1 Punkt)}}
+
+\newcommand{\aufgabe}[1]{\item{\bf #1}}
+\newcommand{\hinweis}{{\em Hinweis}}
+
+\begin{document}
+% Document title
+
+\begin{center}
+\ASSIGNMENT{}. Aufgabenblatt vom \HANDOUT{} zur Vorlesung 
+\vspace*{0.5cm}
+
+{\Large \VORLESUNG{}}
+%\PRACTICAL{}
+(\STAFF{}) 
+
+
+\vspace*{0.5cm}
+{\textbf{Thema:} \titel{}\\}
+\vspace*{0.2cm}
+
+{\small Abgabe: \DELIVER{}}
+\vspace*{1cm}
+\end{center}
+
+Wichtige Definitionen:
+\begin{enumerate}
+\item{Inferenzschluss}
+\item{gerichtete Hypothese}
+\item{ungerichtete Hypothese}
+\item{Fehler 1. Art ($\alpha$-Fehler)}
+\item{Fehler 2. Art ($\beta$-Fehler)}
+\item{Teststatistik des Zwei-Stichproben t-Test}
+\item{Ablauf des Zwei-Stichproben t-Test}
+\item{kritischer Wert und Ablehnbereich}
+\item{p-Wert}
+%\item{Binäre Variable und  Bernoulliverteilung}
+%\item{Binomialverteilung}
+\end{enumerate}
+\vspace{2cm}
+\begin{enumerate}\addtocounter{enumi}{\startwert}
+
+
+\aufgabe{Der Ablauf eines Hypothesentestes}\\ \punkte{10}  \PRACTICAL{}\\
+Schildern Sie wie der Hypothesentest in der klassischen Inferenz abläuft. Gehen Sie dabei auf die Frage ein, was ein Inferenzschluss bedeutet. % Folie 43 in talk2
+%http://www.crashkurs-statistik.de/vorgehen-bei-hypothesentests/
+
+\aufgabe{Lesen Mädchen besser als Jungs: Doppelter t-Test und Welch-Test}\\
+Im Sommer-Semester haben wir uns in der letzten Vorlesung am 19.06.2017 mit der Frage beschäftigt, ob Mädchen 
+besser lesen als Jungen. Diese Fragestellung sollen Sie nun mit dem doppelten t-Test untersuchen, den Sie in der
+Vorlesung kennengelernt haben.
+
+\begin{itemize}
+\item{Der  Index $j$ wird genutzt um die Gruppen zu identifizieren:
+     \[
+     j=\left\{\begin{array}{ll} 1, \: \text{``weiblich,''} \\
+        2, \:  \text{``männlich''}\end{array}\right. 
+  \]
+
+}
+\item{Es sei $y_{i,j}$ die Anzahl der Kompetenzpunkte im Bereich Lesen, der $i$-ten Person in Gruppe $j.$
+\begin{itemize}
+\item{So ist z. B. $y_{3,1}$ die Leseleistung der dritten Schülerin und}
+\item{$y_{100,2}$ die Leseleistung des 100. Schülers.}
+\end{itemize}
+}
+\item{Die mittlere Leseleistung der Schülerinnen ist $\bar{y}_{1},$
+die mittlere Leseleistung der Jungen ist $\bar{y}_{2}.$ }
+\item{Es gibt $n_{1}:=2462$ Schülerinnen und  $n_{2}:=2539$ Schüler im Datensatz.}
+\end{itemize}
+
+\begin{enumerate}
+\item{Lesen Sie den Datensatz  \texttt{pisa\_2012\_schueler.dta} ein. Nutzen Sie den \texttt{STATA}-Befehl
+\\ \texttt{. keep if cnt== ``DEU''} \\ um alle Daten von nicht-deutschen Schülerinnen und Schülern aus dem Speicher
+zu nehmen. Geben sie den Befehl \\ \texttt{. browse} \\ ein um sich den Datensatz anzusehen.}
+\item{Die Information über das Geschlecht ist in der Variable \texttt{st04q01} enthalten. Nutzen Sie den Befehl \\ \texttt{. tab st04q01}\\
+um eine Häufigkeitstabelle zu erstellen.}
+\item{Berechnen Sie für die Gruppe der Mädchen und Jungen jeweils die mittlere Anzahl der Lesepunkte und beschreiben Sie das Ergebnis
+jeweils in einem Satz.
+Nutzen Sie die dazu die Befehle \texttt{. summarize pv1read if st04q01==1} und \texttt{. summarize pv1read if st04q01==2} }
+\item{Stellen Sie die Verteilung der Lesepunkte für Mädchen und Jungen in zwei Boxplots nebeneinander dar. Vergleichen
+Sie die Boxplots in zwei bis drei Sätzen. Nutzen Sie den Befehl \\
+\texttt{. graph box pv1read, over(st04q01)}.}
+\item{Die Forschungshypothese lautet, dass Mädchen besser  lesen als Jungen. Legen Sie das Signifikanzniveau auf $5\%$ fest. Formulieren Sie diese 
+Hypothese als statistische Hypothese und nutzen Sie den \texttt{STATA}-Befehl  
+\texttt{. ttest pv1read, by(st04q01)} um den doppelten t-Test durchzuführen.
+Kann die Forschungshypothese nachgewiesen werden?}
+\item{Wenn man davon ausgehen kann, dass die Varianzen in den beiden Gruppen gleich
+sind, dann verwendet man den doppelten t-Test. Wenn man nicht von der Varianzgleichheit ausgehen kann,
+dann rechnet man den Welch-Test.  Rechnen Sie den Welch-Test und vergleichen Sie das 
+Ergebnis mit dem des doppelten t-Test. (\texttt{. ttest pv1read, by(st04q01) welch}) }
+%oneway pv1read st04q01   medage region
+\end{enumerate}
+%https://www.ssc.wisc.edu/sscc/pubs/sfs/sfs-ttest.htm
+%sqrt(297.61)
+%[1] 17.25138
+\aufgabe{Die Füllmenge der Flaschen: Der einfach t-Test} \punkte{14}  \PRACTICAL{}\\
+
+In einer Getränkefirma werden Flaschen von einer Maschine mit Mineralwasser gefüllt. Es ist bekannt,
+dass die Füllmenge normalverteilt ist. Eine Mitarbeiterin vermutet, dass die Maschine zu wenig
+Mineralwasser in die Flaschen füllt. Sie nimmt eine Stichprobe von $20$ Flaschen und bestimmt die
+genaue Füllmenge.
+\begin{enumerate}
+\item{Lesen Sie den Datensatz \texttt{flaschen.dta} ein.}
+\item{Nutzen Sie den Befehl \texttt{sum, detail} und lesen Sie den Mittelwert, den Median, das $10\%$-Quantil ($q_{0.1}$)
+und das $90\%$-Quantil ($q_{0.9}$) ab. Interpretieren Sie das Intervall $(q_{0.1},q_{0.9})$ inhaltlich.} \punkte{5}
+\item{Schlagen Sie ihre Formelsammlung auf S. 48 auf. Dort finden Sie dein einfachen t-Test. 
+Legen Sie das Signifikanzniveau auf $1\%$ fest und Formulieren Sie die Hypothesen der Mitarbeiterin.}\punkte{2}
+\item{Stellen Sie die Füllmenge mit Hilfe eines Boxplots dar und beschreiben Sie den Boxplot in zwei
+bis drei Sätzen. (\texttt{. graph box Volume})}\punkte{2}
+\item{Nutzen Sie den Befehlt \texttt{ttest Volume == 500} um den einfachen T-test zu rechnen.
+Interpretieren Sie das Ergebnis inhaltlich. Muss die Maschine neu eingestellt werden?}
+\item{Wie würde die Testentscheidung ausfallen, wenn das Signifikanzniveau bei $10\%$ liegen würde?}\punkte{1}
+\item{Formulieren Sie den Fehler 2. Art inhaltlich. Was bedeutet dieser Fehler für die Getränke-Firma.}\punkte{2}
+\item{Was könnte die Mitarbeiterin tun, um mehr Sicherheit im Bezug auf ihre Entscheidung zu haben? Begründen Sie 
+ihre Antwort.}\punkte{2}
+\item{Welche Abweichung von der gewünschten Füllmenge würde ihrer Meinung nach gerade noch zulässig sein?}
+\end{enumerate}
+% Beispiel mit den Flaschen
+% http://www.instantr.com/2012/12/29/performing-a-one-sample-t-test-in-r/
+% http://stats.seandolinar.com/one-sample-t-test-with-r-code/
+% https://www.stata.com/manuals13/rttest.pdf
+% http://www.r-tutor.com/elementary-statistics/type-2-errors/type-2-errors-two-tailed-test-population-mean-unknown-variance
+
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,227 @@
+% \documentclass[a4paper,12pt]{article}
+% \usepackage[utf8]{inputenc}
+% \usepackage[ngerman]{babel} 
+% %opening
+% \title{}
+% %\author{}
+% \date{}
+\documentclass[a4paper,fontsize=14pt]{article}
+%\documentclass[a4paper,fontsize=13pt]{scrartcl}
+%\definecolor{mygreen}{cmyk}{0.82,0.11,1,0.25}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel} 
+\usepackage{textcomp} 
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{multirow,array}
+%\usepackage[margin=1.65cm
+%  %,showframe% <- only to show the page layout
+%]{geometry}
+\usepackage{rotating}
+\usepackage{booktabs} 
+\usepackage{lscape}
+\usepackage{float}
+%opening
+\title{Lehrplanung: Lineare und logistische Regression mit STATA WS 17/18}
+%\subtitle{Simulation und Auswertung der simulierten Daten in Übung und Tutorium mit Hilfe von \texttt{R}}
+%\author{Mariana Nold}
+\date{\vspace{-10ex}}
+\begin{document}
+
+\maketitle
+
+%Termine: 
+%16./23.10.17
+%13./27.11.17
+%11.12.17
+%08.01.18
+%22.01.18
+
+\section{Schwerpunkte}
+\begin{enumerate}
+\item{\colorbox{yellow!60}{Statistik }
+\begin{itemize}
+\item{Welcher Logik folgt das Schätzen und Testen?}
+\item{Probleme statistische Tests und Auswege}
+\item{Was ist  Regression?}
+\item{Was ist (logistische) Regression?}
+\item{Ein (un)gelöstes Problem: Die verständliche Interpretation der Parameter im Logit-Modell} %S. 567
+\end{itemize}}
+\item{\colorbox{pink}{\texttt{STATA}}
+\begin{itemize}
+\item{Daten mit \texttt{STATA} aufbereiten und beschreiben}
+\item{Bekannte Tests mit \texttt{STATA} rechnen}
+\item{Bivariate Analyse: Kreuztabellen, Vergleich von stetiger Variable in zwei Gruppen, Regression mit nur einer unabhängigen Variable}
+\item{Regression mit einer oder  mehren unabhängigen Variablen}
+\item{Logistische Regression mit einer oder  mehren unabhängigen Variablen}
+\end{itemize}
+}
+\item{\colorbox{green!50}{Artikel}
+\begin{itemize}
+\item[1)]{Gesundheitsbezogene Lebensqualität von übergewichtigen 
+und adipösen Jugendlichen-Welche Unterschiede zeigen sich nach  Sozialstatus und
+Schulbildung ( Laura Krause, Ute Ellert, Lars Eric Kroll, Thomas Lampert )\\
+\url{edoc.rki.de/oa/articles/reBtAzsyxON1Q/PDF/27nYdA0QWejZo.pdf}}
+%\item[2)]{Psychische Gesundheit von übergewichtigen
+%und adipösen Jugendlichen unter Berücksichtigung von Sozialstatus und
+%Schulbildung. (Krause, L.)}
+\item[2)]{ Bildungsbenachteiligung durch Übergewicht: Warum adipöse Kinder in der Schule schlechter abschneiden. (Marcel Helbig, Stefanie Jähnen)\\
+\url{www.degruyter.com/view/j/zfsoz.2013.42.issue-5/zfsoz-2013-0504/zfsoz-2013-0504.xml}}
+\end{itemize}
+}
+\end{enumerate}
+
+\section{Statistische Methoden}
+Zielkompetenzen, die geübt werden sollen sind:
+\begin{enumerate}
+\item{Statistische Ergebnisse verständlich kommunizieren, wesentliche Aussagen in einfachen Worten ausdrücken können.}
+\item{Daten selbst analysieren: eigene Analysen, passend zu den Artikeln, wobei die Modelle in den Artikeln selbst nicht repliziert werden.}
+\item{Statistische Informationen nutzen und sachadäquat interpretieren: STATA-Output und Information aus den bedien Artikeln.}
+\end{enumerate}
+
+\section{Literatur}
+
+\begin{enumerate}
+\item{Statistik:  \textit{Regressionsmodelle für Zustände und Ereignisse, Michael Windzio},  Kap 1- 3 (Thulb E-Book)}
+\item{Statistik: \textit{Logistische Regression, Best, Henning (et al.),Handbuch der sozialwissenschaftlichen Datenanalyse, S. 827-836} (Thulb E-Book)}
+\item{Statistik: Probleme mit dem stat. Testen,\textit{Statistik: Eine Einführung für Sozialwissenschaftler,
+Ludwig-Mayerhofer  } (muss kopiert werden)}
+\item{\texttt{STATA}: \textit{Kohler-Kreuter,Datenanalyse mit Stata: Allgemeine Konzepte der Datenanalyse und ihre praktische Anwendung}, Kap I}
+\item{\texttt{STATA}: Regression:\\  \url{stats.idre.ucla.edu/stata/webbooks/reg/chapter1/}\\ \url{regressionwith-statachapter-1-simple-and-multiple-regression/}}
+\item{\texttt{STATA}: logistische Regression: \url{stats.idre.ucla.edu/stata/dae/logistic-regression/}}
+\end{enumerate}
+
+% STATA:
+% Das erste Mal
+% dann Links
+% https://stats.idre.ucla.edu/stata/dae/logistic-regression/
+% https://stats.idre.ucla.edu/stata/webbooks/reg/chapter1/regressionwith-statachapter-1-simple-and-multiple-regression/
+
+% Statistik:
+% neues Buch von Eid
+% Auch in Stat II
+% Einfach Effektstärke noch einführen und
+% Teile als Formelsammlung kopieren.
+%    \begin{table}
+%  %  \caption{Mit zwei Ausnahmen findet die Vorlesung $14$-tägig statt}
+%\begin{center}
+%\caption{\colorbox{yellow!40}{Es gibt ein Aufgabenblatt zur Abgabe}}
+%  \begin{tabular}{|c|c|c|}
+%    \hline
+%    Nr. & Datum & Thema \\ \hline
+%    0 &   $ 16.10.2017$   &  \colorbox{blue!10}{  Der Zufallsvorgang und der Inferenzschluss}   \\ \hline
+%    \colorbox{yellow!40}{1} &  $23.10.2017$  &   \colorbox{blue!10}{Die parametrische  Wahrscheinlichkeitsverteilung } \\ \hline
+%    \colorbox{yellow!40}{2} &   $13.11.2017$   &   \colorbox{green!40}{Grundlagen des statistischen Testens}\\ \hline
+%    \colorbox{yellow!40}{3} &   $27.11.2017$   &   \colorbox{green!40}{Punktschätzer und Konfidenzintervalle }\\ \hline
+%%    \multirow{2}{*}{3} &  \multirow{2}{*}{$27.11.2017$}& \colorbox{red!20}{Grundlagen des statistischen Testens}\\
+%%               &               & von quantitativen Merkmalen\\ \hline
+%  \multirow{2}{*}{\colorbox{yellow!40}{4}} &  \multirow{2}{*}{$11.12.2017$}& \colorbox{violet!40}{Bivariate lineare Regression} \\
+%                   &        & \colorbox{violet!40}{und Varianzanalyse}\\ \hline  
+%    \colorbox{yellow!40}{5} & $08.01.2018$      &  \colorbox{violet!40}{Multiple lineare Regression}  \\ \hline   
+%    6 &   $22.01.2018$     &  \colorbox{violet!40}{Varianzanalyse} \\ \hline
+%  \end{tabular}
+%  \end{center}
+%  \label{tab:multicol}
+%  \end{table}
+\section{Ablaufplan für dieses Semester}
+Die folgende Terminübersicht zeigt jeweils den Schwerpunkt der entsprechenden Seminarübung. Wenn der Schwerpunkt im Bereich
+Statistik liegt, kann auch teilweise mit \texttt{STATA} gearbeitet werden. Der Schwerpunkt ist also das Hauptthema des entsprechenden
+Termins.
+\begin{table}[h]
+  %  \caption{Mit zwei Ausnahmen findet die Vorlesung $14$-tägig statt}
+\begin{center}
+\caption{Überblick über die Veranstaltungen in 2017}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Nr. & Datum & Thema \\ \hline
+   
+    0 &   $18.10.2017$   &    Organisatorisches, Arbeitsweise, Ablauf, Vorstellung der Materialien  \\ \hline
+     1 &  $25.10.2017$     &  \colorbox{green!50}{Artikel: Worum geht es?} \\ \hline
+    2 &   $01.11.2017$   &   \colorbox{yellow!60}{ Der Zufallsvorgang und der Inferenzschluss }  \\ \hline
+    3 &   $08.11.2017$  &    \colorbox{yellow!60}{Grundlagen des statistischen Testens}\\ \hline
+    4 &   $15.11.2017$   &  \colorbox{yellow!60}{Das lineare Regressionsmodell } \\ \hline
+    5 &   $22.11.2017$     & \colorbox{green!50}{Artikel: Eigene Fragestellung vorstellen} \colorbox{red!70}{1. PL} \\ \hline
+    6 &   $29.11.2017$   &   \colorbox{pink}{\texttt{STATA}: Das erst Mal (Kohler und Kreuter, Kap I)}\\ \hline
+%    \multirow{2}{*}{3} &  \multirow{2}{*}{$27.11.2017$}& \colorbox{red!20}{Grundlagen des statistischen Testens}\\
+%               &               & von quantitativen Merkmalen\\ \hline
+  \multirow{2}{*}{7} &  \multirow{2}{*}{$06.12.2017$}& \colorbox{pink}{\texttt{STATA}: Hypothesen operationalisieren
+  } \\
+                   &        & \colorbox{pink}{Variablen auswählen und geeignet codieren}\\ \hline  
+  %  6 & $22.11.2018$      &  \colorbox{pink}{Regression mit \texttt{STATA} I }  \\ \hline   % Link
+    8 & $13.12.2017$      &  \colorbox{pink}{Das lineare Regressionsmodell  mit \texttt{STATA} }  \\ \hline   % Link
+%    7 & $06.12.2017$     &  \colorbox{green!50}{Artikel: Worum geht es?} \\ \hline
+    9 & $20.12.2017$     &  \colorbox{yellow!60}{Zustände und Ereignisse in den Sozialwissenschaften +GLM (Windzio)}  \\ \hline
+  %  9 & $20.12.2017$     & \colorbox{green!50}{Artikel: Eigene Fragestellung ableiten} \\ \hline
+  %  11 & $$     &   \\ \hline
+  \end{tabular}
+  \end{center}
+  \label{tab:multicol}
+ \end{table}
+ 
+ \begin{table}[h]
+  %  \caption{Mit zwei Ausnahmen findet die Vorlesung $14$-tägig statt}
+\begin{center}
+\caption{Überblick über die Veranstaltungen in 2018}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Nr. & Datum & Thema \\ \hline
+    10 &   $10.01.2018$   &   \colorbox{yellow!60}{ Das logistische Regressionsmodell I (Windzio)} \\ \hline
+    11 &   $17.01.2018$   &   \colorbox{pink}{ Das logistische Regressionsmodell mit \texttt{STATA}}  \\ \hline
+    12 &   $24.01.2018$  &   \colorbox{yellow!60}{ Das logistische Regressionsmodell II (Windzio)}\\ \hline
+    13 &   $31.01.2018$   &   \colorbox{green!50}{Artikel: Präsentation und Diskussion der eigenen Daten-Analyse I} \colorbox{red!70}{2. PL}\\ \hline
+    14 &   $07.02.2018$   &    \colorbox{green!50}{Artikel: Präsentation und Diskussion der eigenen Daten-Analyse II} \colorbox{red!70}{2. PL}\\ \hline
+\end{tabular}
+  \end{center}
+  \label{tab:multicol}
+ \end{table}
+\section{Erbringen der Prüfungsleistung (PL)}
+Die Zulassung zur Prüfung erfolgt durch die Abgabe der ersten Prüfungsleistung (in einer annehmbaren Form).
+Die Prüfungsleistung besteht insgesamt aus drei Teilen.\\
+ Wählen Sie einen der beiden Artikel aus und bearbeiten Sie die folgenden
+Aufgaben:
+\begin{itemize}
+\item[1)]{Der erste Teil der Prüfungsleistung besteht darin, den gewählten  Artikel zusammenzufassen und eine eigene Hypothese
+abzuleiten, die man mittels einer (logistischen) Regression untersuchen kann.
+ Wichtige  Aussagen des gewählten  Artikel sollen zunächst auf zwei bis drei Seiten zusammengefasst werden. 
+ Die Ableitung der eigenen Hypothese sollte auf einer halben bis maximal einer ganzen Seite dargelegt werden.
+Auf einer halben bis maximaler einer Seite soll der Artikel mit Bezug auf die eigene Hypothese  kritisch und konstruktiv kommentiert werden.
+\\
+Bearbeitungszeit ist vom 18.10.2017 bis zum 17.11.2017 um 18 Uhr, bitte per E-Mail an mich abgeben. Am 22.11.2017 werden
+die Hypothesen im Seminar vorgestellt. Es erfolgt eine Rückmeldung, ob die Hypothese für die weitere Arbeit geeignet ist.}
+\item[2)]{Der zweite Teil der Prüfungsleistung besteht darin, mit Bezug auf den Artikel die eigne Hypothese,
+mit einem (logistischen) Regressionsmodell zu untersuchen. 
+\\ Stellen
+Sie mit Bezug zu dem Artikel ein eigenes (logistisches) Regressionsmodell  auf, rechnen Sie es mit \texttt{STATA}
+und interpretieren Sie das Ergebnis. Der Bearbeitungszeitraum ist vom 6.12.2017 bis zum 19.01.2018 um 18 Uhr, bitte per E-Mail an mich abgeben.
+Am 31.01.2018 und am 7.02.2018 werden die Ergebnisse im Seminar vorgestellt und besprochen.\\
+Für den zweiten Teil der Prüfungsleistung wird ihnen ein Datensatz zur Verfügung gestellt, der dem KIGGS-Datensatz
+ähnelt. Mit ihren \texttt{do} Files werde ich die Berechnung auf dem echten KIGGS-Datensatz durchführen und Ihnen
+die Ergebnisse mitteilen. }
+\item[3)]{Der dritte Teil der Prüfungsleistung besteht darin den ersten und zweiten Teil in einem Forschungsbericht zusammenzufassen.
+Dieser sollte insgesamt etwa acht bis zehn Seiten lang sein. Abgabetermin ist der 23.03.2018. Auch der \texttt{STATA do} File
+soll abgegeben werden.}
+\end{itemize}
+
+%\section{Anmerkungen}
+%\begin{itemize}
+%\item{Beide Artikel bekommen die Studis von Anfang an und sie sollen auch von Anfang versuchen, die Artikel zu lesen.}
+%\item{Bei den grün markierten Seminaren, arbeiten wir im Seminar gemeinsam an Fragestellungen, die in
+%Bezug auf die Hausarbeit entstehen.}
+%\item{Zu den gelben Seminaren gibt es Vorlesungsfolien, außerdem wird die Formelsammlung verwendet.}
+%\item{Zu den \texttt{STATA}-Seminaren gibt es \texttt{do}-Files.}
+%\item{Ich möchte die Beispiele und Daten aus dem Buch von Michael Windzio verwenden und ergänzen.
+%Diese Aufgabe könnte ich dem Praktikanten übertragen. Er kann die \texttt{STATA}-Seminare mit vorbereiten.}
+%\item{Für die Bearbeitung der eigenen Regressionsaufgabe bekommen die Studies einen Subdatensatz (sie müssen ihn im
+%Methoden Pool bearbeiten)}
+%\end{itemize}
+%
+%\section{Fragen zu den Artikeln}
+%\begin{enumerate}
+%\item{Hat Frau Krause lauter einzelne Regressionen gerechnet, mit je einer Einflussgröße und jeweils das $R^{2}$ angegeben?}
+%\item{Wie sieht das Modell aus, dass Marcel gerechnet hat, einfach ein lineares Wahrscheinlichkeitsmodell?}
+%\end{enumerate}
+\end{document}
+

@@ -1,5 +1,5 @@
 set.seed(789)
-setwd("C:/Users/zo95yup/Documents/GitHub/StatII_Soziologie_Jena/Indukt_Stat/Talk3")
+setwd("C:/Users/zo95yup/Documents/GitHub/StatII_Soziologie_Jena/Indukt_Stat/Talk2")
 x<-rnorm(n=100,mean=250,sd=4)# Mittelwert der x-Gruppe wird simuliert für eine Standardabweichung von 40.
 # und 10 Personen pro Gruppe
 y<-rnorm(n=100,mean=250,sd=4)# Mittelwert der y-Gruppe wird simuliert für eine Standardabweichung von 40.
