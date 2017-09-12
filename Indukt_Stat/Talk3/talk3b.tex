@@ -34,7 +34,7 @@
  empirische Sozialforschung und Sozialstrukturanalyse}
 % \end{center}
  \date{}
-\title [Punktschätzer und Konfidenzintervalle ]{Punktschätzer und Konfidenzintervalle}
+\title [Punktschätzer und Konfidenzintervalle ]{Punktschätzer und Konfidenzintervalle }
 \date{27. November 2017}
 \begin{frame}
 \maketitle
@@ -264,8 +264,8 @@ Gruppen wird als homogen angenommen und mit $\sigma$ bezeichnet. }
 %\end{frame}
 \begin{frame}{Definition der Zufallsvariablen $X_{i}$}
 \begin{description}
-\item{Die Grundgesamtheit für die wir uns im Folgenden interessieren ist, die der deutschen Männer im Jahr $2016.$}\pause
-\item{Wie hoch ist der Anteil der besorgten Männer in der Grundgesamtheit? }\pause
+\item{Die Grundgesamtheit für die wir uns im Folgenden interessieren ist, die der deutschen Männer im Jahr $2016.$}
+\item{Wie hoch ist der Anteil der besorgten Männer in der Grundgesamtheit? }
 \item{Wir nennen $X_{i}$ die Antwort  des $i$ ten Mannes in der Befragung.}
 \end{description}
 Es ist
@@ -352,8 +352,7 @@ des Schätzverfahren mitanzugeben.}\pause
 mit symmetrischer Verteilung. }\pause
 \item{Ein anderer Weg die Genauigkeit des Schätzverfahren direkt miteinzubeziehen, ist die 
 Intervallschätzung.}\pause
-\item{Das Ergebnis der der Intervallschätzung ist nicht ein Wert sondern ein Intervall. Dieses Intervall
-heißt Konfidenzintervall.}\pause
+\item{Das Ergebnis der der Intervallschätzung ist nicht ein Wert sondern ein Intervall.}\pause
 %\item{Wie diese Intervalle berechnet werden entnimmt man der Formelsammlung bzw.
 %man lässt \texttt{STATA} oder eine andere Statstik-Software rechnen.}
 \end{itemize}
@@ -371,13 +370,9 @@ Das approximative $(1-\alpha)$-Konfidenzintervall für den Anteil $p$ in einer G
  wobei $z_{1-\frac{\alpha}{2}}$ das $(1-\alpha)$-Quantil der Standardnormalverteilung ist.\pause
 \begin{itemize}
 \item{Man kann mit \texttt{STATA} oder andere Statistik-Software eine Intervallschätzung
-für eine vorher festgelegtes Konfidenzniveau $\alpha$ berechnen.}\pause
-\item{Asymptotisch bzw. approximativ bedeutet,
-dass man bei großen Stichprobenumfängen dieses Intervall verwendet werden darf.}\pause
-\item{Daher steht in der FS S. 52 die Voraussetzung $n \cdot p (1-p) \geq 9.$}\pause
-\item{Im Folgenden soll die Bedeutung des Konfidenzintervalls an einer fiktiven Studie demonstriert werden.}
-%\item{Sie können dieses Konfidenzintervall interpretieren, als ein Intervall,
-%dass alle Nullhypothesen enthält, die der approximative Binomialtest mit Irrtumswahrscheinlichkeit $\alpha$ beibehält.}\pause
+für eine vorher festgelegtes Konfidenzniveau $\alpha$ berechnen.}
+\item{Sie können dieses Konfidenzintervall interpretieren, als ein Intervall,
+dass alle Nullhypothesen enthält, die der approximative Binomialtest mit Irrtumswahrscheinlichkeit $\alpha$ beibehält.}\pause
 %\item{Wenn man eine Stichprobe von  $100$ Männern hat, von denen $30$ die Frage bejahen, ergibt sich 
 %$[0.22,0.40]$ }\pause
 %\item{Wenn man eine Stichprobe von  $1000$ Männern hat, von denen $300$ die Frage bejahen, ergibt sich 
@@ -389,12 +384,13 @@ dass man bei großen Stichprobenumfängen dieses Intervall verwendet werden darf
 % Hatten wir schon gesehen in PISA und eine Interpretation können wir schon sofort angeben
 
 % http://www.faz.net/aktuell/politik/inland/allensbach-umfrage-zeigt-angst-um-innere-sicherheit-steigt-14073805/infografik-sorgen-um-die-14074061.html
-\begin{frame}{Welche praktische Bedeutung hat das Konfidenzintervall?}
+\begin{frame}{Eine zweite Herleitung bzw. Interpretation der Intervallschätzung?}
 \begin{itemize}
-\item{Im Folgenden gehen wir davon aus, dass der wahre (und unbekannte) Anteil der Männer, die der Frage zustimmen, in der Grundgesamtheit bei $25\%$ liegt.}\pause
+\item{Im folgenden gehen wir davon aus, dass der wahre (und unbekannte) Anteil der männlichen Personen ab
+16 Jahren, die der Frage zustimmen, in der Grundgesamtheit bei $25\%$ liegt.}\pause
 %\item{Stellen Sie sich vor wir erheben $100$ Stichproben mit je $100$ Personen aus der Grundgesamtheit.}\pause
 \item{Sie können sich vorstellen, dass $k$ Personen losgehen und jede Person eine einfach Zufallsstichprobe mit je
-$100$ Personen zieht. }\pause
+$100$ Personen zieht.}\pause
 \item{Wir gehen dabei davon aus, dass die Grundgesamtheit so groß ist, dass keine Person doppelt vorkommt.}\pause
 \item{Die Folgenden Grafiken zeigen für $k \in (100,200,250)$
 \begin{itemize}
@@ -489,14 +485,14 @@ $g_{u}=g_{u}(x_{1}, \dots x_{n})$ und $g_{o}=g_{o}(x_{1}, \dots x_{n}).$
 \item{Die obige Definition besagt, dass die Intervallschätzung gerade so
 festgelegt ist, dass zwei Dinge erfüllt sind:
 \begin{itemize}
-\item[1)]{Die untere Intervallgrenze liegt mit Sicherheit niedriger ist als die obere Intervallgrenze (*). Dieser Teil der Definition
+\item[1)]{Die untere Intervallgrenze mit Sicherheit niedriger ist als die obere Intervallgrenze (*). Dieser Teil der Definition
 ist aus mathematischen Gründen erforderlich und braucht Sie nicht zu interessieren.}
 \item[2)]{Vor der Berechnung des Konfidenzintervalls ist die Wahrscheinlichkeit dass man ein Konfidenzintervall
-erhält, dass den wahren Parameter  enthält eben gleich $1-\alpha.$(**) Dieser Teil der Definition
+erhält, dass den wahren Parameter nicht enthält eben gleich $\alpha.$(**) Dieser Teil der Definition
 ist für die Interpretation grundlegend wichtig.}
 \end{itemize}
 }\pause
-\item{Fazit: Vor Berechnung des Konfidenzintervalls ist als die Wahrscheinlichkeit ein ``blaues'' Intervall zu bekommen
+\item{Vor Berechnung des Konfidenzintervalls ist als die Wahrscheinlichkeit ein ``blaues'' Intervall zu bekommen
 $(1-\alpha)$ und die Wahrscheinlichkeit für ein ``rotes'' Intervall $\alpha.$}
 \end{itemize}
 \end{frame}
@@ -512,41 +508,41 @@ dass in $(1-\alpha)\%$ der Fälle den wahren Parameter enthält.}\pause
 \item{Ist das Intervall breit, ist die Schätzung ungenau, ist das Intervall schmal, ist die Schätzung
 relativ genau.}\pause
 \item{Im allgemeinen gilt, desto größer der Stichprobenumfang desto schmaler das Konfidenzintervall und
-desto niedriger die Irrtumswahrscheinlichkeit $\alpha$ desto breiter das Intervall.}
+desto niedriger die Irrtumswahrscheinlichkeit desto breiter das Intervall.}
 \end{itemize}
 \end{frame}
-\subsection{Herleitung des Konfidenzintervalls für Anteilswerte}
+\subsection{Äquivalenz von Konfidenzintervallen und Signifikanztests}
 %
-%\begin{frame}{Klassifikation für Tests}
-%\begin{block}{Parametrische und nicht-parametrische Tests}
-%Wenn man für die Teststatistik die Kenntnis des Verteilungstyps in der Grundgesamtheit
-% voraussetzt, liegt ein parametrischer Test vor, andernfalls ein verteilungsfreier
-%oder nicht-parametrischer Test.
-%\end{block}\pause
-%\begin{itemize}
-%\item{Der $\chi^{2}$-Test ist ein nicht-parametrischer Test.}
-%\item{ Alle anderen Tests, die wir bisher behandelt
-%haben sind parametrisch.}
-%\item{Wir wollen uns im Folgenden ansehen, warum die Konfidenzintervalle sich als Menge
-%der beibehaltenen Nullhypothesen interpretieren lassen. Dabei beschränken wir uns
-%auf ungerichtet Hypothesen, also Hypothesen der Form $\theta=\theta_{0}.$}
-%\end{itemize}
-%
-%\end{frame}
+\begin{frame}{Klassifikation für Tests}
+\begin{block}{Parametrische und nicht-parametrische Tests}
+Wenn man für die Teststatistik die Kenntnis des Verteilungstyps in der Grundgesamtheit
+ voraussetzt, liegt ein parametrischer Test vor, andernfalls ein verteilungsfreier
+oder nicht-parametrischer Test.
+\end{block}\pause
+\begin{itemize}
+\item{Der $\chi^{2}$-Test ist ein nicht-parametrischer Test.}
+\item{ Alle anderen Tests, die wir bisher behandelt
+haben sind parametrisch.}
+\item{Wir wollen uns im Folgenden ansehen, warum die Konfidenzintervalle sich als Menge
+der beibehaltenen Nullhypothesen interpretieren lassen. Dabei beschränken wir uns
+auf ungerichtet Hypothesen, also Hypothesen der Form $\theta=\theta_{0}.$}
+\end{itemize}
+
+\end{frame}
 %\begin{frame}{Der Punktschätzer}% S. 120 LM, S. 366 FT
 
 
 \begin{frame}{Der Standardfehler (vgl. LMLG S. 130)}
-Wir haben jetzt gesehen, wie das Konfidenzintervall interpretiert wird. Wir wollen uns noch anschauen,
-wie man es herleiten kann. Dazu brauchen wir den Standardfehler.\pause
+Um die beiden Interpretationen des Konfidenzintervall aufeinander beziehen zu können,
+brauchen wir den Standardfehler für Anteilswerte.
 \begin{variableblock}{Definition: Standardfehler }{bg=Orchid!30,fg=black}{bg=Plum!30,fg=black}
-Der Standardfehler, oft mit der englischen Abkürzung S. E. (für \textit{standard error}) bezeichnet,
+Der Standardfehler, of mit der englischen Abkürzung S. E. (für \textit{standard error}) bezeichnet,
 ist die Standartabweichung der Schätz- bzw. Teststatistik. Er kann aus den Stichprobendaten
 geschätzt werden. In manchen Situationen ist er bekannt und muss nicht geschätzt werden.
 \end{variableblock}
 \pause
 \vspace{0.5cm}
-Der Standardfehler hängt u. a. von der Stichprobengröße ab: \\Große Stichproben produzieren
+Der Standardfehler hängt u. a. von der Stichprobengröße ab: Große Stichproben produzieren
 unter sonst gleichen Bedingungen geringe, kleine Stichproben produzieren hingegen große
 Standardfehler.
 %\begin{itemize}
@@ -558,20 +554,18 @@ Standardfehler.
 
 
 
-\begin{frame}{Konfidenzintervalls für Anteilswerte und Tests}
-Oft sind Schätzer (approximativ) normalverteilt, d. h.
-$$\hat{\theta} \sim N\big(\theta, \hat{\sigma}_{\hat{\theta}}\big)$$%N(\theta,\hat{\sigma}_{\hat_{\theta}})
-oder 
-$$\hat{\theta} \sim N\big(\theta, \sigma_{\hat{\theta}}\big),$$ wenn der S. E. $\sigma_{\hat{\theta}}$
-bekannt ist.
+\begin{frame}{Konstruktion eines Konfidenzintervalls}
 Wenn die Verteilung des Schätzers zur Familie 
 der Normalverteilungen gehört, sind Konfidenzintervalle nach dem folgenden Muster gebaut: 
-
+$$\hat{\theta} \sim N\big(\theta, \hat{\sigma}_{\hat{\theta}}\big)$$%N(\theta,\hat{\sigma}_{\hat_{\theta}})
+oder 
+$$\hat{\theta} \sim N\big(\theta, \sigma_{\hat{\theta}}\big)$$ wenn der S. E. $\sigma_{\hat{\theta}}$
+bekannt ist.
 \begin{itemize}
 \item[1)]{Die untere Grenze $G_{u}$ wird berechnet als $\hat{\theta}-z_{1-\frac{\alpha}{2}}\cdot S.E.$}
-\item[2)]{Die untere Grenze $G_{o}$ wird berechnet als $\hat{\theta}+z_{1-\frac{\alpha}{2}}\cdot S.E.$}
+\item[2)]{Die untere Grenze $G_{o}$ wird berechnet als $\hat{\theta}+z_{1-\frac{\alpha}{2}}|\cdot S.E.$}
 \end{itemize}
-dabei ist $z_{1-\frac{\alpha}{2}}$ das $(1-\frac{\alpha}{2})$-Quantil der Standardnormalverteilung und\\
+dabei ist $z_{1-\frac{\alpha}{2}}$ das $1-\frac{\alpha}{2}$ Quantil der Standardnormalverteilung und
 S. E. ist der bekannte oder geschätzte Standardfehler des Schätzers $\hat{\theta}.$
 \end{frame}
 %
@@ -581,7 +575,7 @@ S. E. ist der bekannte oder geschätzte Standardfehler des Schätzers $\hat{\the
 %\item{S. E.: Standardfehler des Schätzers}
 %\end{itemize}
 
-\begin{frame}{Herleitung des Konfidenzintervall I}
+\begin{frame}{Standardfehler für Anteilswerte I}
 \begin{itemize}
 \item{Der Schätzer $\hat{p}$ ist asymptotisch normalverteilt.}
 \item{Asymptotisch bedeutet,
@@ -594,7 +588,7 @@ mit $$\hat{\sigma}_{\hat{p}}=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.$$}%=\sqrt{\fra
  
 \end{frame}
 
-\begin{frame}{Herleitung des Konfidenzintervall II}
+\begin{frame}{Standardfehler für Anteilswerte II}
 Der Schätzer $\hat{p}$ ist asymptotisch normalverteilt
 $$
 \hat{p} \overset{a}{\sim} N\big(p, \hat{\sigma}_{\hat{p}}\big).
@@ -602,33 +596,17 @@ $$
 Gemäß dem obigen Konstruktionsprinzip ergibt sich dann genau
 das Konfidenzintervall \eqref{eq:1}, also
 $$
-\bigg[\hat{p} - z_{1-\frac{\alpha}{2}}\Bigg(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\Bigg),
-\hat{p} + z_{1-\frac{\alpha}{2}}\Bigg(\sqrt{\frac{\hat{p}(1-\hat{p}}{n}}\Bigg) \Bigg].
+\bigg[\hat{p} - z_{1-\frac{\alpha}{2}}\Bigg(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\Bigg),\hat{p} + z_{1-\frac{\alpha}{2}}\Bigg(\sqrt{\frac{\hat{p}(1-\hat{p}}{n}}\Bigg) \Bigg].
 $$
 \end{frame}
 
-\begin{frame}{Herleitung des Konfidenzintervall III}
-Um das Konstruktionsprinzip anzuwenden, braucht man nur einzusetzen.
+\begin{frame}{Äquivalenz von Konfidenzintervallen und Signifikanztests}
+Die Teststatistik im approximativen Binominaltest ist (vgl. FS S. 57) $$T = \frac{\hat{p}-p_{0}}{\sqrt{p_{0}(1-p_{0})}}\cdot \sqrt{n}. $$%
+%Da wir $p_{$
 \begin{itemize}
-\item[1)]{Die untere Grenze $G_{u}$ wird berechnet als $\hat{\theta}-z_{1-\frac{\alpha}{2}}\cdot S.E.$}
-\item[2)]{Die untere Grenze $G_{o}$ wird berechnet als $\hat{\theta}+z_{1-\frac{\alpha}{2}}\cdot S.E.$}
+\item{h}
 \end{itemize}
-$$ 
-G_{u} = \hat{p} - z_{1-\frac{\alpha}{2}}\Bigg(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\Bigg)
-$$
-und
-$$
-G_{o} = \hat{p} + z_{1-\frac{\alpha}{2}}\Bigg(\sqrt{\frac{\hat{p}(1-\hat{p}}{n}}\Bigg).
-$$
 \end{frame}
-
-%\begin{frame}{Äquivalenz von Konfidenzintervallen und Signifikanztests}
-%Die Teststatistik im approximativen Binominaltest ist (vgl. FS S. 57) $$T = \frac{\hat{p}-p_{0}}{\sqrt{p_{0}(1-p_{0})}}\cdot \sqrt{n}. $$%
-%%Da wir $p_{$
-%\begin{itemize}
-%\item{h}
-%\end{itemize}
-%\end{frame}
 
 %\begin{frame}{Das Konfidenzintervall: Die häufigste Interpretation}% S. 125
 %\end{frame}
@@ -676,8 +654,6 @@ Wilcoxon-Test. Diese werden vorgestellt. Bei den nicht-parametrischen Tests ist 
 eines Konfidenzintervalls zu umgehen.}\pause
 \item[3)]{Wir lernen den Q-Q-Plot kennen, als Methode um zu Entscheiden, ob es sinnvoll
 ist von einer Normalverteilung auszugehen, oder nicht.}\pause
-\item[4)]{Wir sprechen über eine zweite Interpretation von Konfidenzintervallen,
-die in manchen Fällen möglich ist.}
 \end{itemize}
 \end{frame}
 \end{document}

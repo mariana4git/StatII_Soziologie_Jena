@@ -9,7 +9,8 @@ r <- seq(-1.3,1.3,0.1)
 nr <- length(r)
 
 # power values
-n <- seq(20,45,5)
+#n <- seq(20,45,5)
+n <- seq(5,25,5)
 np <- length(n)
 
 # obtain sample sizes
@@ -28,7 +29,8 @@ xrange <- range(r)
 yrange <- range(samsize)
 colors <- rainbow(length(n))
 setwd("C:/Users/zo95yup/Documents/GitHub/StatII_Soziologie_Jena/Indukt_Stat/Talk3")
-pdf("power4.pdf")
+#pdf("power4.pdf")
+pdf("power3.pdf")
 plot(xrange, yrange, type="n",
      xlab=expression(delta= (mu-500) %/% 20),
      ylab="Power (p)" ,cex.lab=1.5,cex.axis=1.5,cex.main=1.5)
@@ -48,7 +50,7 @@ abline(v=-0.5, col="darkgreen", lty=2)
 abline(v=0.5, col="darkgreen", lty=2)
 title("Power, Sig=0.05 (two-tailed)",cex=1.5)
 legend("top", title="Sample Size", as.character(n),
-       fill=colors)
+       fill=colors,cex=1.5)
 dev.off()
 
 # pwr.t.test(n = 20, d = 10,

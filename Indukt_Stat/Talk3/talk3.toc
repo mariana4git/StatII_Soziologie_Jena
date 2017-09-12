@@ -5,5 +5,5 @@
 \beamer@subsectionintoc {2}{2}{Kein guter Test ohne Ber\IeC {\"u}cksichtigung der Power}{8}{0}{2}
 \beamer@sectionintoc {3}{Punktsch\IeC {\"a}tzer und Intervallsch\IeC {\"a}tzer f\IeC {\"u}r den Anteilswert}{18}{0}{3}
 \beamer@subsectionintoc {3}{1}{Beispiel: Die diffusen \IeC {\"A}ngste der Deutschen}{18}{0}{3}
-\beamer@subsectionintoc {3}{2}{\IeC {\"A}quivalenz von Konfidenzintervallen und Signifikanztests}{38}{0}{3}
-\beamer@sectionintoc {4}{Ausblick: \IeC {\"U}bung}{44}{0}{4}
+\beamer@subsectionintoc {3}{2}{Herleitung des Konfidenzintervalls f\IeC {\"u}r Anteilswerte}{38}{0}{3}
+\beamer@sectionintoc {4}{Ausblick: \IeC {\"U}bung}{43}{0}{4}

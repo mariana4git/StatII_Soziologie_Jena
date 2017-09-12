@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  11 SEP 2017 08:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.31)  12 SEP 2017 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./talk0.tex
-(./talk0.tex
+**./talk3b.tex
+(./talk3b.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 10 language(s) loaded.
 
@@ -1223,30 +1223,23 @@ er/beamerinnerthemerounded.sty)
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/beamer/themes/col
 or/beamercolorthemedolphin.sty)
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/beamer/themes/out
-er/beamerouterthemeinfolines.sty)) (./talk0.aux
+er/beamerouterthemeinfolines.sty)) (./talk3b.aux)
+\openout1 = `talk3b.aux'.
 
-LaTeX Warning: Label `tab:multicol' multiply defined.
-
-
-LaTeX Warning: Label `tab:multicol' multiply defined.
-
-)
-\openout1 = `talk0.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1319,7 +1312,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.
 sty
@@ -1331,65 +1324,65 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count171
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
- (./talk0.out) (./talk0.out)
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
+ (./talk3b.out) (./talk3b.out)
 \@outlinefile=\write5
-\openout5 = `talk0.out'.
+\openout5 = `talk3b.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 28.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 30.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 30.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 28.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 30.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 28.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 28.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 30.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 30.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 30.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 28.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 28.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 28.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 28.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 28.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 2
-8.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 3
+0.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-28.
+30.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 28.
+ut line 30.
 
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/beamer/translator
 /dicts/translator-basic-dictionary/translator-basic-dictionary-English.dict
@@ -1417,65 +1410,55 @@ Dictionary: translator-numbers-dictionary, Language: English
 /dicts/translator-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 28.
- (./talk0.nav)
+LaTeX Info: Redefining \includegraphics on input line 30.
+ (./talk3b.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 29.
+(hyperref)                setting the option has no effect on input line 31.
 
-<index.jpeg, id=42, 106.3975pt x 124.465pt>
+<index.jpeg, id=46, 106.3975pt x 124.465pt>
 File: index.jpeg Graphic file (type jpg)
  <use index.jpeg>
-Package pdftex.def Info: index.jpeg used on input line 44.
+Package pdftex.def Info: index.jpeg used on input line 46.
 (pdftex.def)             Requested size: 51.3422pt x 60.06157pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 44.
+(Font)              size <5> substituted on input line 46.
 
 [1
 
 {c:/Users/zo95yup/Programme/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdft
-ex.map} <./index.jpeg>] (./talk0.toc) [2
+ex.map} <./index.jpeg>] (./talk3b.toc) [2
+
+] [3
+
+] [4
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
 
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 68.
+line 102.
 
 (c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/tex/latex/sansmathaccent/ot
 1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) [3
-
-] [4
-
-] [5
+) [5
 
 ] [6
 
-]pdfTeX warning (ext4): destination with the same identifier (name{tab:multicol
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.168 \end{frame}
-                  [7
+] [7
 
-]pdfTeX warning (ext4): destination with the same identifier (name{tab:multicol
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.194 \end{frame}
-                  [8
+] [8
 
 ] [9
 
@@ -1483,24 +1466,58 @@ l.194 \end{frame}
 
 ] [11
 
-] [12
+]
+<power3.pdf, id=168, 505.89pt x 505.89pt>
+File: power3.pdf Graphic file (type pdf)
+ <use power3.pdf>
+Package pdftex.def Info: power3.pdf used on input line 182.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-] [13
+Overfull \vbox (8.95204pt too high) detected at line 182
+ []
 
-] [14
+[12
+
+ <./power3.pdf>] <power4.pdf, id=185, 505.89pt x 505.89pt>
+File: power4.pdf Graphic file (type pdf)
+ <use power4.pdf>
+Package pdftex.def Info: power4.pdf used on input line 189.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 189
+ []
+
+[13
+
+ <./power4.pdf>] [14
 
 ] [15
 
 ] [16
 
-] [17
-
-] [18
-
-] [19
-
 ]
-[20
+<powerPisa.pdf, id=227, 505.89pt x 505.89pt>
+File: powerPisa.pdf Graphic file (type pdf)
+ <use powerPisa.pdf>
+Package pdftex.def Info: powerPisa.pdf used on input line 237.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 237
+ []
+
+[17
+
+ <./powerPisa.pdf>] <sorgen.jpg, id=243, 1907.125pt x 1072.005pt>
+File: sorgen.jpg Graphic file (type jpg)
+
+<use sorgen.jpg>
+Package pdftex.def Info: sorgen.jpg used on input line 247.
+(pdftex.def)             Requested size: 290.9531pt x 163.54185pt.
+ [18
+
+ <./sorgen.jpg>] [19
+
+] [20
 
 ] [21
 
@@ -1513,55 +1530,83 @@ l.194 \end{frame}
 ] [25
 
 ]
-<incomplete.jpg, id=276, 259.97125pt x 194.7275pt>
-File: incomplete.jpg Graphic file (type jpg)
- <use incomplete.jpg>
-Package pdftex.def Info: incomplete.jpg used on input line 503.
-(pdftex.def)             Requested size: 222.48985pt x 166.6512pt.
-
 [26
 
- <./incomplete.jpg>] [27
+] [27
 
-] <pattern.jpg, id=293, 702.625pt x 702.625pt>
-File: pattern.jpg Graphic file (type jpg)
+] <prob_est.pdf, id=336, 505.89pt x 505.89pt>
+File: prob_est.pdf Graphic file (type pdf)
+ <use prob_est.pdf>
+Package pdftex.def Info: prob_est.pdf used on input line 412.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-<use pattern.jpg>
-Package pdftex.def Info: pattern.jpg used on input line 523.
-(pdftex.def)             Requested size: 205.37926pt x 205.37492pt.
- [28
+Overfull \vbox (8.95204pt too high) detected at line 412
+ []
 
- <./pattern.jpg>]
-<incomplete2.jpg, id=302, 99.9735pt x 65.043pt>
-File: incomplete2.jpg Graphic file (type jpg)
- <use incomplete2.jpg>
-Package pdftex.def Info: incomplete2.jpg used on input line 530.
-(pdftex.def)             Requested size: 222.48985pt x 144.7584pt.
- [29
+[28
 
- <./incomplete2.jpg>] <mosaic-pattern.jpg, id=311, 508.90125pt x 339.2675pt>
-File: mosaic-pattern.jpg Graphic file (type jpg)
+ <./prob_est.pdf>] <confi.pdf, id=350, 505.89pt x 505.89pt>
+File: confi.pdf Graphic file (type pdf)
+ <use confi.pdf>
+Package pdftex.def Info: confi.pdf used on input line 420.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-<use mosaic-pattern.jpg>
-Package pdftex.def Info: mosaic-pattern.jpg used on input line 537.
-(pdftex.def)             Requested size: 222.48985pt x 148.32562pt.
- [30
+Overfull \vbox (8.95204pt too high) detected at line 420
+ []
 
- <./mosaic-pattern.jpg>]
-<patchwork.jpg, id=320, 433.62pt x 532.6299pt>
-File: patchwork.jpg Graphic file (type jpg)
- <use patchwork.jpg>
-Package pdftex.def Info: patchwork.jpg used on input line 544.
-(pdftex.def)             Requested size: 433.61894pt x 532.62859pt.
- [31
+[29
 
- <./patchwork.jpg>] [32
+ <./confi.pdf>] [30
 
-] [33
+] <prob_est200.pdf, id=373, 505.89pt x 505.89pt>
+File: prob_est200.pdf Graphic file (type pdf)
 
-] [34
+<use prob_est200.pdf>
+Package pdftex.def Info: prob_est200.pdf used on input line 440.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
 
-] [35
+Overfull \vbox (8.95204pt too high) detected at line 440
+ []
+
+[31
+
+ <./prob_est200.pdf>] <confi200.pdf, id=388, 505.89pt x 505.89pt>
+File: confi200.pdf Graphic file (type pdf)
+
+<use confi200.pdf>
+Package pdftex.def Info: confi200.pdf used on input line 448.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 448
+ []
+
+[32
+
+ <./confi200.pdf>] <prob_est250.pdf, id=403, 505.89pt x 505.89pt>
+File: prob_est250.pdf Graphic file (type pdf)
+
+<use prob_est250.pdf>
+Package pdftex.def Info: prob_est250.pdf used on input line 456.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 456
+ []
+
+[33
+
+ <./prob_est250.pdf>] <confi250.pdf, id=418, 505.89pt x 505.89pt>
+File: confi250.pdf Graphic file (type pdf)
+
+<use confi250.pdf>
+Package pdftex.def Info: confi250.pdf used on input line 464.
+(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
+
+Overfull \vbox (8.95204pt too high) detected at line 464
+ []
+
+[34
+
+ <./confi250.pdf>] [35
 
 ] [36
 
@@ -1571,104 +1616,80 @@ Package pdftex.def Info: patchwork.jpg used on input line 544.
 
 ] [39
 
-]
-<taschengeld_box.pdf, id=391, 505.89pt x 505.89pt>
-File: taschengeld_box.pdf Graphic file (type pdf)
- <use taschengeld_box.pdf>
-Package pdftex.def Info: taschengeld_box.pdf used on input line 708.
-(pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
+] [40
 
-[40
+] [41
 
- <./taschengeld_box.pdf>]
-<taschengeld_theo.pdf, id=406, 505.89pt x 505.89pt>
-File: taschengeld_theo.pdf Graphic file (type pdf)
- <use taschengeld_theo.pdf>
-Package pdftex.def Info: taschengeld_theo.pdf used on input line 715.
-(pdftex.def)             Requested size: 188.26346pt x 188.26477pt.
+] [42
 
-[41
-
- <./taschengeld_theo.pdf>]
-<taschengeld_dens.pdf, id=420, 505.89pt x 505.89pt>
-File: taschengeld_dens.pdf Graphic file (type pdf)
- <use taschengeld_dens.pdf>
-Package pdftex.def Info: taschengeld_dens.pdf used on input line 722.
-(pdftex.def)             Requested size: 222.48985pt x 222.49193pt.
-
-Overfull \vbox (26.95204pt too high) detected at line 722
- []
-
-[42
-
- <./taschengeld_dens.pdf>] [43
-
-] [44
-
-] [45
-
-] [46
+] [43
 
 ]
-Overfull \hbox (0.94986pt too wide) in paragraph at lines 801--801
-[][][][][][]  
- []
+<Test_EB.png, id=510, 582.175pt x 276.03125pt>
+File: Test_EB.png Graphic file (type png)
+ <use Test_EB.png>
+Package pdftex.def Info: Test_EB.png used on input line 643.
+(pdftex.def)             Requested size: 325.17949pt x 154.18051pt.
+ [44
 
-[47
+ <./Test_EB.png>] [45
 
 ]
 \tf@nav=\write6
-\openout6 = `talk0.nav'.
+\openout6 = `talk3b.nav'.
 
 \tf@toc=\write7
-\openout7 = `talk0.toc'.
+\openout7 = `talk3b.toc'.
 
 \tf@snm=\write8
-\openout8 = `talk0.snm'.
+\openout8 = `talk3b.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 802.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 802.
- (./talk0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 802.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 802.
-Package rerunfilecheck Info: File `talk0.out' has not changed.
-(rerunfilecheck)             Checksum: 14359C783699F1264F97764CE1765EA7;465.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 659.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 659.
+ (./talk3b.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 659.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 659.
+Package rerunfilecheck Info: File `talk3b.out' has not changed.
+(rerunfilecheck)             Checksum: EEECCC5EBA9CA4D6131499626288EF27;676.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 22394 strings out of 494852
- 450720 string characters out of 6175638
- 520694 words of memory out of 5000000
- 25075 multiletter control sequences out of 15000+600000
- 17235 words of font info for 64 fonts, out of 8000000 for 9000
+ 22403 strings out of 494852
+ 450650 string characters out of 6175638
+ 520836 words of memory out of 5000000
+ 25083 multiletter control sequences out of 15000+600000
+ 18477 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,17n,62p,800b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,62p,801b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/Users/zo95yup/Programme/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/Users/zo95yup/
-Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/
+ts/cm/cmex10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/zo95yup/Programme/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Users/zo95yup/
+Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/
 Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss9.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmssbx10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/Users/zo95yup/Programme/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/zo95yup/Pro
-gramme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Us
+cmss10.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmss12.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmss8.pfb><c:/Users/zo95yup/Programme/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/Users/zo95yup/Prog
+ramme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/Us
 ers/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt9.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msam7.pfb>
-Output written on talk0.pdf (47 pages, 814665 bytes).
+ssi12.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssi8.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/zo95yup/Programme/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Users/zo95yup/Program
+me/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Users/
+zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sam7.pfb><c:/Users/zo95yup/Programme/texlive/2016/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on talk3b.pdf (45 pages, 536638 bytes).
 PDF statistics:
- 540 PDF objects out of 1000 (max. 8388607)
- 445 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
- 204 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 

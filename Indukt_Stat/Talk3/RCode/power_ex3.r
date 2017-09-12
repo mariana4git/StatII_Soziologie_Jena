@@ -37,7 +37,7 @@ plot(xrange, yrange, type="n",
 for (i in 1:np){
   lines(r, samsize[,i], type="l", lwd=2, col=colors[i])
 }
-
+# "bottomright", "bottom", "bottomleft", "left", "topleft", "top", "topright", "right" and "center"
 # add annotation (grid lines, title, legend)
 abline(v=0, h=seq(0,yrange[2],0.2), lty=2, col="grey89")
 abline(h=0, v=seq(xrange[1],xrange[2],.2), lty=2,
@@ -47,8 +47,8 @@ abline(v=0.1, col="red", lty=2)
 abline(v=-0.05, col="darkgreen", lty=2)
 abline(v=0.05, col="darkgreen", lty=2)
 title("Power, Sig=0.05 (one-tailed)",cex=1.5)
-legend("top", title="Sample Size", as.character(n),
-       fill=colors)
+legend("topright", title="Sample Size", as.character(n),
+       fill=colors,cex=1.5)
 dev.off()
 
 # pwr.t.test(n = 20, d = 10,
